@@ -28,4 +28,4 @@ in unit coursework, 9 subprograms and packages out of 9 analyzed
   Coursework.submergeSub at coursework.ads:35 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.surfaceSub at coursework.ads:45 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
 in unit main, 0 subprograms and packages out of 1 analyzed
-  Main at main.adb:4 skipped
+  Main at main.adb:5 skipped

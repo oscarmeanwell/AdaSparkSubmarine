@@ -64,17 +64,27 @@ begin
 
       end if;
       if(inp = "2") then
-         Put("    Oxegen Level is currently: ");
-         Put_Line(sub.oxn'Image);
-         Put("    Overide to Low (l): ");
+         Put("    Overide to Low (l), Normal (n): ");
          Get(inp);
          if(inp = "l") then
             sub.oxn := Low;
             checkOxg;
          end if;
+         if(inp = "n") then
+            sub.oxn := Present;
+            checkOxg;
+         end if;
       end if;
       if(inp = "3") then
-         Put_Line("test");
+         Put("    Reactor overheated(1), normal (2): ");
+         Get(inp);
+         if(inp = "1") then
+            sub.reac := Overheated;
+            checkReactor;
+         end if;
+         if(inp = "2") then
+            sub.reac := Normal;
+         end if;
       end if;
       if(inp = "4") then
          Put_Line("test");

@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		085288bb NE OO SU
+U main%b		main.adb		f43a3e40 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -28,7 +28,7 @@ D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D coursework.ads	20190404152524 c891afbe coursework%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20190404151824 48de945f main%b
+D main.adb		20190404154050 b4b622a4 main%b
 D system.ads		20180524051738 32a08138 system%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
@@ -47,33 +47,36 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-240U14*Get 11|48s7 54s10 70s10 84s10
-242U14*Put 11|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 67s10 69s10
-. 83s10
+240U14*Get 11|48s7 54s10 68s10 80s10 94s10
+242U14*Put 11|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 67s10 79s10
+. 93s10
 263U14*Put_Line 11|17s7 18s7 20s7 24s7 26s7 28s7 30s7 34s4 35s4 36s4 37s4
-. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 68s10 77s10 80s10 86s13
-. 91s13 97s10
+. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 90s10 96s13 101s13 107s10
 X 8 coursework.ads
 1K9*Coursework 68e15 11|1w6 1r22
-4n37*Low{4E9} 11|72r24
+4n20*Present{4E9} 11|74r24
+4n37*Low{4E9} 11|70r24
+7n25*Normal{7E9} 11|86r25
+7n33*Overheated{7E9} 11|82r25
 9A9*AirArray(3E9)<8I9>
-13e7*oxn{4E9} 11|28r20 68r23 72m17
+13e7*oxn{4E9} 11|28r20 70m17 74m17
 14e7*stat{5E9} 11|20r20 52r23
-15e7*reac{7E9} 11|26r20
+15e7*reac{7E9} 11|26r20 82m17 86m17
 16e7*dive{10E9} 11|30r20
 20a7*airlocksA{9A9} 11|22r20 24r25
 24r4*airlocks{19R9} 11|22r11 24r16
-26r4*sub{11R9} 11|20r16 26r16 28r16 30r16 52r19 68r19 72m13
+26r4*sub{11R9} 11|20r16 26r16 28r16 30r16 52r19 70m13 74m13 82m13 86m13
 35U14*submergeSub 11|57s13
-40U14*openAirlock 11|87s13
+40U14*openAirlock 11|97s13
 45U14*surfaceSub 11|62s13
-50U14*checkOxg 11|73s13
-64U14*closeAirlock 11|92s13
+50U14*checkOxg 11|71s13 75s13
+54U14*checkReactor 11|83s13
+64U14*closeAirlock 11|102s13
 X 11 main.adb
-5U11*Main 5b11 103l5 103t9
-6b1 simulationActive{boolean} 44r10 100m10
-7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 66r10 70m14 71r13 76r10 79r10
-. 82r10 84m14 85r13 90r13 96r10 99r10
+5U11*Main 5b11 113l5 113t9
+6b1 simulationActive{boolean} 44r10 110m10
+7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 66r10 68m14 69r13 73r13 78r10
+. 80m14 81r13 85r13 89r10 92r10 94m14 95r13 100r13 106r10 109r10
 8i1 last{integer}
 9a1 title{string} 34r13
 10a1 title1{string} 35r13

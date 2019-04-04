@@ -3,7 +3,7 @@ is
    procedure submergeSub is
    begin
       --operationPermitted;
-      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed and then sub.oxn = Present) then
+      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
          sub.stat := Submerged;
       end if;
    end submergeSub;
@@ -40,14 +40,13 @@ is
       --sub.oxn := Low;
       if(sub.oxn = Low and then sub.stat = Submerged) then
          surfaceSub;
-
       end if;
    end checkOxg;
 
    procedure checkReactor is
       --Check the reactor
    begin
-      if(sub.reac = Overheated and then sub.stat = Submerged and then airlocks.allowed = True) then
+      if(sub.reac = Overheated and then sub.stat = Submerged) then
          surfaceSub;
       end if;
    end checkReactor;

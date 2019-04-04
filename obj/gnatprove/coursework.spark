@@ -301,7 +301,7 @@
     },
     {
       "file": "coursework.adb",
-      "line": 51,
+      "line": 50,
       "col": 10,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -328,7 +328,7 @@
         }
       ],
       "check_file": "coursework.adb",
-      "check_line": 51,
+      "check_line": 50,
       "check_col": 10,
       "how_proved": "prover",
       "stats": {
@@ -360,7 +360,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 27,
-              "time": 6.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -395,7 +395,7 @@
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 5.99999986588955E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
@@ -891,14 +891,14 @@
     }
   ],
   "timings": {
-    "marking": 4.44214005256072E-04,
-    "globals (basic)": 3.17236990667880E-04,
-    "globals/properties (advanced)": 9.80064971372485E-04,
-    "flow analysis": 1.62612721323967E-02,
-    "codepeer results": 6.98599978932180E-06,
-    "init_why_sections": 2.87650007521734E-04,
-    "translation of standard": 4.69568278640509E-03,
-    "translation of compilation unit": 1.43590820953250E-02,
-    "proof": 1.14150786399841E+00
+    "marking": 4.47500991867855E-04,
+    "globals (basic)": 3.27510002534837E-04,
+    "globals/properties (advanced)": 9.95269976556301E-04,
+    "flow analysis": 1.64523534476757E-02,
+    "codepeer results": 6.57500004308531E-06,
+    "init_why_sections": 2.72034987574443E-04,
+    "translation of standard": 4.31475182995200E-03,
+    "translation of compilation unit": 1.17747522890568E-02,
+    "proof": 1.14507877826691E+00
   }
 }

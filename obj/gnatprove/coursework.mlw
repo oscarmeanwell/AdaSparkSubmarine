@@ -3857,10 +3857,10 @@ module Coursework__package_def
   (#"coursework.adb" 21 0 0# ());
   (#"coursework.adb" 29 0 0# ());
   (#"coursework.adb" 37 0 0# ());
-  (#"coursework.adb" 47 0 0# ());
-  (#"coursework.adb" 55 0 0# ());
-  (#"coursework.adb" 64 0 0# ());
-  ( "GP_Sloc:coursework.adb:71:1" (#"coursework.adb" 71 0 0# ()) ) )
+  (#"coursework.adb" 46 0 0# ());
+  (#"coursework.adb" 54 0 0# ());
+  (#"coursework.adb" 63 0 0# ());
+  ( "GP_Sloc:coursework.adb:70:1" (#"coursework.adb" 70 0 0# ()) ) )
 end
 
 (* Module for checking contracts and absence of run-time errors in subprogram "operationpermitted" defined at coursework.ads:29, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
@@ -3966,6 +3966,8 @@ module Coursework__submergesub__subprogram_def
  use        Coursework__status__rep
  use        Coursework__opertationallowed
  use        Coursework__opertationallowed__rep
+ use        Coursework__reactorheat
+ use        Coursework__reactorheat__rep
  use        Array__Int__Coursework__airlock
  use        Coursework__submarine
  use        Coursework__submarine___axiom
@@ -4010,11 +4012,11 @@ module Coursework__submergesub__subprogram_def
    assume {  ( ((Coursework__opertationallowed__rep.to_rep (Coursework__acionpermitted.rec__coursework__acionpermitted__allowed (Coursework__acionpermitted.__split_fields { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content }))) = 0) /\ ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) };
    try
    ( ( "GP_Sloc:coursework.adb:6:10" (#"coursework.adb" 6 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:6:7" (#"coursework.adb" 6 0 0# (if (( ( ((Coursework__airlock__rep.to_rep((let temp___293 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))) in (
+   ( "GP_Sloc:coursework.adb:6:7" (#"coursework.adb" 6 0 0# (if (( ( ( ((Coursework__airlock__rep.to_rep((let temp___293 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))) in (
     (Array__Int__Coursework__airlock.get(temp___293) (1))))
    )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___294 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))) in (
     (Array__Int__Coursework__airlock.get(temp___294) (2))))
-   )) = 1) ) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
+   )) = 1) ) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
     ( ( "GP_Sloc:coursework.adb:7:10" (#"coursework.adb" 7 0 0# ()) );
     ( "GP_Sloc:coursework.adb:7:19" (#"coursework.adb" 7 0 0# (let temp___292 = (let temp___291 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
      ( #"coursework.adb" 7 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields(temp___291)))) in (
@@ -4304,11 +4306,11 @@ module Coursework__checkreactor__subprogram_def
   ;
   #"coursework.ads" 54 0 0# assume { #"coursework.ads" 54 0 0# ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Coursework__opertationallowed__rep.to_rep (Coursework__acionpermitted.rec__coursework__acionpermitted__allowed (Coursework__acionpermitted.__split_fields { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content }))) = 0) ) };
   #"coursework.ads" 54 0 0# try
-   ( ( "GP_Sloc:coursework.adb:50:10" (#"coursework.adb" 50 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:50:7" (#"coursework.adb" 50 0 0# (if (( ( ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__opertationallowed__rep.to_rep((Coursework__acionpermitted.rec__coursework__acionpermitted__allowed((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))))) = 0) )) then (
-    ( ( "GP_Sloc:coursework.adb:51:10" (#"coursework.adb" 51 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:51:10" (#"coursework.adb" 51 0 0# ( (#"coursework.adb" 51 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_PRECONDITION" "GP_Shape:if__call_surfacesub" "GP_Sloc:coursework.adb:51:10" "GP_Id:5" "comment:         surfaceSub;
-         ^ coursework.adb:51:10:VC_PRECONDITION" (Coursework__surfacesub___axiom.surfacesub(())) )) )) ) )) else (
+   ( ( "GP_Sloc:coursework.adb:49:10" (#"coursework.adb" 49 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:49:7" (#"coursework.adb" 49 0 0# (if (( ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
+    ( ( "GP_Sloc:coursework.adb:50:10" (#"coursework.adb" 50 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:50:10" (#"coursework.adb" 50 0 0# ( (#"coursework.adb" 50 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_PRECONDITION" "GP_Shape:if__call_surfacesub" "GP_Sloc:coursework.adb:50:10" "GP_Id:5" "comment:         surfaceSub;
+         ^ coursework.adb:50:10:VC_PRECONDITION" (Coursework__surfacesub___axiom.surfacesub(())) )) )) ) )) else (
     ()))) );
     raise Return__exc )
   with
@@ -4371,16 +4373,16 @@ module Coursework__divesub__subprogram_def
   ;
    assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Coursework__opertationallowed__rep.to_rep (Coursework__acionpermitted.rec__coursework__acionpermitted__allowed (Coursework__acionpermitted.__split_fields { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content }))) = 0) ) ) };
    try
-   ( ( "GP_Sloc:coursework.adb:58:10" (#"coursework.adb" 58 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:58:7" (#"coursework.adb" 58 0 0# (if (( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__opertationallowed__rep.to_rep((Coursework__acionpermitted.rec__coursework__acionpermitted__allowed((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))))) = 0) )) then (
-    ( ( "GP_Sloc:coursework.adb:59:10" (#"coursework.adb" 59 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:59:19" (#"coursework.adb" 59 0 0# (let temp___324 = (let temp___323 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 59 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___323)))) in (
+   ( ( "GP_Sloc:coursework.adb:57:10" (#"coursework.adb" 57 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:57:7" (#"coursework.adb" 57 0 0# (if (( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__opertationallowed__rep.to_rep((Coursework__acionpermitted.rec__coursework__acionpermitted__allowed((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))))) = 0) )) then (
+    ( ( "GP_Sloc:coursework.adb:58:10" (#"coursework.adb" 58 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:58:19" (#"coursework.adb" 58 0 0# (let temp___324 = (let temp___323 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 58 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___323)))) in (
       ()))
       end ;
      { ( temp___323 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___323)) ) with Coursework__submarine.rec__coursework__submarine__dive = (Coursework__diving__rep.of_rep(0)) } } )))
      in (
-     #"coursework.adb" 59 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___324)) )))
+     #"coursework.adb" 58 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___324)) )))
     ) ) )) else (
     ()))) );
     raise Return__exc )
@@ -4443,20 +4445,20 @@ module Coursework__closeairlock__subprogram_def
   ;
   #"coursework.ads" 64 0 0# assume { #"coursework.ads" 64 0 0# ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) };
   #"coursework.ads" 64 0 0# try
-   ( ( "GP_Sloc:coursework.adb:66:10" (#"coursework.adb" 66 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:66:7" (#"coursework.adb" 66 0 0# (if (((Coursework__airlock__rep.to_rep((let temp___331 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))) in (
+   ( ( "GP_Sloc:coursework.adb:65:10" (#"coursework.adb" 65 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:65:7" (#"coursework.adb" 65 0 0# (if (((Coursework__airlock__rep.to_rep((let temp___331 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields({ Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })))) in (
     (Array__Int__Coursework__airlock.get(temp___331) (1))))
    )) = 0)) then (
-    ( ( "GP_Sloc:coursework.adb:67:10" (#"coursework.adb" 67 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:67:32" (#"coursework.adb" 67 0 0# (let temp___330 = (let temp___329 = { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content } in (
-     ( #"coursework.adb" 67 0 0# abstract ensures {true}(let _ = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields(temp___329)))) in (
+    ( ( "GP_Sloc:coursework.adb:66:10" (#"coursework.adb" 66 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:66:32" (#"coursework.adb" 66 0 0# (let temp___330 = (let temp___329 = { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content } in (
+     ( #"coursework.adb" 66 0 0# abstract ensures {true}(let _ = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa((Coursework__acionpermitted.__split_fields(temp___329)))) in (
       ()))
       end ;
      { ( temp___329 ) with Coursework__acionpermitted.__split_fields = { ( (Coursework__acionpermitted.__split_fields(temp___329)) ) with Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa = (let temp___328 = (Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa (Coursework__acionpermitted.__split_fields { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content })) in (
       (Array__Int__Coursework__airlock.set((Coursework__acionpermitted.rec__coursework__acionpermitted__airlocksa (Coursework__acionpermitted.__split_fields { Coursework__acionpermitted.__split_fields = Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content }))) (1) ((Coursework__airlock__rep.of_rep(1))))))
       } } )))
      in (
-     #"coursework.adb" 67 0 0# Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content <- ( (Coursework__acionpermitted.__split_fields(temp___330)) )))
+     #"coursework.adb" 66 0 0# Coursework__airlocks.airlocks__split_fields.Coursework__acionpermitted.__split_fields__content <- ( (Coursework__acionpermitted.__split_fields(temp___330)) )))
     ) ) )) else (
     ()))) );
     raise Return__exc )
