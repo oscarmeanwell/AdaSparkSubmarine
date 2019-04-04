@@ -37,7 +37,7 @@ is
    begin
       --Check the oxegen Levels
       --sub.oxn := Low;
-      if(sub.oxn = Low and then sub.stat = Submerged) then
+      if(sub.oxn = Low and then sub.stat = Submerged and then airlocks.allowed = True) then
           surfaceSub;
       end if;
    end checkOxg;
@@ -45,7 +45,7 @@ is
    procedure checkReactor is
       --Check the reactor
    begin
-      if(sub.reac = Overheated and then sub.stat = Submerged) then
+      if(sub.reac = Overheated and then sub.stat = Submerged and then airlocks.allowed = True) then
          surfaceSub;
       end if;
    end checkReactor;
@@ -54,7 +54,7 @@ is
       --Dive the sub
    begin
       if(sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True) then
-         sub.dive = True;
+         sub.dive := True;
          --Is this how to do this?
       end if;
    end diveSub;

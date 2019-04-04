@@ -23,7 +23,8 @@ is
 
    airlocks : AcionPermitted := (airlocksA => (Closed, Closed), allowed => False);
 
-   sub : Submarine := (oxn => Present, stat => Surfaced, air => airlocks.airlocksA, reac => Normal, dive => False);
+   sub : Submarine := (oxn => Present, stat => Surfaced, air => airlocks.airlocksA,
+                       reac => Normal, dive => False);
 
    procedure operationPermitted with
      Global => (In_Out => airlocks),
@@ -47,15 +48,16 @@ is
      Post => sub.stat = Surfaced;
 
    procedure checkOxg with
-     Global => (In_Out => sub);
+     Global => (In_Out => sub, Input => airlocks),
+     Pre => airlocks.allowed= True;
 
    procedure checkReactor with
-     Global => (In_Out => sub),
-     Pre => sub.stat = Submerged;
+     Global => (In_Out => sub, Input => airlocks),
+     Pre => sub.stat = Submerged and then airlocks.allowed = True;
 
 
    procedure diveSub with
-     Global => (In_Out => sub),
+     Global => (In_Out => sub, Input => airlocks),
      Pre => sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True,
      Post => sub.stat = Submerged;
 

@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		2436a7d3 NE OO SU
+U main%b		main.adb		6c6ecd77 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -25,10 +25,10 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190404112052 492b06f0 coursework%s
+D coursework.ads	20190404115538 52ccbcc4 coursework%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20190404112330 e5001279 main%b
+D main.adb		20190404133810 b6bfc2e9 main%b
 D system.ads		20180524051738 32a08138 system%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
@@ -47,18 +47,33 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-263U14*Put_Line 11|8s4 9s4 12s4 13s4 16s4 17s4 18s4 19s4 21s4 22s4
+240U14*Get 11|43s7 49s10
+242U14*Put 11|42s7 46s10 48s10 59s10
+263U14*Put_Line 11|17s4 18s4 19s4 20s4 21s4 22s4 23s4 24s4 27s4 28s4 31s4
+. 32s4 33s4 34s4 36s4 37s4 39s4 41s7 47s10 51s13 56s13 60s10 64s10 67s10
+. 70s10 73s10 76s10
 X 8 coursework.ads
-1K9*Coursework 59e15 11|1w6 1r22
+1K9*Coursework 64e15 11|1w6 1r22
 9A9*AirArray(3E9)<8I9>
-14e7*stat{5E9} 11|9r17 13r17 17r17
-19a7*airlocksA{9A9} 11|19r22 22r22
-23r4*airlocks{18R9} 11|19r13 22r13
-25r4*sub{11R9} 11|9r13 13r13 17r13
-27U14*operationPermitted 11|10s4
-33U14*submergeSub 11|11s4
-38U14*openAirlock 11|20s4
-48U14*checkOxg 11|15s4
+14e7*stat{5E9} 11|24r17 28r17 32r17 47r23 60r23
+20a7*airlocksA{9A9} 11|34r22 37r22
+24r4*airlocks{19R9} 11|34r13 37r13
+26r4*sub{11R9} 11|24r13 28r13 32r13 47r19 60r19
+29U14*operationPermitted 11|25s4
+35U14*submergeSub 11|26s4 52s13
+40U14*openAirlock 11|35s4
+45U14*surfaceSub 11|57s13
+50U14*checkOxg 11|30s4
 X 11 main.adb
-4U11*Main 4b11 23l5 23t9
+4U11*Main 4b11 82l5 82t9
+5b1 simulationActive{boolean} 40r10 79m10
+6a1 inp{string} 43m11 45r10 49m14 50r13 55r13 63r10 66r10 69r10 72r10 75r10
+. 78r10
+7i1 last{integer}
+8a1 title{string} 17r13
+9a1 title1{string} 18r13
+10a1 title2{string} 19r13
+11a1 title3{string} 20r13
+12a1 title4{string} 21r13
+13a1 title5{string} 22r13
 
