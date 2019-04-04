@@ -2,7 +2,8 @@ package body Coursework with SPARK_Mode
 is
    procedure submergeSub is
    begin
-      if(airlocks.allowed = True and then sub.oxn = Present) then
+      --operationPermitted;
+      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed and then sub.oxn = Present) then
          sub.stat := Submerged;
       end if;
    end submergeSub;
@@ -37,8 +38,9 @@ is
    begin
       --Check the oxegen Levels
       --sub.oxn := Low;
-      if(sub.oxn = Low and then sub.stat = Submerged and then airlocks.allowed = True) then
-          surfaceSub;
+      if(sub.oxn = Low and then sub.stat = Submerged) then
+         surfaceSub;
+
       end if;
    end checkOxg;
 
@@ -58,5 +60,12 @@ is
          --Is this how to do this?
       end if;
    end diveSub;
+
+   procedure closeAirlock is
+   begin
+      if(airlocks.airlocksA(1) = Open) then
+         airlocks.airlocksA(1) := Closed;
+      end if;
+   end closeAirlock;
 
 end Coursework;

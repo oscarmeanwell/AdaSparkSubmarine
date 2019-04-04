@@ -17,10 +17,11 @@ Total                             8    1 (13%)          .          .     7 (88%)
 
 
 Analyzed 2 units
-in unit coursework, 8 subprograms and packages out of 8 analyzed
+in unit coursework, 9 subprograms and packages out of 9 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Coursework.checkOxg at coursework.ads:50 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.checkReactor at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.closeAirlock at coursework.ads:64 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Coursework.diveSub at coursework.ads:59 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.openAirlock at coursework.ads:40 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.operationPermitted at coursework.ads:29 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)

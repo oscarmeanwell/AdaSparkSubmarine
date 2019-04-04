@@ -35,7 +35,7 @@ is
    procedure submergeSub with
      Global => (In_Out => sub, Input => airlocks),
      Pre => airlocks.allowed = True and sub.oxn = Present,
-     Post =>  sub.oxn = Present and then airlocks.allowed = True;
+     Post =>  sub.oxn = Present;
 
    procedure openAirlock with
      Global => (In_Out => airlocks),
@@ -60,5 +60,9 @@ is
      Global => (In_Out => sub, Input => airlocks),
      Pre => sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True,
      Post => sub.stat = Submerged;
+
+   procedure closeAirlock with
+     Global => (In_Out => airlocks, Input => sub),
+     Pre => sub.stat = Submerged;
 
 end Coursework;
