@@ -11,7 +11,8 @@ begin
    submergeSub;
    Put_Line("Submarine is: ");
    Put_Line(sub.stat'Image);
-   surfaceSub;
+   --surfaceSub;
+   checkOxg;
    Put_Line("Submarine is: ");
    Put_Line(sub.stat'Image);
    Put_Line("Airlock is: ");

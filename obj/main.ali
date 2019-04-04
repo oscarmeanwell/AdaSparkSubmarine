@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		fda70a48 NE OO SU
+U main%b		main.adb		2436a7d3 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -25,10 +25,10 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190404094652 b7294800 coursework%s
+D coursework.ads	20190404112052 492b06f0 coursework%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20190404094714 c293f112 main%b
+D main.adb		20190404112330 e5001279 main%b
 D system.ads		20180524051738 32a08138 system%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
@@ -47,18 +47,18 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-263U14*Put_Line 11|8s4 9s4 12s4 13s4 15s4 16s4 17s4 18s4 20s4 21s4
+263U14*Put_Line 11|8s4 9s4 12s4 13s4 16s4 17s4 18s4 19s4 21s4 22s4
 X 8 coursework.ads
-1K9*Coursework 51e15 11|1w6 1r22
+1K9*Coursework 59e15 11|1w6 1r22
 9A9*AirArray(3E9)<8I9>
-14e7*stat{5E9} 11|9r17 13r17 16r17
-18a7*airlocksA{9A9} 11|18r22 21r22
-22r4*airlocks{17R9} 11|18r13 21r13
-24r4*sub{11R9} 11|9r13 13r13 16r13
-26U14*operationPermitted 11|10s4
-32U14*submergeSub 11|11s4
-37U14*openAirlock 11|19s4
-42U14*surfaceSub 11|14s4
+14e7*stat{5E9} 11|9r17 13r17 17r17
+19a7*airlocksA{9A9} 11|19r22 22r22
+23r4*airlocks{18R9} 11|19r13 22r13
+25r4*sub{11R9} 11|9r13 13r13 17r13
+27U14*operationPermitted 11|10s4
+33U14*submergeSub 11|11s4
+38U14*openAirlock 11|20s4
+48U14*checkOxg 11|15s4
 X 11 main.adb
-4U11*Main 4b11 22l5 22t9
+4U11*Main 4b11 23l5 23t9
 

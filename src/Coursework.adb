@@ -9,8 +9,11 @@ is
 
 
    procedure operationPermitted is
+      --Are both airlocks shut?
    begin
+      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed) then
          airlocks.allowed := True;
+      end if;
    end operationPermitted;
 
 
@@ -23,8 +26,37 @@ is
    end openAirlock;
 
    procedure surfaceSub is
+      --Surface the submarine
    begin
-      sub.stat := Surfaced;
+      if(sub.stat = Submerged) then
+         sub.stat := Surfaced;
+      end if;
    end surfaceSub;
+
+   procedure checkOxg is
+   begin
+      --Check the oxegen Levels
+      --sub.oxn := Low;
+      if(sub.oxn = Low and then sub.stat = Submerged) then
+          surfaceSub;
+      end if;
+   end checkOxg;
+
+   procedure checkReactor is
+      --Check the reactor
+   begin
+      if(sub.reac = Overheated and then sub.stat = Submerged) then
+         surfaceSub;
+      end if;
+   end checkReactor;
+
+   procedure diveSub is
+      --Dive the sub
+   begin
+      if(sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True) then
+         sub.dive = True;
+         --Is this how to do this?
+      end if;
+   end diveSub;
 
 end Coursework;

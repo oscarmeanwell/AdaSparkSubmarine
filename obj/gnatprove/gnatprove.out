@@ -10,17 +10,21 @@ Initialization                    1          1          .          .           .
 Non-Aliasing                      .          .          .          .           .           .          .
 Run-time Checks                   .          .          .          .           .           .          .
 Assertions                        .          .          .          .           .           .          .
-Functional Contracts              3          .          .          .    3 (CVC4)           .          .
+Functional Contracts              7          .          .          .    7 (CVC4)           .          .
 LSP Verification                  .          .          .          .           .           .          .
 -------------------------------------------------------------------------------------------------------
-Total                             4    1 (25%)          .          .     3 (75%)           .          .
+Total                             8    1 (13%)          .          .     7 (88%)           .          .
 
 
 Analyzed 2 units
-in unit coursework, 4 subprograms and packages out of 4 analyzed
+in unit coursework, 8 subprograms and packages out of 8 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.openAirlock at coursework.ads:37 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.operationPermitted at coursework.ads:26 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.submergeSub at coursework.ads:32 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.checkOxg at coursework.ads:48 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.checkReactor at coursework.ads:51 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.diveSub at coursework.ads:56 flow analyzed (0 errors, 0 checks and 1 warnings) and proved (1 checks)
+  Coursework.openAirlock at coursework.ads:38 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.operationPermitted at coursework.ads:27 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.submergeSub at coursework.ads:33 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.surfaceSub at coursework.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
 in unit main, 0 subprograms and packages out of 1 analyzed
   Main at main.adb:4 skipped
