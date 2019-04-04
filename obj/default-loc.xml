@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\GNAT\2018\bin\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 16" line=" 6" >
+      <vfs_project>C:\Users\User\Desktop\fase\default.gpr</vfs_project>
+      <vfs_file>C:\Users\User\Desktop\fase\src\Coursework.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

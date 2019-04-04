@@ -1,0 +1,63 @@
+V "GNAT Lib v2018"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U coursework%b		coursework.adb		28ea7a2f OO PK
+
+U coursework%s		coursework.ads		48afda3a OO PK
+
+D coursework.ads	20190404093252 48afda3a coursework%s
+D coursework.adb	20190404093022 6045a015 coursework%b
+D system.ads		20180524051738 32a08138 system%s
+X 1 coursework.ads
+1K9*Coursework 44l5 44e15 2|1b14 26l5 26t15
+3E9*Airlock 3e34 9r38
+3n21*Open{3E9} 2|21r35
+3n27*Closed{3E9} 22r48 22r56 28r37 28r77 29r38 29r78 39r37 39r77 40r39 40r73
+. 2|20r34 20r74
+4E9*Oxegen 4e36 13r13
+4n20*Present{4E9} 24r31 34r51 35r25 2|5r53
+4n29*Absent{4E9}
+5E9*Status 5e40 14r14
+5n20*Submerged{5E9} 2|6r22
+5n31*Surfaced{5E9} 24r48
+6E9*OpertationAllowed 6e43 19r17
+6n31*True{6E9} 34r32 35r61 2|5r29 13r30
+6n37*False{6E9} 22r76
+8I9*Index<short_short_integer> 9r28
+9A9*AirArray(3E9)<8I9> 12r13 18r19
+11R9*Submarine 15e14 24r10
+12a7*air{9A9} 24m58
+13e7*oxn{4E9} 24m24 34r45 35r19 2|5r47
+14e7*stat{5E9} 24m40 2|6m14
+17R9*AcionPermitted 20e14 22r15
+18a7*airlocksA{9A9} 22m34 24r74 28r22 28r62 29r23 29r63 39r22 39r62 40r24
+. 40r58 2|20r19 20r59 21m19
+19e7*allowed{6E9} 22m65 34r22 35r51 2|5r19 13m19
+22r4*airlocks{17R9} 24r65 27r27 28r13 28r53 29r14 29r54 33r41 34r13 35r42
+. 38r27 39r13 39r53 40r15 40r49 2|5r10 13m10 20r10 20r50 21m10
+24r4*sub{11R9} 33r27 34r41 35r15 2|5r43 6m10
+26U14*operationPermitted 2|11b14 14l8 14t26
+32U14*submergeSub 2|3b14 8l8 8t19
+37U14*openAirlock 2|17b14 23l8 23t19
+
+QQ SPARKVERSION 2018 (20180523)
+GG EK_DIRECT_CALLS coursework__operationpermitted 0
+GG EK_GLOBALS coursework__operationpermitted local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__airlocks proper_output 1 coursework__airlocks refined_proof_in 0 refined_input 1 coursework__airlocks refined_output 1 coursework__airlocks calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__airlocks LOCKS 0
+GG EK_DIRECT_CALLS coursework__submergesub 0
+GG EK_GLOBALS coursework__submergesub local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 coursework__airlocks coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 2 coursework__airlocks coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 coursework__airlocks coursework__sub LOCKS 0
+GG EK_DIRECT_CALLS coursework__openairlock 0
+GG EK_GLOBALS coursework__openairlock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__airlocks proper_output 1 coursework__airlocks refined_proof_in 0 refined_input 1 coursework__airlocks refined_output 1 coursework__airlocks calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__airlocks LOCKS 0
+GG EK_DIRECT_CALLS coursework 0
+GG EK_GLOBALS coursework local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 coursework__airlocks coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 2 coursework__airlocks coursework__sub FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER

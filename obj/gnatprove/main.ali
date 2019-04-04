@@ -1,0 +1,50 @@
+V "GNAT Lib v2018"
+M P W=b
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U main%b		main.adb		469d68d1 OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W coursework%s		coursework.adb		coursework.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-textio.ads		20180524051738 881db35a ada.text_io%s
+D coursework.ads	20190403155146 4b87caa2 coursework%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
+D main.adb		20190403155134 85071129 main%b
+D system.ads		20180524051738 32a08138 system%s
+D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 8|2r6 2r23
+X 4 a-textio.ads
+49K13*Text_IO 471e16 8|2w10 2r27
+263U14*Put_Line 8|7s4 8s4 10s4 11s4
+X 5 coursework.ads
+1K9*Coursework 20e15 8|1w6 1r22
+10e7*stat{5E9} 8|8r17 11r17
+13r4*sub{7R9} 8|8r13 11r13
+15U14*submergeSub 8|9s4
+X 8 main.adb
+4U11*Main 4b11 12l5 12t9
+
+QQ SPARKVERSION 2018 (20180523)
+GG EK_DIRECT_CALLS main 0
+GG EK_GLOBALS main local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 0 refined_proof_in 0 refined_input 1 coursework__sub refined_output 0 calls_proof 0 calls 0 calls_conditional 2 coursework__submergesub ada__text_io__put_line__2 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_END_MARKER
