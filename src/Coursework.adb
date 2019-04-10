@@ -10,11 +10,11 @@ is
    end submergeSub;
 
 
-   procedure openAirlock is
+   procedure openAirlock(n : Integer) is
       --If one of the airlocks is open, dont open the next
    begin
       if(sub.air(1) = Closed and then sub.air(2) = Closed) then
-         sub.air(1) := Open;
+         sub.air(n) := Open;
       end if;
    end openAirlock;
 
@@ -53,14 +53,10 @@ is
       end if;
    end diveSub;
 
-   procedure closeAirlock is
+   procedure closeAirlock(n : Integer) is
    begin
-      if(sub.air(1) = Open) then
-         sub.air(1) := Closed;
-      end if;
-
-      if(sub.air(2) = Open) then
-         sub.air(2) := Closed;
+      if(sub.air(n) = Open) then
+         sub.air(n) := Closed;
       end if;
    end closeAirlock;
 

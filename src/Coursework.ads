@@ -4,8 +4,8 @@ is
    type Oxegen is (Present, Absent, Low);
    type Status is (Submerged, Surfaced);
    type ReactorHeat is (Normal, Overheated);
-   type Index is range 1 .. 2;
-   type AirArray is array (Index) of Airlock;
+   type Index is new Integer range 1 .. 2;
+   type AirArray is array (Integer range 1 .. 2) of Airlock;
    type Diving is (True, False);
 
    MAXDIVE : constant := 1000;
@@ -37,10 +37,10 @@ is
      Pre => sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present,
      Post =>  sub.oxn = Present;
 
-   procedure openAirlock with
+   procedure openAirlock(n : Integer) with
      Global => (In_Out => sub),
      Pre => sub.air(1) = Closed and then sub.air(2) = Closed,
-     Post =>  sub.air(1) = Closed or sub.air(2) = Closed;
+     Post =>  sub.air(n) = Open;
 
    procedure surfaceSub with
      Global => (In_Out => sub),
@@ -63,9 +63,9 @@ is
          and then sub.dive.currentDepth < Integer'Last-100,
      Post => sub.stat = Submerged and then sub.dive.currentDepth > sub.dive.currentDepth'Old;
 
-   procedure closeAirlock with
+   procedure closeAirlock(n : Integer) with
      Global => (In_Out => sub),
-     Pre => sub.stat = Submerged and then (sub.air(1) = Open xor sub.air(2) = Open),
-     Post => sub.air(1) = Closed and then sub.air(2) = Closed;
+     Pre => (n = 1 or n = 2) and then sub.stat = Submerged and then (sub.air(1) = Open xor sub.air(2) = Open),
+     Post => sub.air(n) = Closed;
 
 end Coursework;

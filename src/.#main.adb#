@@ -96,7 +96,7 @@ begin
          if(inp = "o") then
             Put("    Airlock Number (1, 2): ");
             Get(inp);
-            Put("    Attempting to Open Airlock");
+            Put("    Attempting to Open Airlock ");
             Put_Line(inp);
             openAirlock(Integer'Value(inp));
          end if;
@@ -104,7 +104,7 @@ begin
          if(inp = "c") then
             Put("    Airlock Number (1, 2): ");
             Get(inp);
-            Put("    Attempting to Close Airlock");
+            Put("    Attempting to Close Airlock ");
             Put_Line(inp);
             closeAirlock(Integer'Value(inp));
          end if;

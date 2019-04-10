@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#cdfe33a8#;
+   u00001 : constant Version_32 := 16#0b4dd9d9#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -199,18 +199,26 @@ package ada_main is
    pragma Export (C, u00080, "system__stringsS");
    u00081 : constant Version_32 := 16#f5c4f553#;
    pragma Export (C, u00081, "system__file_control_blockS");
-   u00082 : constant Version_32 := 16#2c978614#;
+   u00082 : constant Version_32 := 16#0a505cb7#;
    pragma Export (C, u00082, "courseworkB");
-   u00083 : constant Version_32 := 16#a39adcf1#;
+   u00083 : constant Version_32 := 16#fa8b438f#;
    pragma Export (C, u00083, "courseworkS");
    u00084 : constant Version_32 := 16#273384e4#;
    pragma Export (C, u00084, "system__img_enum_newB");
    u00085 : constant Version_32 := 16#6917693b#;
    pragma Export (C, u00085, "system__img_enum_newS");
-   u00086 : constant Version_32 := 16#2323a8af#;
-   pragma Export (C, u00086, "system__memoryB");
-   u00087 : constant Version_32 := 16#512609cf#;
-   pragma Export (C, u00087, "system__memoryS");
+   u00086 : constant Version_32 := 16#d763507a#;
+   pragma Export (C, u00086, "system__val_intB");
+   u00087 : constant Version_32 := 16#40fe45c4#;
+   pragma Export (C, u00087, "system__val_intS");
+   u00088 : constant Version_32 := 16#1d9142a4#;
+   pragma Export (C, u00088, "system__val_unsB");
+   u00089 : constant Version_32 := 16#2c75fe43#;
+   pragma Export (C, u00089, "system__val_unsS");
+   u00090 : constant Version_32 := 16#2323a8af#;
+   pragma Export (C, u00090, "system__memoryB");
+   u00091 : constant Version_32 := 16#512609cf#;
+   pragma Export (C, u00091, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -295,6 +303,10 @@ package ada_main is
    --  ada.finalization%s
    --  system.file_io%s
    --  system.file_io%b
+   --  system.val_uns%s
+   --  system.val_uns%b
+   --  system.val_int%s
+   --  system.val_int%b
    --  ada.text_io%s
    --  ada.text_io%b
    --  coursework%s
