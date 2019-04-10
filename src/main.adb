@@ -66,15 +66,16 @@ begin
          Put("    Overide to Low (1), Normal (2), Run Out (3)): ");
          Get(inp);
          if(inp = "1") then
-            sub.oxn := Low;
             Put_Line("    Oxegen is LOW!");
+            checkOxg("Low");
          end if;
          if(inp = "2") then
-            sub.oxn := Present;
+
+            checkOxg("Present");
          end if;
          if(inp = "3") then
-            sub.oxn := Absent;
-            checkOxg;
+
+            checkOxg("Absent");
          end if;
 
       elsif(inp = "3") then

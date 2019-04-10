@@ -42,11 +42,11 @@ is
      Pre => sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked,
      Post => sub.stat = Surfaced and then sub.air(1) = Locked and then sub.air(2) = Locked;
 
-   procedure checkOxg(d : String) with
+   procedure overideOxegen(d : String) with
      Global => (In_Out => sub),
      Pre => sub.air(1) = Locked and then sub.air(2) = Locked;
 
-   procedure checkReactor with
+   procedure overideReactor with
      Global => (In_Out => sub),
      Pre => sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked;
 
