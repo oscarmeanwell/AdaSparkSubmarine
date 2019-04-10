@@ -8,18 +8,29 @@ is
    type AirArray is array (Index) of Airlock;
    type Diving is (True, False);
 
+   MAXDIVE : constant := 1000;
+
+   type DiveRecord is record
+      isDiving : Diving;
+      maxDepth : Integer;
+      currentDepth : Integer;
+      safeDiveDepth : Integer;
+   end record;
+
    type Submarine is record
       air : AirArray;
       oxn : Oxegen;
       stat : Status;
       reac : ReactorHeat;
-      dive : Diving;
+      dive : DiveRecord;
    end record;
 
-   sub : Submarine := (oxn => Present, stat => Surfaced, air => (Closed, Closed),
-                       reac => Normal, dive => False);
+   diveR : DiveRecord := (isDiving => False, maxDepth => MAXDIVE, currentDepth => 0, safeDiveDepth => MAXDIVE - 100);
 
-   currentDepth : Integer := 0;
+   sub : Submarine := (oxn => Present, stat => Surfaced, air => (Closed, Closed),
+                       reac => Normal, dive => diveR);
+
+
 
    procedure submergeSub with
      Global => (In_Out => sub),
@@ -47,8 +58,9 @@ is
 
    procedure diveSub with
      Global => (In_Out => sub),
-     Pre => sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed and then sub.air(2) = Closed,
-     Post => sub.stat = Submerged;
+     Pre => sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
+         and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth,
+     Post => sub.stat = Submerged and then sub.dive.currentDepth > sub.dive.currentDepth'Old;
 
    procedure closeAirlock with
      Global => (In_Out => sub),

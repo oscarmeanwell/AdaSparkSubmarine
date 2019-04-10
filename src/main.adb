@@ -26,8 +26,8 @@ procedure printSub is
       Put_Line(sub.reac'Image);
       Put("   Oxegen is: ");
       Put_Line(sub.oxn'Image);
-      Put("   Diving is: ");
-      Put_Line(sub.dive'Image);
+      Put("   Depth is: ");
+      Put_Line(sub.dive.currentDepth'Image);
 
    end printSub;
 begin
@@ -87,7 +87,8 @@ begin
          end if;
       end if;
       if(inp = "4") then
-         Put_Line("test");
+         Put_Line("    Attempting to dive");
+         diveSub;
       end if;
       if(inp = "5") then
          Put("    Open airlock (o), Close Airlock (c): ");

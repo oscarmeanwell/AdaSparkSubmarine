@@ -19,12 +19,12 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		8ecb9f23 OO PK IL
+U ada_main%b		b__main.adb		e0cf2c7c OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z system%s		system.ads		system.ali
 
-U ada_main%s		b__main.ads		b2902374 EE NE OO PK IL
+U ada_main%s		b__main.ads		216585e7 EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -32,8 +32,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20180524051735 76789da1 ada%s
 D a-except.ads		20180524051735 291912d5 ada.exceptions%s
 D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
-D b__main.ads		20190410105134 d29cfe92 ada_main%s
-D b__main.adb		20190410105134 754e7364 ada_main%b
+D b__main.ads		20190410114053 41695801 ada_main%s
+D b__main.adb		20190410114053 88bf66a8 ada_main%b
 D system.ads		20180524051735 085b6ffb system%s
 D s-parame.ads		20180524051736 48ec542b system.parameters%s
 D s-secsta.ads		20180524051736 20bbe636 system.secondary_stack%s
@@ -45,19 +45,19 @@ X 1 ada.ads
 X 2 a-except.ads
 54K13*Exceptions 349e19 5|6w10
 X 4 b__main.ads
-6K9*ada_main 305l5 305e13 5|8b14 224l5 224t13
-8i4*gnat_argc{integer} 12m22 12r22 5|202m7
-9m4*gnat_argv{6|67M9} 13m22 13r22 5|203m7
-10m4*gnat_envp{6|67M9} 14m22 14r22 5|204m7
-16i4*gnat_exit_status{integer} 17m22 17r22 5|211r15
+6K9*ada_main 305l5 305e13 5|8b14 225l5 225t13
+8i4*gnat_argc{integer} 12m22 12r22 5|203m7
+9m4*gnat_argv{6|67M9} 13m22 13r22 5|204m7
+10m4*gnat_envp{6|67M9} 14m22 14r22 5|205m7
+16i4*gnat_exit_status{integer} 17m22 17r22 5|212r15
 19a4*GNAT_Version{string} 21r22
-23a4*Ada_Main_Program_Name{string} 24r22 5|198r52
-26U14*adainit 27i<c,adainit>22 5|74b14 180l8 180t15 207s7
-29U14*adafinal 30i<c,adafinal>22 5|56b14 70l8 70t16 209s7
-32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|185b13 212t7
-33i7 argc{integer} 5|186b7 202r20
-34m7 argv{6|67M9} 5|187b7 203r20
-35m7 envp{6|67M9} 5|188b7 204r20
+23a4*Ada_Main_Program_Name{string} 24r22 5|199r52
+26U14*adainit 27i<c,adainit>22 5|74b14 181l8 181t15 208s7
+29U14*adafinal 30i<c,adafinal>22 5|56b14 70l8 70t16 210s7
+32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|186b13 213t7
+33i7 argc{integer} 5|187b7 203r20
+34m7 argv{6|67M9} 5|188b7 204r20
+35m7 envp{6|67M9} 5|189b7 205r20
 39M9*Version_32 40r22 42r22 44r22 46r22 48r22 50r22 52r22 54r22 56r22 58r22
 . 60r22 62r22 64r22 66r22 68r22 70r22 72r22 74r22 76r22 78r22 80r22 82r22
 . 84r22 86r22 88r22 90r22 92r22 94r22 96r22 98r22 100r22 102r22 104r22 106r22
@@ -167,7 +167,7 @@ X 5 b__main.adb
 20i4 E74{short_integer} 20m45 20r45 173m7 173r14
 21i4 E73{short_integer} 21m45 21r45 45m10 45r17 175m7 175r14
 22i4 E06{short_integer} 22m45 22r45 34m7 34r14 178m7 178r14
-23i4 E83{short_integer} 23m45 23r45 179m7 179r14
+23i4 E83{short_integer} 23m45 23r45 180m7 180r14
 25a4 Sec_Default_Sized_Stacks(8|45R9) 145m32 145r32
 27a4 Local_Priority_Specific_Dispatching{string} 132r9
 28a4 Local_Interrupt_States{string} 135r27
@@ -202,17 +202,17 @@ X 5 b__main.adb
 113p7*Finalize_Library_Objects{72P9} 114m25 114r25 149m7
 115i7*Binder_Sec_Stacks_Count{natural} 116m27 116r27 144m7
 117m7*Default_Sized_SS_Pool{6|67M9} 118m27 118r27 145m7
-182U14 Ada_Main_Program 183b<ada,_ada_main>24 208s7
-191U17*Initialize 191>29 192b<c,__gnat_initialize>25 206s7
-191m29 Addr{6|67M9}
-194U17*Finalize 195b<c,__gnat_finalize>25 210s7
-196a7 SEH(integer) 206m19 206r19
-198m7 Ensure_Reference{6|67M9} 199r24
+183U14 Ada_Main_Program 184b<ada,_ada_main>24 209s7
+192U17*Initialize 192>29 193b<c,__gnat_initialize>25 207s7
+192m29 Addr{6|67M9}
+195U17*Finalize 196b<c,__gnat_finalize>25 211s7
+197a7 SEH(integer) 207m19 207r19
+199m7 Ensure_Reference{6|67M9} 200r24
 X 6 system.ads
 37K9*System 4|3w6 4r6 5r6 9r16 10r16 34r14 35r14 5|25r57 25r90 87r39 93r26
-. 103r38 107r23 117r31 143r39 187r14 188r14 191r36 198r34 6|174e11
-67M9*Address 4|9r23 10r23 34r21 35r21 5|87r46 93r33 107r30 117r38 187r21
-. 188r21 191r43 198r41
+. 103r38 107r23 117r31 143r39 188r14 189r14 192r36 199r34 6|174e11
+67M9*Address 4|9r23 10r23 34r21 35r21 5|87r46 93r33 107r30 117r38 188r21
+. 189r21 192r43 199r41
 X 7 s-parame.ads
 51K16*Parameters 4|4w13 5|25r97 103r45 143r46 7|198e22
 58I9*Size_Type<long_integer> 5|103r56

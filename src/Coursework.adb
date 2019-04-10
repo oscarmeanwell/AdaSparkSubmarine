@@ -5,6 +5,7 @@ is
       --operationPermitted;
       if(sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
          sub.stat := Submerged;
+         sub.dive.currentDepth := 10;
       end if;
    end submergeSub;
 
@@ -22,6 +23,7 @@ is
    begin
       if(sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed) then
          sub.stat := Surfaced;
+         sub.dive.currentDepth := 0;
       end if;
    end surfaceSub;
 
@@ -45,8 +47,12 @@ is
    procedure diveSub is
       --Dive the sub
    begin
-      if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed and then sub.air(2) = Closed) then
-         sub.dive := True;
+      if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
+         and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then
+
+         sub.dive.isDiving := True;
+
+         sub.dive.currentDepth := sub.dive.currentDepth + 100;
          --Is this how to do this?
       end if;
    end diveSub;
