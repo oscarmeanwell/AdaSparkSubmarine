@@ -105,8 +105,8 @@ begin
                Put_Line(inp);
                closeAirlock(Integer'Value(inp));
             end if;
-         end if;
-         if(inp = "2") then
+         --end if;
+         elsif(inp = "2") then
             Put("    Lock door number (1,2): ");
             Get(inp);
             Put("Attempting to lock door ");
@@ -137,5 +137,3 @@ begin
       end if;
    end loop;
 end Main;
-
-

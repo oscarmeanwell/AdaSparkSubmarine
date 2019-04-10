@@ -19,12 +19,12 @@ Total                            39    6 (15%)          .          .     33 (85%
 Analyzed 2 units
 in unit coursework, 11 subprograms and packages out of 11 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.closeAirlock at coursework.ads:72 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.closeAirlock at coursework.ads:71 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
   Coursework.diveSub at coursework.ads:63 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
-  Coursework.fireTorpedeo at coursework.ads:98 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.loadTorpedeo at coursework.ads:89 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (8 checks)
-  Coursework.lockDoor at coursework.ads:83 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.openAirlock at coursework.ads:77 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Coursework.fireTorpedeo at coursework.ads:97 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.loadTorpedeo at coursework.ads:88 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (8 checks)
+  Coursework.lockDoor at coursework.ads:82 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.openAirlock at coursework.ads:76 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
   Coursework.overideOxegen at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.overideReactor at coursework.ads:58 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.submergeSub at coursework.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)

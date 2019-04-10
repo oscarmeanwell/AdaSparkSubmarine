@@ -3,7 +3,7 @@ is
 
    procedure submergeSub is
    begin
-      if(sub.air(1) = Locked and then sub.air(2) = Locked and then sub.oxn = Present and then sub.reac = Normal) then
+      if(sub.air(1) = Locked and then sub.air(2) = Locked and then sub.oxn /= Absent and then sub.reac = Normal) then
          sub.stat := Submerged;
          sub.dive.currentDepth := 10;
       end if;

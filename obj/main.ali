@@ -12,7 +12,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		5e96eccd NE OO SU
+U main%b		main.adb		ef5042e5 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -32,10 +32,10 @@ D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051736 491b781d ada.tags%s
 D a-textio.ads		20180524051736 881db35a ada.text_io%s
 D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190410160107 24dfef0c coursework%s
+D coursework.ads	20190410180421 8a4e1a39 coursework%s
 D interfac.ads		20180524051734 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
-D main.adb		20190410164751 f254b09b main%b
+D main.adb		20190410180706 ed03eb86 main%b
 D system.ads		20180524051735 085b6ffb system%s
 D s-conca2.ads		20180524051735 02a0d7d0 system.concat_2%s
 D s-conca3.ads		20180524051736 0b705ca5 system.concat_3%s
@@ -68,7 +68,7 @@ X 6 a-textio.ads
 . 31s74 33s4 37s7 43s10 47s13 52s13 60s13 84s10 97s16 105s16 113s13 119s10
 . 125s13 131s13
 X 8 coursework.ads
-1K9*Coursework 97e15 11|1w6 1r22
+1K9*Coursework 102e15 11|1w6 1r22
 6n25*Normal{6E9} 11|80r25
 6n33*Overheated{6E9} 11|76r25
 7A9*AirArray(3E9)<integer>
@@ -89,17 +89,17 @@ X 8 coursework.ads
 54U14*overideOxegen 11|61s13 65s13 69s13
 58U14*overideReactor 11|77s13
 63U14*diveSub 11|85s10
-70U14*closeAirlock 11|106s16
-75U14*openAirlock 11|98s16
-81U14*lockDoor 11|114s13
-86U14*loadTorpedeo 11|126s13
-92U14*fireTorpedeo 11|132s13
+71U14*closeAirlock 11|106s16
+76U14*openAirlock 11|98s16
+82U14*lockDoor 11|114s13
+88U14*loadTorpedeo 11|126s13
+97U14*fireTorpedeo 11|132s13
 X 11 main.adb
 5U11*Main 5b11 139l5 139t9
 6b1 simulationActive{boolean} 35r10 136m10
 7a1 inp{string} 39m11 41r10 45m14 46r13 51r13 56r13 58m14 59r13 63r13 67r13
 . 72r13 74m14 75r13 79r13 83r13 87r13 89m14 90r13 92m17 93r16 95m20 97r25
-. 98r42 101r16 103m20 105r25 106r43 109r13 111m17 113r22 114r36 118r13 121m14
+. 98r42 101r16 103m20 105r25 106r43 109r16 111m17 113r22 114r36 118r13 121m14
 . 122r13 124m17 125r62 126r40 128r16 130m17 131r64 132r40 135r13
 8i1 last{integer}
 9a1 t1{string} 31r13
