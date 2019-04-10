@@ -62,20 +62,26 @@ begin
             surfaceSub;
          end if;
 
-      end if;
-      if(inp = "2") then
-         Put("    Overide to Low (l), Normal (n): ");
+      --end if;
+      elsif(inp = "2") then
+         Put("    Overide to Low (1), Normal (2), Run Out (3)): ");
          Get(inp);
-         if(inp = "l") then
+         if(inp = "1") then
             sub.oxn := Low;
             checkOxg;
          end if;
-         if(inp = "n") then
+         if(inp = "2") then
             sub.oxn := Present;
             checkOxg;
          end if;
-      end if;
-      if(inp = "3") then
+         if(inp = "3") then
+            sub.oxn := Absent;
+            checkOxg;
+            Put_Line("    Oxegen is LOW!");
+         end if;
+
+      --end elsif;
+      elsif(inp = "3") then
          Put("    Reactor overheated(1), normal (2): ");
          Get(inp);
          if(inp = "1") then
@@ -85,18 +91,18 @@ begin
          if(inp = "2") then
             sub.reac := Normal;
          end if;
-      end if;
-      if(inp = "4") then
+      --end if;
+      elsif(inp = "4") then
          Put_Line("    Attempting to dive");
          diveSub;
-      end if;
-      if(inp = "5") then
+      --end if;
+      elsif(inp = "5") then
          Put("    Open airlock (o), Close Airlock (c): ");
          Get(inp);
          if(inp = "o") then
             Put("    Airlock Number (1, 2): ");
             Get(inp);
-            Put("    Attempting to Open Airlock");
+            Put("    Attempting to Open Airlock ");
             Put_Line(inp);
             openAirlock(Integer'Value(inp));
          end if;
@@ -104,16 +110,16 @@ begin
          if(inp = "c") then
             Put("    Airlock Number (1, 2): ");
             Get(inp);
-            Put("    Attempting to Close Airlock");
+            Put("    Attempting to Close Airlock ");
             Put_Line(inp);
             closeAirlock(Integer'Value(inp));
          end if;
 
-      end if;
-      if(inp = "6") then
+      --end if;
+      elsif(inp = "6") then
          Put_Line("test");
-      end if;
-      if(inp = "7") then
+      --end if;
+      elsif(inp = "7") then
          simulationActive := False;
       end if;
    end loop;

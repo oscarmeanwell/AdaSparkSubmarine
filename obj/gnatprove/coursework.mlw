@@ -2293,6 +2293,63 @@ module Coursework__diving__rep
 
 end
 
+(* Module for axiomatizing type "doorlocked" defined at coursework.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Coursework__doorlocked
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type doorlocked 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = doorlocked, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type doorlocked__ref =
+  { mutable doorlocked__content "model_trace:" "name:" : doorlocked }
+ 
+ function doorlocked__ref___projection 
+   (a : doorlocked__ref) : doorlocked =
+  a.doorlocked__content
+ 
+ meta "model_projection" function doorlocked__ref___projection
+ 
+ meta "inline : no" function doorlocked__ref___projection
+ 
+ val doorlocked__havoc 
+   (x : doorlocked__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "doorlocked" defined at coursework.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Coursework__doorlocked__rep
+ use        Coursework__doorlocked
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Coursework__doorlocked.doorlocked, 
+ predicate in_range = Coursework__doorlocked.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
 (* Module for axiomatizing the record theory associated to type "diverecord" defined at coursework.ads:13, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
 module Coursework__diverecord__rep
  use import "_gnatprove_standard".Main
@@ -2302,9 +2359,9 @@ module Coursework__diverecord__rep
  use        Coursework__diving__rep
 
  type __split_fields =
-  { rec__coursework__diverecord__isdiving "model_trace:.2785" "name:isDiving" : Coursework__diving.diving; rec__coursework__diverecord__maxdepth "model_trace:.2795" "name:maxDepth" : Standard__integer.integer; rec__coursework__diverecord__currentdepth "model_trace:.2805" "name:currentDepth" : Standard__integer.integer; rec__coursework__diverecord__safedivedepth "model_trace:.2815" "name:safeDiveDepth" : Standard__integer.integer }
+  { rec__coursework__diverecord__isdiving "model_trace:.2834" "name:isDiving" : Coursework__diving.diving; rec__coursework__diverecord__maxdepth "model_trace:.2844" "name:maxDepth" : Standard__integer.integer; rec__coursework__diverecord__currentdepth "model_trace:.2854" "name:currentDepth" : Standard__integer.integer; rec__coursework__diverecord__safedivedepth "model_trace:.2864" "name:safeDiveDepth" : Standard__integer.integer }
  
- function __split_fields_isDiving__projection "model_trace:.2785" "name:isDiving" 
+ function __split_fields_isDiving__projection "model_trace:.2834" "name:isDiving" 
    (a : __split_fields) : Coursework__diving.diving =
   a.rec__coursework__diverecord__isdiving
  
@@ -2312,7 +2369,7 @@ module Coursework__diverecord__rep
  
  meta "inline : no" function __split_fields_isDiving__projection
  
- function __split_fields_maxDepth__projection "model_trace:.2795" "name:maxDepth" 
+ function __split_fields_maxDepth__projection "model_trace:.2844" "name:maxDepth" 
    (a : __split_fields) : Standard__integer.integer =
   a.rec__coursework__diverecord__maxdepth
  
@@ -2320,7 +2377,7 @@ module Coursework__diverecord__rep
  
  meta "inline : no" function __split_fields_maxDepth__projection
  
- function __split_fields_currentDepth__projection "model_trace:.2805" "name:currentDepth" 
+ function __split_fields_currentDepth__projection "model_trace:.2854" "name:currentDepth" 
    (a : __split_fields) : Standard__integer.integer =
   a.rec__coursework__diverecord__currentdepth
  
@@ -2328,7 +2385,7 @@ module Coursework__diverecord__rep
  
  meta "inline : no" function __split_fields_currentDepth__projection
  
- function __split_fields_safeDiveDepth__projection "model_trace:.2815" "name:safeDiveDepth" 
+ function __split_fields_safeDiveDepth__projection "model_trace:.2864" "name:safeDiveDepth" 
    (a : __split_fields) : Standard__integer.integer =
   a.rec__coursework__diverecord__safedivedepth
  
@@ -2561,9 +2618,9 @@ module Coursework__submarine__rep
  use        Array__Int__Coursework__airlock
 
  type __split_fields =
-  { rec__coursework__submarine__air "model_trace:.2837" "name:air" : Array__Int__Coursework__airlock.map; rec__coursework__submarine__oxn "model_trace:.2847" "name:oxn" : Coursework__oxegen.oxegen; rec__coursework__submarine__stat "model_trace:.2857" "name:stat" : Coursework__status.status; rec__coursework__submarine__reac "model_trace:.2867" "name:reac" : Coursework__reactorheat.reactorheat; rec__coursework__submarine__dive "model_trace:.2877" "name:dive" : Coursework__diverecord.diverecord }
+  { rec__coursework__submarine__air "model_trace:.2886" "name:air" : Array__Int__Coursework__airlock.map; rec__coursework__submarine__oxn "model_trace:.2896" "name:oxn" : Coursework__oxegen.oxegen; rec__coursework__submarine__stat "model_trace:.2906" "name:stat" : Coursework__status.status; rec__coursework__submarine__reac "model_trace:.2916" "name:reac" : Coursework__reactorheat.reactorheat; rec__coursework__submarine__dive "model_trace:.2926" "name:dive" : Coursework__diverecord.diverecord }
  
- function __split_fields_air__projection "model_trace:.2837" "name:air" 
+ function __split_fields_air__projection "model_trace:.2886" "name:air" 
    (a : __split_fields) : Array__Int__Coursework__airlock.map =
   a.rec__coursework__submarine__air
  
@@ -2571,7 +2628,7 @@ module Coursework__submarine__rep
  
  meta "inline : no" function __split_fields_air__projection
  
- function __split_fields_oxn__projection "model_trace:.2847" "name:oxn" 
+ function __split_fields_oxn__projection "model_trace:.2896" "name:oxn" 
    (a : __split_fields) : Coursework__oxegen.oxegen =
   a.rec__coursework__submarine__oxn
  
@@ -2579,7 +2636,7 @@ module Coursework__submarine__rep
  
  meta "inline : no" function __split_fields_oxn__projection
  
- function __split_fields_stat__projection "model_trace:.2857" "name:stat" 
+ function __split_fields_stat__projection "model_trace:.2906" "name:stat" 
    (a : __split_fields) : Coursework__status.status =
   a.rec__coursework__submarine__stat
  
@@ -2587,7 +2644,7 @@ module Coursework__submarine__rep
  
  meta "inline : no" function __split_fields_stat__projection
  
- function __split_fields_reac__projection "model_trace:.2867" "name:reac" 
+ function __split_fields_reac__projection "model_trace:.2916" "name:reac" 
    (a : __split_fields) : Coursework__reactorheat.reactorheat =
   a.rec__coursework__submarine__reac
  
@@ -2595,7 +2652,7 @@ module Coursework__submarine__rep
  
  meta "inline : no" function __split_fields_reac__projection
  
- function __split_fields_dive__projection "model_trace:.2877" "name:dive" 
+ function __split_fields_dive__projection "model_trace:.2926" "name:dive" 
    (a : __split_fields) : Coursework__diverecord.diverecord =
   a.rec__coursework__submarine__dive
  
@@ -2928,11 +2985,30 @@ module Coursework__T4s
 
 end
 
-(* Module for defining the constant "n" defined at coursework.ads:66, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "n" defined at coursework.ads:61, created in Gnat2Why.Decls.Translate_Constant *)
 module Coursework__closeairlock__n
  use import "_gnatprove_standard".Main
 
- function n #"coursework.ads" 66 0 0#"model" "model_trace:3277" "name:n" 
+ function n #"coursework.ads" 61 0 0#"model" "model_trace:3302" "name:n" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "n" defined at coursework.ads:61, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Coursework__closeairlock__n___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "n" defined at coursework.ads:66, created in Gnat2Why.Decls.Translate_Constant *)
+module Coursework__openairlock__n
+ use import "_gnatprove_standard".Main
+
+ function n #"coursework.ads" 66 0 0#"model" "name:n" "model_trace:3369" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2941,7 +3017,7 @@ module Coursework__closeairlock__n
 end
 
 (* Module giving an empty axiom for the entity "n" defined at coursework.ads:66, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Coursework__closeairlock__n___axiom
+module Coursework__openairlock__n___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2951,7 +3027,7 @@ module Coursework__diver
  use import "_gnatprove_standard".Main
  use        Coursework__diverecord
 
- val diver__split_fields #"coursework.ads" 28 0 0#"model_projected" "model_trace:2889" "name:diveR"  : Coursework__diverecord.__split_fields__ref 
+ val diver__split_fields #"coursework.ads" 28 0 0#"model_projected" "model_trace:2938" "name:diveR"  : Coursework__diverecord.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2970,7 +3046,7 @@ module Coursework__sub
  use import "_gnatprove_standard".Main
  use        Coursework__submarine
 
- val sub__split_fields #"coursework.ads" 30 0 0#"model_projected" "model_trace:2913" "name:sub"  : Coursework__submarine.__split_fields__ref 
+ val sub__split_fields #"coursework.ads" 30 0 0#"model_projected" "model_trace:2962" "name:sub"  : Coursework__submarine.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -3346,50 +3422,50 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "submergesub" defined at coursework.ads:35, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "submergesub" defined at coursework.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__submergesub
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openairlock" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Coursework__openairlock
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "surfacesub" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "surfacesub" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__surfacesub
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "checkoxg" defined at coursework.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "checkoxg" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__checkoxg
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "checkreactor" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "checkreactor" defined at coursework.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__checkreactor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "divesub" defined at coursework.ads:59, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "divesub" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__divesub
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "closeairlock" defined at coursework.ads:61, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Coursework__closeairlock
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "openairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Coursework__openairlock
  use import "_gnatprove_standard".Main
 
 
@@ -3534,17 +3610,34 @@ module Coursework__diving___axiom
 
 end
 
+(* Module giving axioms for type "doorlocked" defined at coursework.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Coursework__doorlocked___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Coursework__doorlocked
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_211 : int) (temp___is_init_207 : bool) (temp___skip_constant_208 : bool) (temp___do_toplevel_209 : bool) (temp___do_typ_inv_210 : bool)  =
+  (if (( temp___is_init_207 \/ (Coursework__doorlocked.first <= Coursework__doorlocked.last) )) then (
+   (Coursework__doorlocked.dynamic_property Coursework__doorlocked.first Coursework__doorlocked.last temp___expr_211)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_212 : int) (temp___skip_top_level_213 : bool)  =
+  true
+
+end
+
 (* Module giving axioms for type "diverecord" defined at coursework.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Coursework__diverecord___axiom
  use import "_gnatprove_standard".Main
  use        Coursework__diverecord
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_211 : Coursework__diverecord.diverecord) (temp___is_init_207 : bool) (temp___skip_constant_208 : bool) (temp___do_toplevel_209 : bool) (temp___do_typ_inv_210 : bool)  =
+   (temp___expr_218 : Coursework__diverecord.diverecord) (temp___is_init_214 : bool) (temp___skip_constant_215 : bool) (temp___do_toplevel_216 : bool) (temp___do_typ_inv_217 : bool)  =
   true
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_212 : Coursework__diverecord.diverecord) (temp___skip_top_level_213 : bool)  =
+   (temp___expr_219 : Coursework__diverecord.diverecord) (temp___skip_top_level_220 : bool)  =
   true
 
 end
@@ -3555,11 +3648,11 @@ module Coursework__submarine___axiom
  use        Coursework__submarine
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_222 : Coursework__submarine.submarine) (temp___is_init_218 : bool) (temp___skip_constant_219 : bool) (temp___do_toplevel_220 : bool) (temp___do_typ_inv_221 : bool)  =
+   (temp___expr_229 : Coursework__submarine.submarine) (temp___is_init_225 : bool) (temp___skip_constant_226 : bool) (temp___do_toplevel_227 : bool) (temp___do_typ_inv_228 : bool)  =
   true
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_224 : Coursework__submarine.submarine) (temp___skip_top_level_225 : bool)  =
+   (temp___expr_231 : Coursework__submarine.submarine) (temp___skip_top_level_232 : bool)  =
   true
 
 end
@@ -3579,15 +3672,15 @@ module Coursework__T4s___axiom
 end
 
 (* Module for declaring an abstract function for the aggregate at coursework.ads:30, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
-module Temp_____aggregate_def_271
+module Temp_____aggregate_def_279
  use import "_gnatprove_standard".Main
  use        Array__Int__Coursework__airlock
 
- function temp_____aggregate_def_271 
-   (temp___273 : int) (temp___274 : int) : Array__Int__Coursework__airlock.map
+ function temp_____aggregate_def_279 
+   (temp___281 : int) (temp___282 : int) : Array__Int__Coursework__airlock.map
 
 end
-(* Module for declaring a program function (and possibly an axiom) for "submergesub" defined at coursework.ads:35, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "submergesub" defined at coursework.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__submergesub___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3596,60 +3689,37 @@ module Coursework__submergesub___axiom
  use        Coursework__airlock__rep
  use        Coursework__oxegen
  use        Coursework__oxegen__rep
+ use        Coursework__status
+ use        Coursework__status__rep
+ use        Coursework__reactorheat
+ use        Coursework__reactorheat__rep
  use        Array__Int__Coursework__airlock
  use        Coursework__submarine
  use        Coursework__submarine___axiom
  use        Coursework__sub
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
 
  val submergesub 
    (__void_param : unit) : unit
-  requires {  ( ((Coursework__airlock__rep.to_rep (let temp___238 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___238 1)))
-  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___237 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___237 2)))
-  ) = 1) /\ ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) ) }
-  ensures {  ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
-  reads {Coursework__sub.sub__split_fields}
-  writes {Coursework__sub.sub__split_fields}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "openairlock" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Coursework__openairlock___axiom
- use        Coursework__sub
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Coursework__airlock
- use        Coursework__airlock__rep
- use        Array__Int__Coursework__airlock
- use        Coursework__submarine
- use        Coursework__submarine___axiom
- use        Coursework__sub
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
-
- val openairlock 
-   (__void_param : unit) : unit
-  requires {  ( ((Coursework__airlock__rep.to_rep (let temp___242 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___242 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___241 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___241 2)))
-  ) = 1) ) }
-  ensures {  ( ( ((Coursework__airlock__rep.to_rep (let temp___243 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___243 1)))
-  ) = 1) \/ ((Coursework__airlock__rep.to_rep (let temp___244 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___245 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___245 1)))
+  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___244 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
    (Array__Int__Coursework__airlock.get temp___244 2)))
-  ) = 1) ) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
+  ) = 1) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Coursework__reactorheat__rep.to_rep (Coursework__submarine.rec__coursework__submarine__reac (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) ) ) ) }
+  ensures {  ( ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___247 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___247 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___246 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___246 2)))
+  ) = 1) ) ) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
   reads {Coursework__sub.sub__split_fields}
   writes {Coursework__sub.sub__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "surfacesub" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "surfacesub" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__surfacesub___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3669,22 +3739,22 @@ module Coursework__surfacesub___axiom
 
  val surfacesub 
    (__void_param : unit) : unit
-  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___248 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___248 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___247 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___247 2)))
+  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___251 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___251 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___250 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___250 2)))
   ) = 1) ) ) }
-  ensures {  ( ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___250 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___250 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___249 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___249 2)))
+  ensures {  ( ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___253 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___253 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___252 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___252 2)))
   ) = 1) ) ) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
   reads {Coursework__sub.sub__split_fields}
   writes {Coursework__sub.sub__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "checkoxg" defined at coursework.ads:50, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "checkoxg" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__checkoxg___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3700,10 +3770,10 @@ module Coursework__checkoxg___axiom
 
  val checkoxg 
    (__void_param : unit) : unit
-  requires {  ( ((Coursework__airlock__rep.to_rep (let temp___254 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___254 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___253 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___253 2)))
+  requires {  ( ((Coursework__airlock__rep.to_rep (let temp___257 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___257 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___256 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___256 2)))
   ) = 1) ) }
   ensures {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) }
   reads {Coursework__sub.sub__split_fields}
@@ -3711,7 +3781,7 @@ module Coursework__checkoxg___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "checkreactor" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "checkreactor" defined at coursework.ads:49, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__checkreactor___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3729,10 +3799,10 @@ module Coursework__checkreactor___axiom
 
  val checkreactor 
    (__void_param : unit) : unit
-  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___258 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___258 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___257 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___257 2)))
+  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___261 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___261 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___260 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___260 2)))
   ) = 1) ) ) }
   ensures {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) }
   reads {Coursework__sub.sub__split_fields}
@@ -3740,7 +3810,7 @@ module Coursework__checkreactor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divesub" defined at coursework.ads:59, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "divesub" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__divesub___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3763,10 +3833,10 @@ module Coursework__divesub___axiom
 
  val divesub 
    (__void_param : unit) : unit
-  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___262 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___262 1)))
-  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___261 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___261 2)))
+  requires {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___265 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___265 1)))
+  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___264 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___264 2)))
   ) = 1) /\ ( ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) < (Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__safedivedepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) /\ ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) < 2147483547) ) ) ) ) ) }
   ensures {  ( ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) > (Standard__integer__rep.to_rep (old (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) ))) ) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
   reads {Coursework__sub.sub__split_fields}
@@ -3774,7 +3844,7 @@ module Coursework__divesub___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "closeairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "closeairlock" defined at coursework.ads:61, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Coursework__closeairlock___axiom
  use        Coursework__sub
  use import "_gnatprove_standard".Main
@@ -3795,39 +3865,69 @@ module Coursework__closeairlock___axiom
 
  val closeairlock 
    (n : int) : unit
-  requires {  ( ( (n = 1) \/ (n = 2) ) /\ ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Boolean.andb (Boolean.orb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___265 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___265 1)))
-  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___266 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___266 2)))
-  ) 0)) (Boolean.notb (Boolean.andb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___265 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___265 1)))
-  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___266 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___266 2)))
+  requires {  ( ( (n = 1) \/ (n = 2) ) /\ ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Boolean.andb (Boolean.orb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___268 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___268 1)))
+  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___269 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___269 2)))
+  ) 0)) (Boolean.notb (Boolean.andb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___268 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___268 1)))
+  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___269 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___269 2)))
   ) 0)))) = True) ) ) }
-  ensures {  ( ((Coursework__airlock__rep.to_rep (let temp___267 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___267 n)))
+  ensures {  ( ((Coursework__airlock__rep.to_rep (let temp___270 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___270 n)))
   ) = 1) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
   reads {Coursework__sub.sub__split_fields}
   writes {Coursework__sub.sub__split_fields}
 
 end
 
+(* Module for declaring a program function (and possibly an axiom) for "openairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Coursework__openairlock___axiom
+ use        Coursework__sub
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Coursework__airlock
+ use        Coursework__airlock__rep
+ use        Array__Int__Coursework__airlock
+ use        Coursework__submarine
+ use        Coursework__submarine___axiom
+ use        Coursework__sub
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+
+ val openairlock 
+   (n : int) : unit
+  requires {  ( ( (n = 1) \/ (n = 2) ) /\ ( ((Coursework__airlock__rep.to_rep (let temp___274 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___274 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___273 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___273 2)))
+  ) = 1) ) ) }
+  ensures {  ( ((Coursework__airlock__rep.to_rep (let temp___275 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___275 n)))
+  ) = 0) /\ (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True True True True) ) }
+  reads {Coursework__sub.sub__split_fields}
+  writes {Coursework__sub.sub__split_fields}
+
+end
+
 (* Module for defining the value of the aggregate at coursework.ads:30, created in Gnat2Why.Expr.Transform_Aggregate.Generate_Logic_Function *)
-module Temp_____aggregate_def_271___axiom
+module Temp_____aggregate_def_279___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Coursework__airlock
  use        Coursework__airlock___axiom
  use        Coursework__airlock__rep
  use        Array__Int__Coursework__airlock
- use        Temp_____aggregate_def_271
+ use        Temp_____aggregate_def_279
  use        Array__Int__Coursework__airlock
 
  axiom def_axiom :
-  (forall temp___273   temp___274   : int.
-   (let temp___272 = (Temp_____aggregate_def_271.temp_____aggregate_def_271 temp___273 temp___274) in (
-    (if (( (Coursework__airlock___axiom.dynamic_invariant temp___273 True True True True) /\ (Coursework__airlock___axiom.dynamic_invariant temp___274 True True True True) )) then (
-     ( ((Coursework__airlock__rep.to_rep (Array__Int__Coursework__airlock.get temp___272 1)) = temp___273) /\ ((Coursework__airlock__rep.to_rep (Array__Int__Coursework__airlock.get temp___272 2)) = temp___274) )) else true)))
+  (forall temp___281   temp___282   : int.
+   (let temp___280 = (Temp_____aggregate_def_279.temp_____aggregate_def_279 temp___281 temp___282) in (
+    (if (( (Coursework__airlock___axiom.dynamic_invariant temp___281 True True True True) /\ (Coursework__airlock___axiom.dynamic_invariant temp___282 True True True True) )) then (
+     ( ((Coursework__airlock__rep.to_rep (Array__Int__Coursework__airlock.get temp___280 1)) = temp___281) /\ ((Coursework__airlock__rep.to_rep (Array__Int__Coursework__airlock.get temp___280 2)) = temp___282) )) else true)))
   )
 
 end
@@ -3852,7 +3952,7 @@ module Coursework__package_def
  use        Coursework__diver
  use        Coursework__sub
  use        Array__Int__Coursework__airlock
- use        Temp_____aggregate_def_271
+ use        Temp_____aggregate_def_279
  use        Array__Int__Coursework__airlock
  use        Standard__integer___axiom
  use        Coursework__airlock___axiom
@@ -3865,7 +3965,7 @@ module Coursework__package_def
  use        Coursework__submarine___axiom
  use        Coursework__diver___axiom
  use        Coursework__sub___axiom
- use        Temp_____aggregate_def_271___axiom
+ use        Temp_____aggregate_def_279___axiom
 
  let def #"coursework.ads" 1 0 0#"GP_Subp:coursework.ads:1" "W:diverges:N" 
    (__void_param : unit)
@@ -3881,6 +3981,7 @@ module Coursework__package_def
   (#"coursework.ads" 7 0 0# ());
   (#"coursework.ads" 8 0 0# ());
   (#"coursework.ads" 9 0 0# ());
+  (#"coursework.ads" 10 0 0# ());
   (#"coursework.ads" 11 0 0# ());
   (#"coursework.ads" 13 0 0# ());
   (#"coursework.ads" 20 0 0# ());
@@ -3898,48 +3999,53 @@ module Coursework__package_def
   (#"coursework.ads" 30 0 0# ());
   (#"coursework.ads" 30 0 0# ());
   (#"coursework.ads" 31 0 0# ());
-  (#"coursework.ads" 30 0 0# ( (let coursework__sub__assume = { Coursework__submarine.__split_fields = { Coursework__submarine.rec__coursework__submarine__air = (Temp_____aggregate_def_271.temp_____aggregate_def_271(1) (1)); Coursework__submarine.rec__coursework__submarine__oxn = (Coursework__oxegen__rep.of_rep(0)); Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(1)); Coursework__submarine.rec__coursework__submarine__reac = (Coursework__reactorheat__rep.of_rep(0)); Coursework__submarine.rec__coursework__submarine__dive = { Coursework__diverecord.__split_fields = Coursework__diver.diver__split_fields.Coursework__diverecord.__split_fields__content } } } in (
+  (#"coursework.ads" 30 0 0# ( (let coursework__sub__assume = { Coursework__submarine.__split_fields = { Coursework__submarine.rec__coursework__submarine__air = (Temp_____aggregate_def_279.temp_____aggregate_def_279(1) (1)); Coursework__submarine.rec__coursework__submarine__oxn = (Coursework__oxegen__rep.of_rep(0)); Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(1)); Coursework__submarine.rec__coursework__submarine__reac = (Coursework__reactorheat__rep.of_rep(0)); Coursework__submarine.rec__coursework__submarine__dive = { Coursework__diverecord.__split_fields = Coursework__diver.diver__split_fields.Coursework__diverecord.__split_fields__content } } } in (
    #"coursework.ads" 30 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(coursework__sub__assume)) )))
   ;
   #"coursework.ads" 30 0 0# assume { #"coursework.ads" 30 0 0# (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) } ));
-  (#"coursework.ads" 35 0 0# ());
+  (#"coursework.ads" 34 0 0# ());
   (#"coursework.ads" 38 0 0# ());
-  (#"coursework.ads" 37 0 0# ());
-  (#"coursework.ads" 37 0 0# ());
+  (#"coursework.ads" 38 0 0# ());
+  (#"coursework.ads" 38 0 0# ());
+  (#"coursework.ads" 36 0 0# ());
+  (#"coursework.ads" 36 0 0# ());
+  (#"coursework.ads" 36 0 0# ());
   (#"coursework.ads" 37 0 0# ());
   (#"coursework.ads" 36 0 0# ());
+  (#"coursework.ads" 35 0 0# ());
   (#"coursework.ads" 40 0 0# ());
   (#"coursework.ads" 43 0 0# ());
+  (#"coursework.ads" 43 0 0# ());
+  (#"coursework.ads" 43 0 0# ());
+  (#"coursework.ads" 42 0 0# ());
   (#"coursework.ads" 42 0 0# ());
   (#"coursework.ads" 42 0 0# ());
   (#"coursework.ads" 41 0 0# ());
   (#"coursework.ads" 45 0 0# ());
-  (#"coursework.ads" 48 0 0# ());
-  (#"coursework.ads" 48 0 0# ());
-  (#"coursework.ads" 48 0 0# ());
-  (#"coursework.ads" 47 0 0# ());
   (#"coursework.ads" 47 0 0# ());
   (#"coursework.ads" 47 0 0# ());
   (#"coursework.ads" 46 0 0# ());
-  (#"coursework.ads" 50 0 0# ());
-  (#"coursework.ads" 52 0 0# ());
-  (#"coursework.ads" 52 0 0# ());
+  (#"coursework.ads" 49 0 0# ());
   (#"coursework.ads" 51 0 0# ());
+  (#"coursework.ads" 51 0 0# ());
+  (#"coursework.ads" 51 0 0# ());
+  (#"coursework.ads" 50 0 0# ());
   (#"coursework.ads" 54 0 0# ());
+  (#"coursework.ads" 59 0 0# ());
+  (#"coursework.ads" 59 0 0# ());
   (#"coursework.ads" 56 0 0# ());
   (#"coursework.ads" 56 0 0# ());
+  (#"coursework.ads" 56 0 0# ());
+  (#"coursework.ads" 57 0 0# ());
+  (#"coursework.ads" 57 0 0# ());
   (#"coursework.ads" 56 0 0# ());
   (#"coursework.ads" 55 0 0# ());
-  (#"coursework.ads" 59 0 0# ());
+  (#"coursework.ads" 61 0 0# ());
   (#"coursework.ads" 64 0 0# ());
-  (#"coursework.ads" 64 0 0# ());
-  (#"coursework.ads" 61 0 0# ());
-  (#"coursework.ads" 61 0 0# ());
-  (#"coursework.ads" 61 0 0# ());
+  (#"coursework.ads" 63 0 0# ());
+  (#"coursework.ads" 63 0 0# ());
+  (#"coursework.ads" 63 0 0# ());
   (#"coursework.ads" 62 0 0# ());
-  (#"coursework.ads" 62 0 0# ());
-  (#"coursework.ads" 61 0 0# ());
-  (#"coursework.ads" 60 0 0# ());
   (#"coursework.ads" 66 0 0# ());
   (#"coursework.ads" 69 0 0# ());
   (#"coursework.ads" 68 0 0# ());
@@ -3947,18 +4053,19 @@ module Coursework__package_def
   (#"coursework.ads" 68 0 0# ());
   (#"coursework.ads" 67 0 0# ());
   (#"coursework.ads" 67 0 0# ());
+  (#"coursework.ads" 67 0 0# ());
   (#"coursework.adb" 1 0 0# ());
   (#"coursework.adb" 4 0 0# ());
   (#"coursework.adb" 13 0 0# ());
   (#"coursework.adb" 21 0 0# ());
   (#"coursework.adb" 30 0 0# ());
-  (#"coursework.adb" 38 0 0# ());
-  (#"coursework.adb" 46 0 0# ());
-  (#"coursework.adb" 56 0 0# ());
-  ( "GP_Sloc:coursework.adb:63:1" (#"coursework.adb" 63 0 0# ()) ) )
+  (#"coursework.adb" 39 0 0# ());
+  (#"coursework.adb" 49 0 0# ());
+  (#"coursework.adb" 59 0 0# ());
+  ( "GP_Sloc:coursework.adb:66:1" (#"coursework.adb" 66 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "submergesub" defined at coursework.ads:35, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "submergesub" defined at coursework.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__submergesub__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3982,6 +4089,10 @@ module Coursework__submergesub__subprogram_def
  use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
  use        Standard__integer___axiom
  use        Coursework__airlock___axiom
  use        Coursework__oxegen___axiom
@@ -3993,173 +4104,83 @@ module Coursework__submergesub__subprogram_def
  use        Coursework__submarine___axiom
  use        Coursework__sub___axiom
 
- let def #"coursework.ads" 35 0 0#"W:diverges:N" "GP_Subp:coursework.ads:35" 
+ let def #"coursework.ads" 34 0 0#"W:diverges:N" "GP_Subp:coursework.ads:34" 
    (__void_param : unit)
-  requires { #"coursework.ads" 35 0 0# true }
-  ensures { #"coursework.ads" 35 0 0# (#"coursework.ads" 38 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:coursework.ads:38:15" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post =>  sub.oxn = Present;
-              ^ coursework.ads:38:15:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3561" "GP_Sloc:coursework.ads:38:15" ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) )) }
+  requires { #"coursework.ads" 34 0 0# true }
+  ensures { #"coursework.ads" 34 0 0# (#"coursework.ads" 38 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:coursework.ads:38:15" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post =>  sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed;
+              ^ coursework.ads:38:15:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:3784" "GP_Sloc:coursework.ads:38:15" ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) /\ ( ( "GP_Pretty_Ada:3056" "GP_Sloc:coursework.ads:38:56" ((Coursework__airlock__rep.to_rep (let temp___300 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___300 1)))
+  ) = 1) ) /\ ( "GP_Pretty_Ada:3064" "GP_Sloc:coursework.ads:38:85" ((Coursework__airlock__rep.to_rep (let temp___299 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___299 2)))
+  ) = 1) ) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:35 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:34 *)
   ;
    assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:35 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:34 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:35 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:34 *)
   ;
-   abstract ensures {true}(let _ = ( ((Coursework__airlock__rep.to_rep((let temp___286 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___286) (1))))
-  )) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___285 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___285) (2))))
-  )) = 1) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) ) in (
+   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___296 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___296) (1))))
+  )) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___295 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___295) (2))))
+  )) = 1) && ( ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) ) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:35 *)
+  () (* Assume Pre of the subprogram coursework.ads:34 *)
   ;
-   assume {  ( ((Coursework__airlock__rep.to_rep (let temp___288 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___288 1)))
-  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___287 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___287 2)))
-  ) = 1) /\ ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) ) };
+   assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___298 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___298 1)))
+  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___297 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___297 2)))
+  ) = 1) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Coursework__reactorheat__rep.to_rep (Coursework__submarine.rec__coursework__submarine__reac (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) ) ) ) };
    try
    ( ( "GP_Sloc:coursework.adb:6:10" (#"coursework.adb" 6 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:6:7" (#"coursework.adb" 6 0 0# (if (( ( ( ((Coursework__airlock__rep.to_rep((let temp___281 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___281) (1))))
-   )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___282 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___282) (2))))
+   ( "GP_Sloc:coursework.adb:6:7" (#"coursework.adb" 6 0 0# (if (( ( ( ((Coursework__airlock__rep.to_rep((let temp___289 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___289) (1))))
+   )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___290 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___290) (2))))
    )) = 1) ) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
     ( ( "GP_Sloc:coursework.adb:7:10" (#"coursework.adb" 7 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:7:19" (#"coursework.adb" 7 0 0# (let temp___277 = (let temp___276 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 7 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields(temp___276)))) in (
+    ( "GP_Sloc:coursework.adb:7:19" (#"coursework.adb" 7 0 0# (let temp___285 = (let temp___284 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 7 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields(temp___284)))) in (
       ()))
       end ;
-     { ( temp___276 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___276)) ) with Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(0)) } } )))
+     { ( temp___284 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___284)) ) with Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(0)) } } )))
      in (
-     #"coursework.adb" 7 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___277)) )))
+     #"coursework.adb" 7 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___285)) )))
     ) );
     ( "GP_Sloc:coursework.adb:8:10" (#"coursework.adb" 8 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:8:32" (#"coursework.adb" 8 0 0# (let temp___280 = (let temp___279 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 8 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___279)))) in (
+    ( "GP_Sloc:coursework.adb:8:32" (#"coursework.adb" 8 0 0# (let temp___288 = (let temp___287 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 8 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___287)))) in (
       ()))
       end ;
-     { ( temp___279 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___279)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___278 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-      ( #"coursework.adb" 8 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___278)))) in (
+     { ( temp___287 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___287)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___286 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+      ( #"coursework.adb" 8 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___286)))) in (
        ()))
        end ;
-      { ( temp___278 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___278)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = ( 10 : Standard__integer.integer ) } } )))
+      { ( temp___286 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___286)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = ( 10 : Standard__integer.integer ) } } )))
       } } )))
      in (
-     #"coursework.adb" 8 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___280)) )))
+     #"coursework.adb" 8 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___288)) )))
     ) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) in (
+   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___293 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___293) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___292 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___292) (2))))
+  )) = 1) ) ) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "openairlock" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Coursework__openairlock__subprogram_def
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        "_gnatprove_standard".Boolean
- use        Coursework__airlock
- use        Coursework__airlock__rep
- use        Array__Int__Coursework__airlock
- use        Coursework__submarine
- use        Coursework__submarine___axiom
- use        Coursework__sub
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Array__Int__Coursework__airlock
- use        Standard__integer___axiom
- use        Coursework__airlock___axiom
- use        Coursework__oxegen___axiom
- use        Coursework__status___axiom
- use        Coursework__reactorheat___axiom
- use        Coursework__airarray___axiom
- use        Coursework__diving___axiom
- use        Coursework__diverecord___axiom
- use        Coursework__submarine___axiom
- use        Coursework__sub___axiom
-
- let def #"coursework.ads" 40 0 0#"W:diverges:N" "GP_Subp:coursework.ads:40" 
-   (__void_param : unit)
-  requires { #"coursework.ads" 40 0 0# true }
-  ensures { #"coursework.ads" 40 0 0# (#"coursework.ads" 43 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:coursework.ads:43:15" "GP_Id:1" "comment:     Post =>  sub.air(1) = Closed or sub.air(2) = Closed;
-              ^ coursework.ads:43:15:VC_POSTCONDITION" "GP_Shape:pragargs__or" ( "GP_Pretty_Ada:3661" "GP_Sloc:coursework.ads:43:15" ( ((Coursework__airlock__rep.to_rep (let temp___302 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___302 1)))
-  ) = 1) \/ ((Coursework__airlock__rep.to_rep (let temp___303 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___303 2)))
-  ) = 1) ) ) )) }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:40 *)
-  ;
-   assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
-   assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:40 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:40 *)
-  ;
-   abstract ensures {true}(let _ = ( ((Coursework__airlock__rep.to_rep((let temp___299 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___299) (1))))
-  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___298 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___298) (2))))
-  )) = 1) ) in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram coursework.ads:40 *)
-  ;
-   assume {  ( ((Coursework__airlock__rep.to_rep (let temp___301 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___301 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___300 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___300 2)))
-  ) = 1) ) };
-   try
-   ( ( "GP_Sloc:coursework.adb:16:10" (#"coursework.adb" 16 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:16:7" (#"coursework.adb" 16 0 0# (if (( ((Coursework__airlock__rep.to_rep((let temp___292 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___292) (1))))
-   )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___293 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___293) (2))))
-   )) = 1) )) then (
-    ( ( "GP_Sloc:coursework.adb:17:10" (#"coursework.adb" 17 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:17:21" (#"coursework.adb" 17 0 0# (let temp___291 = (let temp___290 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 17 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields(temp___290)))) in (
-      ()))
-      end ;
-     { ( temp___290 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___290)) ) with Coursework__submarine.rec__coursework__submarine__air = (let temp___289 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-      (Array__Int__Coursework__airlock.set((Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) (1) ((Coursework__airlock__rep.of_rep(0))))))
-      } } )))
-     in (
-     #"coursework.adb" 17 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___291)) )))
-    ) ) )) else (
-    ()))) );
-    raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-   abstract ensures {true}(let _ = (Boolean.orb(((Coursework__airlock__rep.to_rep((let temp___295 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___295) (1))))
-  )) = 1)) (((Coursework__airlock__rep.to_rep((let temp___296 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___296) (2))))
-  )) = 1))) in (
-   ()))
-   end  )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "surfacesub" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "surfacesub" defined at coursework.ads:40, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__surfacesub__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4194,83 +4215,83 @@ module Coursework__surfacesub__subprogram_def
  use        Coursework__submarine___axiom
  use        Coursework__sub___axiom
 
- let def #"coursework.ads" 45 0 0#"W:diverges:N" "GP_Subp:coursework.ads:45" 
+ let def #"coursework.ads" 40 0 0#"W:diverges:N" "GP_Subp:coursework.ads:40" 
    (__void_param : unit)
-  requires { #"coursework.ads" 45 0 0# true }
-  ensures { #"coursework.ads" 45 0 0# (#"coursework.ads" 48 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:48:14" "GP_Id:2" "comment:     Post => sub.stat = Surfaced and then sub.air(1) = Closed and then sub.air(2) = Closed;
-             ^ coursework.ads:48:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:3828" "GP_Sloc:coursework.ads:48:14" ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) ) /\ ( ( "GP_Pretty_Ada:3095" "GP_Sloc:coursework.ads:48:54" ((Coursework__airlock__rep.to_rep (let temp___320 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___320 1)))
-  ) = 1) ) /\ ( "GP_Pretty_Ada:3103" "GP_Sloc:coursework.ads:48:83" ((Coursework__airlock__rep.to_rep (let temp___319 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___319 2)))
+  requires { #"coursework.ads" 40 0 0# true }
+  ensures { #"coursework.ads" 40 0 0# (#"coursework.ads" 43 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:43:14" "GP_Id:1" "comment:     Post => sub.stat = Surfaced and then sub.air(1) = Closed and then sub.air(2) = Closed;
+             ^ coursework.ads:43:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:3986" "GP_Sloc:coursework.ads:43:14" ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 1) ) /\ ( ( "GP_Pretty_Ada:3120" "GP_Sloc:coursework.ads:43:54" ((Coursework__airlock__rep.to_rep (let temp___317 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___317 1)))
+  ) = 1) ) /\ ( "GP_Pretty_Ada:3128" "GP_Sloc:coursework.ads:43:83" ((Coursework__airlock__rep.to_rep (let temp___316 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___316 2)))
   ) = 1) ) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:45 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:40 *)
   ;
    assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:45 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:40 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:45 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:40 *)
   ;
-   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___316 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___316) (1))))
-  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___315 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___315) (2))))
+   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___313 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___313) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___312 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___312) (2))))
   )) = 1) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:45 *)
+  () (* Assume Pre of the subprogram coursework.ads:40 *)
   ;
-   assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___318 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___318 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___317 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___317 2)))
+   assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___315 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___315 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___314 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___314 2)))
   ) = 1) ) ) };
    try
    ( ( "GP_Sloc:coursework.adb:24:10" (#"coursework.adb" 24 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:24:7" (#"coursework.adb" 24 0 0# (if (( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__airlock__rep.to_rep((let temp___309 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___309) (1))))
-   )) = 1) ) && ((Coursework__airlock__rep.to_rep((let temp___310 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___310) (2))))
+   ( "GP_Sloc:coursework.adb:24:7" (#"coursework.adb" 24 0 0# (if (( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__airlock__rep.to_rep((let temp___306 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___306) (1))))
+   )) = 1) ) && ((Coursework__airlock__rep.to_rep((let temp___307 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___307) (2))))
    )) = 1) )) then (
     ( ( "GP_Sloc:coursework.adb:25:10" (#"coursework.adb" 25 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:25:19" (#"coursework.adb" 25 0 0# (let temp___305 = (let temp___304 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 25 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields(temp___304)))) in (
+    ( "GP_Sloc:coursework.adb:25:19" (#"coursework.adb" 25 0 0# (let temp___302 = (let temp___301 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 25 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields(temp___301)))) in (
       ()))
       end ;
-     { ( temp___304 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___304)) ) with Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(1)) } } )))
+     { ( temp___301 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___301)) ) with Coursework__submarine.rec__coursework__submarine__stat = (Coursework__status__rep.of_rep(1)) } } )))
      in (
-     #"coursework.adb" 25 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___305)) )))
+     #"coursework.adb" 25 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___302)) )))
     ) );
     ( "GP_Sloc:coursework.adb:26:10" (#"coursework.adb" 26 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:26:32" (#"coursework.adb" 26 0 0# (let temp___308 = (let temp___307 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 26 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___307)))) in (
+    ( "GP_Sloc:coursework.adb:26:32" (#"coursework.adb" 26 0 0# (let temp___305 = (let temp___304 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 26 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___304)))) in (
       ()))
       end ;
-     { ( temp___307 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___307)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___306 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-      ( #"coursework.adb" 26 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___306)))) in (
+     { ( temp___304 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___304)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___303 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+      ( #"coursework.adb" 26 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___303)))) in (
        ()))
        end ;
-      { ( temp___306 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___306)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = ( 0 : Standard__integer.integer ) } } )))
+      { ( temp___303 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___303)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = ( 0 : Standard__integer.integer ) } } )))
       } } )))
      in (
-     #"coursework.adb" 26 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___308)) )))
+     #"coursework.adb" 26 0 0# Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___305)) )))
     ) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___313 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___313) (1))))
-  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___312 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___312) (2))))
+   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___310 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___310) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___309 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___309) (2))))
   )) = 1) ) ) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "checkoxg" defined at coursework.ads:50, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "checkoxg" defined at coursework.ads:45, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__checkoxg__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4301,38 +4322,38 @@ module Coursework__checkoxg__subprogram_def
  use        Coursework__sub___axiom
  use        Coursework__surfacesub___axiom
 
- let def #"coursework.ads" 50 0 0#"W:diverges:N" "GP_Subp:coursework.ads:50" 
+ let def #"coursework.ads" 45 0 0#"W:diverges:N" "GP_Subp:coursework.ads:45" 
    (__void_param : unit)
-  requires { #"coursework.ads" 50 0 0# true }
-  ensures { #"coursework.ads" 50 0 0# true }
+  requires { #"coursework.ads" 45 0 0# true }
+  ensures { #"coursework.ads" 45 0 0# true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:50 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:45 *)
   ;
-  #"coursework.ads" 50 0 0# assume { #"coursework.ads" 50 0 0# (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
-  #"coursework.ads" 50 0 0# assume { #"coursework.ads" 50 0 0# true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:50 *)
+  #"coursework.ads" 45 0 0# assume { #"coursework.ads" 45 0 0# (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
+  #"coursework.ads" 45 0 0# assume { #"coursework.ads" 45 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:45 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:50 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:45 *)
   ;
-  #"coursework.ads" 50 0 0# abstract ensures {true}(let _ = ( ((Coursework__airlock__rep.to_rep((let temp___324 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___324) (1))))
-  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___323 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___323) (2))))
+  #"coursework.ads" 45 0 0# abstract ensures {true}(let _ = ( ((Coursework__airlock__rep.to_rep((let temp___321 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___321) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___320 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___320) (2))))
   )) = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:50 *)
+  () (* Assume Pre of the subprogram coursework.ads:45 *)
   ;
-  #"coursework.ads" 50 0 0# assume { #"coursework.ads" 50 0 0# ( ((Coursework__airlock__rep.to_rep (let temp___326 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___326 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___325 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___325 2)))
+  #"coursework.ads" 45 0 0# assume { #"coursework.ads" 45 0 0# ( ((Coursework__airlock__rep.to_rep (let temp___323 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___323 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___322 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___322 2)))
   ) = 1) ) };
-  #"coursework.ads" 50 0 0# try
+  #"coursework.ads" 45 0 0# try
    ( ( "GP_Sloc:coursework.adb:33:10" (#"coursework.adb" 33 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:33:7" (#"coursework.adb" 33 0 0# (if (( ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 2) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
+   ( "GP_Sloc:coursework.adb:33:7" (#"coursework.adb" 33 0 0# (if (( ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
     ( ( "GP_Sloc:coursework.adb:34:10" (#"coursework.adb" 34 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:34:10" (#"coursework.adb" 34 0 0# ( (#"coursework.adb" 34 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:34:10" "GP_Reason:VC_PRECONDITION" "GP_Id:3" "comment:         surfaceSub;
+    ( "GP_Sloc:coursework.adb:34:10" (#"coursework.adb" 34 0 0# ( (#"coursework.adb" 34 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:34:10" "GP_Reason:VC_PRECONDITION" "GP_Id:2" "comment:         surfaceSub;
          ^ coursework.adb:34:10:VC_PRECONDITION" "GP_Shape:if__call_surfacesub" (Coursework__surfacesub___axiom.surfacesub(())) )) )) ) )) else (
     ()))) );
     raise Return__exc )
@@ -4344,7 +4365,7 @@ module Coursework__checkoxg__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "checkreactor" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "checkreactor" defined at coursework.ads:49, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__checkreactor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4363,6 +4384,8 @@ module Coursework__checkreactor__subprogram_def
  use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
  use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
  use        Standard__integer___axiom
  use        Coursework__airlock___axiom
  use        Coursework__oxegen___axiom
@@ -4375,39 +4398,43 @@ module Coursework__checkreactor__subprogram_def
  use        Coursework__sub___axiom
  use        Coursework__surfacesub___axiom
 
- let def #"coursework.ads" 54 0 0#"W:diverges:N" "GP_Subp:coursework.ads:54" 
+ let def #"coursework.ads" 49 0 0#"W:diverges:N" "GP_Subp:coursework.ads:49" 
    (__void_param : unit)
-  requires { #"coursework.ads" 54 0 0# true }
-  ensures { #"coursework.ads" 54 0 0# true }
+  requires { #"coursework.ads" 49 0 0# true }
+  ensures { #"coursework.ads" 49 0 0# true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:54 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:49 *)
   ;
-  #"coursework.ads" 54 0 0# assume { #"coursework.ads" 54 0 0# (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
-  #"coursework.ads" 54 0 0# assume { #"coursework.ads" 54 0 0# true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:54 *)
+  #"coursework.ads" 49 0 0# assume { #"coursework.ads" 49 0 0# (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
+  #"coursework.ads" 49 0 0# assume { #"coursework.ads" 49 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:49 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:54 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:49 *)
   ;
-  #"coursework.ads" 54 0 0# abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___330 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___330) (1))))
-  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___329 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___329) (2))))
+  #"coursework.ads" 49 0 0# abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___329 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___329) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___328 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___328) (2))))
   )) = 1) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:54 *)
+  () (* Assume Pre of the subprogram coursework.ads:49 *)
   ;
-  #"coursework.ads" 54 0 0# assume { #"coursework.ads" 54 0 0# ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___332 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___332 1)))
-  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___331 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___331 2)))
+  #"coursework.ads" 49 0 0# assume { #"coursework.ads" 49 0 0# ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___331 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___331 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___330 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___330 2)))
   ) = 1) ) ) };
-  #"coursework.ads" 54 0 0# try
-   ( ( "GP_Sloc:coursework.adb:41:10" (#"coursework.adb" 41 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:41:7" (#"coursework.adb" 41 0 0# (if (( ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) )) then (
-    ( ( "GP_Sloc:coursework.adb:42:10" (#"coursework.adb" 42 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:42:10" (#"coursework.adb" 42 0 0# ( (#"coursework.adb" 42 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_PRECONDITION" "GP_Shape:if__call_surfacesub" "GP_Sloc:coursework.adb:42:10" "GP_Id:4" "comment:         surfaceSub;
-         ^ coursework.adb:42:10:VC_PRECONDITION" (Coursework__surfacesub___axiom.surfacesub(())) )) )) ) )) else (
+  #"coursework.ads" 49 0 0# try
+   ( ( "GP_Sloc:coursework.adb:42:10" (#"coursework.adb" 42 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:42:7" (#"coursework.adb" 42 0 0# (if (( ( ( ((Coursework__reactorheat__rep.to_rep((Coursework__submarine.rec__coursework__submarine__reac((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 1) && ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__airlock__rep.to_rep((let temp___324 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___324) (1))))
+   )) = 1) ) && ((Coursework__airlock__rep.to_rep((let temp___325 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___325) (2))))
+   )) = 1) )) then (
+    ( ( "GP_Sloc:coursework.adb:44:10" (#"coursework.adb" 44 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:44:10" (#"coursework.adb" 44 0 0# ( (#"coursework.adb" 44 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_PRECONDITION" "GP_Shape:if__call_surfacesub" "GP_Sloc:coursework.adb:44:10" "GP_Id:3" "comment:         surfaceSub;
+         ^ coursework.adb:44:10:VC_PRECONDITION" (Coursework__surfacesub___axiom.surfacesub(())) )) )) ) )) else (
     ()))) );
     raise Return__exc )
   with
@@ -4418,7 +4445,7 @@ module Coursework__checkreactor__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "divesub" defined at coursework.ads:59, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "divesub" defined at coursework.ads:54, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__divesub__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4454,75 +4481,75 @@ module Coursework__divesub__subprogram_def
  use        Coursework__submarine___axiom
  use        Coursework__sub___axiom
 
- let def #"coursework.ads" 59 0 0#"W:diverges:N" "GP_Subp:coursework.ads:59" 
+ let def #"coursework.ads" 54 0 0#"W:diverges:N" "GP_Subp:coursework.ads:54" 
    (__void_param : unit)
-  requires { #"coursework.ads" 59 0 0# true }
-  ensures { #"coursework.ads" 59 0 0# (#"coursework.ads" 64 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:64:14" "GP_Id:6" "comment:     Post => sub.stat = Submerged and then sub.dive.currentDepth > sub.dive.currentDepth'Old;
-             ^ coursework.ads:64:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4297" "GP_Sloc:coursework.ads:64:14" ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) /\ ( "GP_Pretty_Ada:3263" "GP_Sloc:coursework.ads:64:66" ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) > (Standard__integer__rep.to_rep (old (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) ))) ) ) )) }
+  requires { #"coursework.ads" 54 0 0# true }
+  ensures { #"coursework.ads" 54 0 0# (#"coursework.ads" 59 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:59:14" "GP_Id:5" "comment:     Post => sub.stat = Submerged and then sub.dive.currentDepth > sub.dive.currentDepth'Old;
+             ^ coursework.ads:59:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4455" "GP_Sloc:coursework.ads:59:14" ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) ) /\ ( "GP_Pretty_Ada:3288" "GP_Sloc:coursework.ads:59:66" ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) > (Standard__integer__rep.to_rep (old (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) ))) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:59 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:54 *)
   ;
    assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:59 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:54 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:59 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:54 *)
   ;
-   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___342 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___342) (1))))
-  )) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___341 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___341) (2))))
+   abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ( ((Coursework__airlock__rep.to_rep((let temp___341 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___341) (1))))
+  )) = 1) && ( ((Coursework__airlock__rep.to_rep((let temp___340 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___340) (2))))
   )) = 1) && ( ((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) < (Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__safedivedepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))))))))) && ((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) < 2147483547) ) ) ) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:59 *)
+  () (* Assume Pre of the subprogram coursework.ads:54 *)
   ;
-   assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___344 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___344 1)))
-  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___343 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___343 2)))
+   assume {  ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__oxegen__rep.to_rep (Coursework__submarine.rec__coursework__submarine__oxn (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ( ((Coursework__airlock__rep.to_rep (let temp___343 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___343 1)))
+  ) = 1) /\ ( ((Coursework__airlock__rep.to_rep (let temp___342 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___342 2)))
   ) = 1) /\ ( ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) < (Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__safedivedepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) /\ ((Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))) < 2147483547) ) ) ) ) ) };
    abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))) in (
    ()))
    end ;
-  (let temp___old_339 =  (any int
+  (let temp___old_338 =  (any int
   ensures { (result = (Standard__integer__rep.to_rep (Coursework__diverecord.rec__coursework__diverecord__currentdepth (Coursework__diverecord.__split_fields (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))))} 
   ) in (
    (  try
-    ( ( "GP_Sloc:coursework.adb:50:10" (#"coursework.adb" 50 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:50:7" (#"coursework.adb" 50 0 0# (if (( ( ( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__airlock__rep.to_rep((let temp___336 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-     (Array__Int__Coursework__airlock.get(temp___336) (1))))
-    )) = 1) ) && ((Coursework__airlock__rep.to_rep((let temp___337 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-     (Array__Int__Coursework__airlock.get(temp___337) (2))))
+    ( ( "GP_Sloc:coursework.adb:53:10" (#"coursework.adb" 53 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:53:7" (#"coursework.adb" 53 0 0# (if (( ( ( ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Coursework__oxegen__rep.to_rep((Coursework__submarine.rec__coursework__submarine__oxn((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) ) && ((Coursework__airlock__rep.to_rep((let temp___335 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+     (Array__Int__Coursework__airlock.get(temp___335) (1))))
+    )) = 1) ) && ((Coursework__airlock__rep.to_rep((let temp___336 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+     (Array__Int__Coursework__airlock.get(temp___336) (2))))
     )) = 1) ) && ((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) < (Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__safedivedepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))))))))))) )) then (
-     ( ( "GP_Sloc:coursework.adb:52:10" (#"coursework.adb" 52 0 0# ()) );
-     ( "GP_Sloc:coursework.adb:52:35" (#"coursework.adb" 52 0 0# ()) );
-     ( "GP_Sloc:coursework.adb:52:32" (#"coursework.adb" 52 0 0# (let temp___335 = (let temp___334 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-      ( #"coursework.adb" 52 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___334)))) in (
+     ( ( "GP_Sloc:coursework.adb:55:10" (#"coursework.adb" 55 0 0# ()) );
+     ( "GP_Sloc:coursework.adb:55:35" (#"coursework.adb" 55 0 0# ()) );
+     ( "GP_Sloc:coursework.adb:55:32" (#"coursework.adb" 55 0 0# (let temp___334 = (let temp___333 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+      ( #"coursework.adb" 55 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields(temp___333)))) in (
        ()))
        end ;
-      { ( temp___334 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___334)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___333 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-       ( #"coursework.adb" 52 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___333)))) in (
+      { ( temp___333 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___333)) ) with Coursework__submarine.rec__coursework__submarine__dive = (let temp___332 = (Coursework__submarine.rec__coursework__submarine__dive (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+       ( #"coursework.adb" 55 0 0# abstract ensures {true}(let _ = (Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields(temp___332)))) in (
         ()))
         end ;
-       { ( temp___333 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___333)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = (Standard__integer__rep.of_rep((#"coursework.adb" 52 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:52:57" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:5" "comment:         sub.dive.currentDepth := sub.dive.currentDepth + 100;
-                                                        ^ coursework.adb:52:57:VC_OVERFLOW_CHECK" "GP_Shape:if__sub_assign__add" (Standard__integer.range_check_(((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) + 100))) )))) } } )))
+       { ( temp___332 ) with Coursework__diverecord.__split_fields = { ( (Coursework__diverecord.__split_fields(temp___332)) ) with Coursework__diverecord.rec__coursework__diverecord__currentdepth = (Standard__integer__rep.of_rep((#"coursework.adb" 55 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:55:57" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:         sub.dive.currentDepth := sub.dive.currentDepth + 100;
+                                                        ^ coursework.adb:55:57:VC_OVERFLOW_CHECK" "GP_Shape:if__sub_assign__add" (Standard__integer.range_check_(((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) + 100))) )))) } } )))
        } } )))
       in (
-       Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___335)) )))
+       Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___334)) )))
      ) ) )) else (
      ()))) );
      raise Return__exc )
    with
     Return__exc -> ()
    end;
-    abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) > temp___old_339) ) in (
+    abstract ensures {true}(let _ = ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && ((Standard__integer__rep.to_rep((Coursework__diverecord.rec__coursework__diverecord__currentdepth((Coursework__diverecord.__split_fields((Coursework__submarine.rec__coursework__submarine__dive((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))))))) > temp___old_338) ) in (
     ()))
     end  )))
    )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "closeairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "closeairlock" defined at coursework.ads:61, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Coursework__closeairlock__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4561,75 +4588,177 @@ module Coursework__closeairlock__subprogram_def
  use        Coursework__closeairlock__n___axiom
  use        Coursework__TairarrayD1___axiom
 
- let def #"coursework.ads" 66 0 0#"W:diverges:N" "GP_Subp:coursework.ads:66" 
+ let def #"coursework.ads" 61 0 0#"W:diverges:N" "GP_Subp:coursework.ads:61" 
    (__void_param : unit)
-  requires { #"coursework.ads" 66 0 0# true }
-  ensures { #"coursework.ads" 66 0 0# (#"coursework.ads" 69 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:69:14" "GP_Id:10" "comment:     Post => sub.air(n) = Closed;
-             ^ coursework.ads:69:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4455" "GP_Sloc:coursework.ads:69:14" ((Coursework__airlock__rep.to_rep (let temp___356 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___356 Coursework__closeairlock__n.n)))
+  requires { #"coursework.ads" 61 0 0# true }
+  ensures { #"coursework.ads" 61 0 0# (#"coursework.ads" 64 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:64:14" "GP_Id:9" "comment:     Post => sub.air(n) = Closed;
+             ^ coursework.ads:64:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4613" "GP_Sloc:coursework.ads:64:14" ((Coursework__airlock__rep.to_rep (let temp___355 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___355 Coursework__closeairlock__n.n)))
   ) = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:66 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:61 *)
   ;
    assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
    assume {  (Standard__integer___axiom.dynamic_invariant Coursework__closeairlock__n.n True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:66 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:61 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram coursework.ads:66 *)
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:61 *)
   ;
-   abstract ensures {true}(let _ = ( (Boolean.orb((Coursework__closeairlock__n.n = 1)) ((Coursework__closeairlock__n.n = 2))) && ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && (Boolean.andb((Boolean.orb(((Coursework__airlock__rep.to_rep((let temp___352 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___352) (1))))
-  )) = 0)) (((Coursework__airlock__rep.to_rep((let temp___353 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___353) (2))))
-  )) = 0)))) ((Boolean.notb((Boolean.andb(((Coursework__airlock__rep.to_rep((let temp___352 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___352) (1))))
-  )) = 0)) (((Coursework__airlock__rep.to_rep((let temp___353 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___353) (2))))
+   abstract ensures {true}(let _ = ( (Boolean.orb((Coursework__closeairlock__n.n = 1)) ((Coursework__closeairlock__n.n = 2))) && ( ((Coursework__status__rep.to_rep((Coursework__submarine.rec__coursework__submarine__stat((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))))) = 0) && (Boolean.andb((Boolean.orb(((Coursework__airlock__rep.to_rep((let temp___351 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___351) (1))))
+  )) = 0)) (((Coursework__airlock__rep.to_rep((let temp___352 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___352) (2))))
+  )) = 0)))) ((Boolean.notb((Boolean.andb(((Coursework__airlock__rep.to_rep((let temp___351 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___351) (1))))
+  )) = 0)) (((Coursework__airlock__rep.to_rep((let temp___352 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___352) (2))))
   )) = 0))))))) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram coursework.ads:66 *)
+  () (* Assume Pre of the subprogram coursework.ads:61 *)
   ;
-   assume {  ( ( (Coursework__closeairlock__n.n = 1) \/ (Coursework__closeairlock__n.n = 2) ) /\ ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Boolean.andb (Boolean.orb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___354 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___354 1)))
-  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___355 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___355 2)))
-  ) 0)) (Boolean.notb (Boolean.andb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___354 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___354 1)))
-  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___355 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-   (Array__Int__Coursework__airlock.get temp___355 2)))
+   assume {  ( ( (Coursework__closeairlock__n.n = 1) \/ (Coursework__closeairlock__n.n = 2) ) /\ ( ((Coursework__status__rep.to_rep (Coursework__submarine.rec__coursework__submarine__stat (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) = 0) /\ ((Boolean.andb (Boolean.orb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___353 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___353 1)))
+  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___354 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___354 2)))
+  ) 0)) (Boolean.notb (Boolean.andb (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___353 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___353 1)))
+  ) 0) (Integer.bool_eq (Coursework__airlock__rep.to_rep (let temp___354 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___354 2)))
   ) 0)))) = True) ) ) };
    try
-   ( ( "GP_Sloc:coursework.adb:58:10" (#"coursework.adb" 58 0 0# ()) );
-   ( "GP_Sloc:coursework.adb:58:7" (#"coursework.adb" 58 0 0# (if (((Coursework__airlock__rep.to_rep((let temp___348 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-    (Array__Int__Coursework__airlock.get(temp___348) (( #"coursework.adb" 58 0 0# assert { #"coursework.adb" 58 0 0# (#"coursework.adb" 58 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:coursework.adb:58:18" "GP_Id:8" "comment:      if(sub.air(n) = Open) then
-                 ^ coursework.adb:58:18:VC_INDEX_CHECK" "GP_Shape:if__cmp__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
+   ( ( "GP_Sloc:coursework.adb:61:10" (#"coursework.adb" 61 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:61:7" (#"coursework.adb" 61 0 0# (if (((Coursework__airlock__rep.to_rep((let temp___347 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___347) (( #"coursework.adb" 61 0 0# assert { #"coursework.adb" 61 0 0# (#"coursework.adb" 61 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:coursework.adb:61:18" "GP_Id:7" "comment:      if(sub.air(n) = Open) then
+                 ^ coursework.adb:61:18:VC_INDEX_CHECK" "GP_Shape:if__cmp__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
     Coursework__closeairlock__n.n )))))
    )) = 0)) then (
-    ( ( "GP_Sloc:coursework.adb:59:10" (#"coursework.adb" 59 0 0# ()) );
-    ( "GP_Sloc:coursework.adb:59:21" (#"coursework.adb" 59 0 0# (let temp___347 = (let temp___346 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
-     ( #"coursework.adb" 59 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields(temp___346)))) in (
+    ( ( "GP_Sloc:coursework.adb:62:10" (#"coursework.adb" 62 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:62:21" (#"coursework.adb" 62 0 0# (let temp___346 = (let temp___345 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 62 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields(temp___345)))) in (
       ()))
       end ;
-     { ( temp___346 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___346)) ) with Coursework__submarine.rec__coursework__submarine__air = (let temp___345 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
-      (Array__Int__Coursework__airlock.set((Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) (( #"coursework.adb" 59 0 0# assert { #"coursework.adb" 59 0 0# (#"coursework.adb" 59 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:59:18" "GP_Reason:VC_INDEX_CHECK" "GP_Id:7" "comment:         sub.air(n) := Closed;
-                 ^ coursework.adb:59:18:VC_INDEX_CHECK" "GP_Shape:if__sub_assign__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
+     { ( temp___345 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___345)) ) with Coursework__submarine.rec__coursework__submarine__air = (let temp___344 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+      (Array__Int__Coursework__airlock.set((Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) (( #"coursework.adb" 62 0 0# assert { #"coursework.adb" 62 0 0# (#"coursework.adb" 62 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:coursework.adb:62:18" "GP_Reason:VC_INDEX_CHECK" "GP_Id:6" "comment:         sub.air(n) := Closed;
+                 ^ coursework.adb:62:18:VC_INDEX_CHECK" "GP_Shape:if__sub_assign__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
       Coursework__closeairlock__n.n )) ((Coursework__airlock__rep.of_rep(1))))))
       } } )))
      in (
-      Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___347)) )))
+      Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___346)) )))
     ) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Coursework__airlock__rep.to_rep((let temp___350 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
-   (Array__Int__Coursework__airlock.get(temp___350) ((  assert {  (#"coursework.ads" 69 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:coursework.ads:69:22" "GP_Id:9" "comment:     Post => sub.air(n) = Closed;
-                     ^ coursework.ads:69:22:VC_INDEX_CHECK" "GP_Shape:pragargs__cmp__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
+   abstract ensures {true}(let _ = ((Coursework__airlock__rep.to_rep((let temp___349 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___349) ((  assert {  (#"coursework.ads" 64 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:coursework.ads:64:22" "GP_Id:8" "comment:     Post => sub.air(n) = Closed;
+                     ^ coursework.ads:64:22:VC_INDEX_CHECK" "GP_Shape:pragargs__cmp__ixdcomp" ( (Coursework__TairarrayD1.first <= Coursework__closeairlock__n.n) /\ (Coursework__closeairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
    Coursework__closeairlock__n.n )))))
   )) = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "openairlock" defined at coursework.ads:66, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Coursework__openairlock__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Standard__integer___axiom
+ use        Coursework__airlock
+ use        Coursework__airlock__rep
+ use        Coursework__TairarrayD1
+ use        Array__Int__Coursework__airlock
+ use        Coursework__submarine
+ use        Coursework__submarine___axiom
+ use        Coursework__sub
+ use        Coursework__openairlock__n
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Array__Int__Coursework__airlock
+ use        Standard__integer___axiom
+ use        Coursework__airlock___axiom
+ use        Coursework__oxegen___axiom
+ use        Coursework__status___axiom
+ use        Coursework__reactorheat___axiom
+ use        Coursework__airarray___axiom
+ use        Coursework__diving___axiom
+ use        Coursework__diverecord___axiom
+ use        Coursework__submarine___axiom
+ use        Coursework__sub___axiom
+ use        Coursework__openairlock__n___axiom
+ use        Coursework__TairarrayD1___axiom
+
+ let def #"coursework.ads" 66 0 0#"W:diverges:N" "GP_Subp:coursework.ads:66" 
+   (__void_param : unit)
+  requires { #"coursework.ads" 66 0 0# true }
+  ensures { #"coursework.ads" 66 0 0# (#"coursework.ads" 69 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:coursework.ads:69:15" "GP_Id:12" "comment:     Post =>  sub.air(n) = Open;
+              ^ coursework.ads:69:15:VC_POSTCONDITION" ( "GP_Pretty_Ada:4739" "GP_Sloc:coursework.ads:69:15" ((Coursework__airlock__rep.to_rep (let temp___368 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___368 Coursework__openairlock__n.n)))
+  ) = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram coursework.ads:66 *)
+  ;
+   assume {  (Coursework__submarine___axiom.dynamic_invariant { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } True False True True) };
+   assume {  (Standard__integer___axiom.dynamic_invariant Coursework__openairlock__n.n True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram coursework.ads:66 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram coursework.ads:66 *)
+  ;
+   abstract ensures {true}(let _ = ( (Boolean.orb((Coursework__openairlock__n.n = 1)) ((Coursework__openairlock__n.n = 2))) && ( ((Coursework__airlock__rep.to_rep((let temp___365 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___365) (1))))
+  )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___364 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___364) (2))))
+  )) = 1) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram coursework.ads:66 *)
+  ;
+   assume {  ( ( (Coursework__openairlock__n.n = 1) \/ (Coursework__openairlock__n.n = 2) ) /\ ( ((Coursework__airlock__rep.to_rep (let temp___367 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___367 1)))
+  ) = 1) /\ ((Coursework__airlock__rep.to_rep (let temp___366 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+   (Array__Int__Coursework__airlock.get temp___366 2)))
+  ) = 1) ) ) };
+   try
+   ( ( "GP_Sloc:coursework.adb:16:10" (#"coursework.adb" 16 0 0# ()) );
+   ( "GP_Sloc:coursework.adb:16:7" (#"coursework.adb" 16 0 0# (if (( ((Coursework__airlock__rep.to_rep((let temp___359 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___359) (1))))
+   )) = 1) && ((Coursework__airlock__rep.to_rep((let temp___360 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+    (Array__Int__Coursework__airlock.get(temp___360) (2))))
+   )) = 1) )) then (
+    ( ( "GP_Sloc:coursework.adb:17:10" (#"coursework.adb" 17 0 0# ()) );
+    ( "GP_Sloc:coursework.adb:17:21" (#"coursework.adb" 17 0 0# (let temp___358 = (let temp___357 = { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content } in (
+     ( #"coursework.adb" 17 0 0# abstract ensures {true}(let _ = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields(temp___357)))) in (
+      ()))
+      end ;
+     { ( temp___357 ) with Coursework__submarine.__split_fields = { ( (Coursework__submarine.__split_fields(temp___357)) ) with Coursework__submarine.rec__coursework__submarine__air = (let temp___356 = (Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })) in (
+      (Array__Int__Coursework__airlock.set((Coursework__submarine.rec__coursework__submarine__air (Coursework__submarine.__split_fields { Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content }))) (( #"coursework.adb" 17 0 0# assert { #"coursework.adb" 17 0 0# (#"coursework.adb" 17 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Shape:if__sub_assign__ixdcomp" "GP_Sloc:coursework.adb:17:18" "GP_Id:10" "comment:         sub.air(n) := Open;
+                 ^ coursework.adb:17:18:VC_INDEX_CHECK" ( (Coursework__TairarrayD1.first <= Coursework__openairlock__n.n) /\ (Coursework__openairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
+      Coursework__openairlock__n.n )) ((Coursework__airlock__rep.of_rep(0))))))
+      } } )))
+     in (
+      Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content <- ( (Coursework__submarine.__split_fields(temp___358)) )))
+    ) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Coursework__airlock__rep.to_rep((let temp___362 = (Coursework__submarine.rec__coursework__submarine__air((Coursework__submarine.__split_fields({ Coursework__submarine.__split_fields = Coursework__sub.sub__split_fields.Coursework__submarine.__split_fields__content })))) in (
+   (Array__Int__Coursework__airlock.get(temp___362) ((  assert {  (#"coursework.ads" 69 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Shape:pragargs__cmp__ixdcomp" "GP_Sloc:coursework.ads:69:23" "GP_Id:11" "comment:     Post =>  sub.air(n) = Open;
+                      ^ coursework.ads:69:23:VC_INDEX_CHECK" ( (Coursework__TairarrayD1.first <= Coursework__openairlock__n.n) /\ (Coursework__openairlock__n.n <= Coursework__TairarrayD1.last) ) )) };
+   Coursework__openairlock__n.n )))))
+  )) = 0) in (
    ()))
    end  )
 end

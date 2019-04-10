@@ -47,8 +47,6 @@ is
 
 
    procedure diveSub is
-      -- Dive the sub the use of isDiving in this context is useless,
-      -- It just seeks to model how this could be used
    begin
       if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
          and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then

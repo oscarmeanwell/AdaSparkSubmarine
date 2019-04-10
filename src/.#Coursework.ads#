@@ -68,4 +68,6 @@ is
      Pre => (n = 1 or n = 2) and then sub.air(1) = Closed and then sub.air(2) = Closed,
      Post =>  sub.air(n) = Open;
 
+   procedure
+
 end Coursework;
