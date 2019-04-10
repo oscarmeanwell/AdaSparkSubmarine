@@ -59,11 +59,13 @@ is
    procedure diveSub with
      Global => (In_Out => sub),
      Pre => sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
-         and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth,
+         and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth
+         and then sub.dive.currentDepth < Integer'Last-100,
      Post => sub.stat = Submerged and then sub.dive.currentDepth > sub.dive.currentDepth'Old;
 
    procedure closeAirlock with
      Global => (In_Out => sub),
-     Pre => sub.stat = Submerged and then (sub.air(1) = Closed or sub.air(2) = Closed);
+     Pre => sub.stat = Submerged and then (sub.air(1) = Open xor sub.air(2) = Open),
+     Post => sub.air(1) = Closed and then sub.air(2) = Closed;
 
 end Coursework;

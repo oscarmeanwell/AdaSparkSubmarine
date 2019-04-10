@@ -1,8 +1,8 @@
 package body Coursework with SPARK_Mode
 is
+
    procedure submergeSub is
    begin
-      --operationPermitted;
       if(sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
          sub.stat := Submerged;
          sub.dive.currentDepth := 10;
@@ -30,7 +30,6 @@ is
    procedure checkOxg is
    begin
       --Check the oxegen Levels
-      --sub.oxn := Low;
       if(sub.oxn = Low and then sub.stat = Submerged) then
          surfaceSub;
       end if;
@@ -45,15 +44,12 @@ is
    end checkReactor;
 
    procedure diveSub is
-      --Dive the sub
+      -- Dive the sub the use of isDiving in this context is useless,
+      -- It just seeks to model how this could be used
    begin
       if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
          and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then
-
-         sub.dive.isDiving := True;
-
          sub.dive.currentDepth := sub.dive.currentDepth + 100;
-         --Is this how to do this?
       end if;
    end diveSub;
 
@@ -61,6 +57,10 @@ is
    begin
       if(sub.air(1) = Open) then
          sub.air(1) := Closed;
+      end if;
+
+      if(sub.air(2) = Open) then
+         sub.air(2) := Closed;
       end if;
    end closeAirlock;
 

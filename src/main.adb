@@ -53,12 +53,12 @@ begin
          Put("    Submerge (d), Surface (u): ");
          Get(inp);
          if(inp = "d") then
-            Put_Line("    Trying to submerge");
+            Put_Line("    Attempting to submerge");
             submergeSub;
          end if;
 
          if(inp = "u") then
-            Put_Line("    Trying to surface");
+            Put_Line("    Attempting to surface");
             surfaceSub;
          end if;
 
@@ -94,12 +94,12 @@ begin
          Put("    Open airlock (o), Close Airlock (c): ");
          Get(inp);
          if(inp = "o") then
-            Put_Line("    Opening Airlock");
+            Put_Line("    Attempting to Open Airlock");
             openAirlock;
          end if;
 
          if(inp = "c") then
-            Put_Line("    Closing Airlock");
+            Put_Line("    Attempting to Close Airlock");
             closeAirlock;
          end if;
 

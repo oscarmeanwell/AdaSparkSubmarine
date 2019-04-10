@@ -1,28 +1,28 @@
 Summary of SPARK analysis
 =========================
 
-------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total      Flow   Interval   CodePeer     Provers   Justified   Unproved
-------------------------------------------------------------------------------------------------------
-Data Dependencies                 .         .          .          .           .           .          .
-Flow Dependencies                 .         .          .          .           .           .          .
-Initialization                    .         .          .          .           .           .          .
-Non-Aliasing                      .         .          .          .           .           .          .
-Run-time Checks                   .         .          .          .           .           .          .
-Assertions                        .         .          .          .           .           .          .
-Functional Contracts              6         .          .          .    6 (CVC4)           .          .
-LSP Verification                  .         .          .          .           .           .          .
-------------------------------------------------------------------------------------------------------
-Total                             6         .          .          .    6 (100%)           .          .
+-------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   Interval   CodePeer     Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .          .           .           .          .
+Flow Dependencies                 .          .          .          .           .           .          .
+Initialization                    4          4          .          .           .           .          .
+Non-Aliasing                      .          .          .          .           .           .          .
+Run-time Checks                   1          .          .          .    1 (CVC4)           .          .
+Assertions                        .          .          .          .           .           .          .
+Functional Contracts              7          .          .          .    7 (CVC4)           .          .
+LSP Verification                  .          .          .          .           .           .          .
+-------------------------------------------------------------------------------------------------------
+Total                            12    4 (33%)          .          .     8 (67%)           .          .
 
 
 Analyzed 1 unit
 in unit coursework, 8 subprograms and packages out of 8 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.checkOxg at coursework.ads:38 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.checkReactor at coursework.ads:42 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.closeAirlock at coursework.ads:52 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.diveSub at coursework.ads:47 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.openAirlock at coursework.ads:28 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.submergeSub at coursework.ads:23 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.surfaceSub at coursework.ads:33 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.checkOxg at coursework.ads:50 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.checkReactor at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.closeAirlock at coursework.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.diveSub at coursework.ads:59 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Coursework.openAirlock at coursework.ads:40 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.submergeSub at coursework.ads:35 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.surfaceSub at coursework.ads:45 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
