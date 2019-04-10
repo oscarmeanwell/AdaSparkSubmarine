@@ -39,7 +39,7 @@ begin
    Put_Line(title5);
    Put_Line("");
    Put_Line("");
-   Put_Line("1 = Surface/Submerge, 2 = Oxegen, 3 = Reactor, 4 = Dive, 5 = Open Airlock, 6 = Fire Missile, 7 = Quit");
+   Put_Line("1 = Surface/Submerge, 2 = Oxegen, 3 = Reactor, 4 = Dive, 5 = Open Airlock, 6 = Lock Door, 7 = Fire Missile, 8 = Quit");
 
    while simulationActive loop
       printSub;
@@ -62,25 +62,21 @@ begin
             surfaceSub;
          end if;
 
-      --end if;
       elsif(inp = "2") then
          Put("    Overide to Low (1), Normal (2), Run Out (3)): ");
          Get(inp);
          if(inp = "1") then
             sub.oxn := Low;
-            checkOxg;
+            Put_Line("    Oxegen is LOW!");
          end if;
          if(inp = "2") then
             sub.oxn := Present;
-            checkOxg;
          end if;
          if(inp = "3") then
             sub.oxn := Absent;
             checkOxg;
-            Put_Line("    Oxegen is LOW!");
          end if;
 
-      --end elsif;
       elsif(inp = "3") then
          Put("    Reactor overheated(1), normal (2): ");
          Get(inp);
@@ -91,11 +87,11 @@ begin
          if(inp = "2") then
             sub.reac := Normal;
          end if;
-      --end if;
+
       elsif(inp = "4") then
          Put_Line("    Attempting to dive");
          diveSub;
-      --end if;
+
       elsif(inp = "5") then
          Put("    Open airlock (o), Close Airlock (c): ");
          Get(inp);
@@ -115,11 +111,17 @@ begin
             closeAirlock(Integer'Value(inp));
          end if;
 
-      --end if;
       elsif(inp = "6") then
-         Put_Line("test");
-      --end if;
+         Put("    Lock door number (1,2): ");
+         Get(inp);
+         Put("Attempting to lock door ");
+         Put_Line(inp);
+         lockDoor(Integer'Value(inp));
+
       elsif(inp = "7") then
+         Put_Line("test");
+
+      elsif(inp = "8") then
          simulationActive := False;
       end if;
    end loop;

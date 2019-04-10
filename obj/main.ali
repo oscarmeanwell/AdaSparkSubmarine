@@ -11,7 +11,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		d81a68d1 NE OO SU
+U main%b		main.adb		c68093ec NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -28,10 +28,10 @@ D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051736 491b781d ada.tags%s
 D a-textio.ads		20180524051736 881db35a ada.text_io%s
 D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190410135234 2b8d876f coursework%s
+D coursework.ads	20190410143559 9ae0cdae coursework%s
 D interfac.ads		20180524051734 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
-D main.adb		20190410140249 7b8a5ce4 main%b
+D main.adb		20190410142833 d47ded18 main%b
 D system.ads		20180524051735 085b6ffb system%s
 D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051736 54135002 system.exception_table%s
@@ -52,41 +52,42 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-240U14*Get 11|48s7 54s10 68s10 86s10 101s10 104s13 112s13
-242U14*Put 11|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 67s10 85s10
-. 100s10 103s13 105s13 111s13 113s13
+240U14*Get 11|48s7 54s10 67s10 84s10 99s10 102s13 110s13 118s10
+242U14*Put 11|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 66s10 83s10
+. 98s10 101s13 103s13 109s13 111s13 117s10 119s10
 263U14*Put_Line 11|17s7 18s7 20s7 24s7 26s7 28s7 30s7 34s4 35s4 36s4 37s4
-. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 80s13 96s10 106s13 114s13
-. 120s10
+. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 79s13 94s10 104s13 112s13
+. 120s10 124s10
 X 8 coursework.ads
-1K9*Coursework 71e15 11|1w6 1r22
-4n20*Present{4E9} 11|74r24
-4n29*Absent{4E9} 11|78r24
-4n37*Low{4E9} 11|70r24
-6n25*Normal{6E9} 11|92r25
-6n33*Overheated{6E9} 11|88r25
+1K9*Coursework 76e15 11|1w6 1r22
+4n20*Present{4E9} 11|73r24
+4n29*Absent{4E9} 11|77r24
+4n37*Low{4E9} 11|69r24
+6n25*Normal{6E9} 11|90r25
+6n33*Overheated{6E9} 11|86r25
 8A9*AirArray(3E9)<integer>
 16i7*currentDepth{integer} 11|30r25
 21a7*air{8A9} 11|22r15 24r20
-22e7*oxn{4E9} 11|28r20 70m17 74m17 78m17
+22e7*oxn{4E9} 11|28r20 69m17 73m17 77m17
 23e7*stat{5E9} 11|20r20 52r23
-24e7*reac{6E9} 11|26r20 88m17 92m17
+24e7*reac{6E9} 11|26r20 86m17 90m17
 25r7*dive{13R9} 11|30r20
-30r4*sub{20R9} 11|20r16 22r11 24r16 26r16 28r16 30r16 52r19 70m13 74m13 78m13
-. 88m13 92m13
+30r4*sub{20R9} 11|20r16 22r11 24r16 26r16 28r16 30r16 52r19 69m13 73m13 77m13
+. 86m13 90m13
 34U14*submergeSub 11|57s13
 40U14*surfaceSub 11|62s13
-45U14*checkOxg 11|71s13 75s13 79s13
-49U14*checkReactor 11|89s13
-54U14*diveSub 11|97s10
-61U14*closeAirlock 11|115s13
-66U14*openAirlock 11|107s13
+45U14*checkOxg 11|70s13 74s13 78s13
+49U14*checkReactor 11|87s13
+54U14*diveSub 11|95s10
+61U14*closeAirlock 11|113s13
+66U14*openAirlock 11|105s13
+72U14*lockDoor 11|121s10
 X 11 main.adb
-5U11*Main 5b11 126l5 126t9
-6b1 simulationActive{boolean} 44r10 123m10
-7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 66r13 68m14 69r13 73r13 77r13
-. 84r13 86m14 87r13 91r13 95r13 99r13 101m14 102r13 104m17 106r22 107r39
-. 110r13 112m17 114r22 115r40 119r13 122r13
+5U11*Main 5b11 130l5 130t9
+6b1 simulationActive{boolean} 44r10 127m10
+7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 65r13 67m14 68r13 72r13 76r13
+. 82r13 84m14 85r13 89r13 93r13 97r13 99m14 100r13 102m17 104r22 105r39 108r13
+. 110m17 112r22 113r40 116r13 118m14 120r19 121r33 123r13 126r13
 8i1 last{integer}
 9a1 title{string} 34r13
 10a1 title1{string} 35r13

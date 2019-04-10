@@ -3,7 +3,7 @@ is
 
    procedure submergeSub is
    begin
-      if(sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
+      if(sub.air(1) = Locked and then sub.air(2) = Locked and then sub.oxn = Present and then sub.reac = Normal) then
          sub.stat := Submerged;
          sub.dive.currentDepth := 10;
       end if;
@@ -13,7 +13,8 @@ is
    procedure openAirlock(n : Integer) is
       --If one of the airlocks is open, dont open the next
    begin
-      if(sub.air(1) = Closed and then sub.air(2) = Closed) then
+      if((n = 1 or n = 2) and then (sub.air(1) = Closed or sub.air(1) = Locked)
+         and then (sub.air(2) = Closed or sub.air(2) = Locked)) then
          sub.air(n) := Open;
       end if;
    end openAirlock;
@@ -21,7 +22,7 @@ is
    procedure surfaceSub is
       --Surface the submarine
    begin
-      if(sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed) then
+      if(sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked) then
          sub.stat := Surfaced;
          sub.dive.currentDepth := 0;
       end if;
@@ -30,7 +31,7 @@ is
    procedure checkOxg is
    begin
       --Check the oxegen Levels
-      if(sub.oxn = Absent and then sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed) then
+      if(sub.oxn = Low and then sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked) then
          surfaceSub;
       end if;
 
@@ -40,27 +41,32 @@ is
       --Check the reactor
    begin
       if(sub.reac = Overheated and then sub.stat = Submerged and then
-             sub.air(1) = Closed and then sub.air(2) = Closed) then
+             sub.air(1) = Locked and then sub.air(2) = Locked) then
          surfaceSub;
       end if;
    end checkReactor;
 
 
    procedure diveSub is
-      -- Dive the sub the use of isDiving in this context is useless,
-      -- It just seeks to model how this could be used
    begin
-      if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed
-         and then sub.air(2) = Closed and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then
+      if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Locked
+         and then sub.air(2) = Locked and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then
          sub.dive.currentDepth := sub.dive.currentDepth + 100;
       end if;
    end diveSub;
 
    procedure closeAirlock(n : Integer) is
    begin
-      if(sub.air(n) = Open) then
+      if((n = 1 or n = 2) and then sub.air(n) = Open) then
          sub.air(n) := Closed;
       end if;
    end closeAirlock;
+
+   procedure lockDoor(n : Integer) is
+   begin
+      if((n = 1 or n = 2) and then sub.air(n) = Closed) then
+         sub.air(n) := Locked;
+      end if;
+   end lockDoor;
 
 end Coursework;

@@ -12,31 +12,33 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U coursework%b		coursework.adb		b1d1e074 OO PK
+U coursework%b		coursework.adb		426e3c17 OO PK
 
-U coursework%s		coursework.ads		2b8d876f OO PK
+U coursework%s		coursework.ads		9ae0cdae OO PK
 
-D coursework.ads	20190410135234 2b8d876f coursework%s
-D coursework.adb	20190410135711 9a5c671b coursework%b
+D coursework.ads	20190410143559 9ae0cdae coursework%s
+D coursework.adb	20190410144947 d88ef1b9 coursework%b
 D system.ads		20180524051735 085b6ffb system%s
 X 1 coursework.ads
-1K9*Coursework 71l5 71e15 2|1b14 66l5 66t15
-3E9*Airlock 3e34 8r53
-3n21*Open{3E9} 63r83 63r105 69r28 2|17r24 61r23
-3n27*Closed{3E9} 30r66 30r74 36r55 36r84 38r58 38r87 42r56 42r85 43r56 43r85
-. 47r26 47r55 51r56 51r85 56r83 57r32 64r27 68r52 68r81 2|6r23 6r52 16r23
-. 16r52 24r53 24r82 33r79 33r108 43r27 43r56 53r80 54r32 62r24
+1K9*Coursework 76l5 76e15 2|1b14 72l5 72t15
+3E9*Airlock 3e42 8r53
+3n21*Open{3E9} 63r82 70r28 2|18r24 60r49
+3n27*Closed{3E9} 30r66 30r74 64r27 68r53 69r33 74r52 2|16r50 17r33 61r24
+. 67r49
+3n35*Locked{3E9} 36r55 36r84 38r58 38r87 42r56 42r85 43r56 43r85 47r26 47r55
+. 51r56 51r85 56r83 57r32 68r76 69r56 75r27 2|6r23 6r52 16r73 17r56 25r53
+. 25r82 34r76 34r105 44r27 44r56 52r80 53r32 68r24
 4E9*Oxegen 4e41 22r13
-4n20*Present{4E9} 30r31 37r29 56r53 2|6r78 53r50
-4n29*Absent{4E9} 2|33r20
-4n37*Low{4E9}
+4n20*Present{4E9} 30r31 37r29 56r53 2|6r78 52r50
+4n29*Absent{4E9}
+4n37*Low{4E9} 2|34r20
 5E9*Status 5e40 23r14
-5n20*Submerged{5E9} 38r26 42r24 51r24 56r24 59r25 63r50 2|7r22 24r21 33r47
-. 42r52 53r21
-5n31*Surfaced{5E9} 30r48 36r24 43r25 2|25r22
+5n20*Submerged{5E9} 38r26 42r24 51r24 56r24 59r25 63r50 2|7r22 25r21 34r44
+. 43r52 52r21
+5n31*Surfaced{5E9} 30r48 36r24 43r25 2|26r22
 6E9*ReactorHeat 6e44 24r14
 6n25*Normal{6E9} 31r32 37r57 2|6r106
-6n33*Overheated{6E9} 2|42r21
+6n33*Overheated{6E9} 2|43r21
 7I9*Index<integer>
 8A9*AirArray(3E9)<integer> 21r13
 9E9*Diving 9e32 14r18
@@ -49,37 +51,39 @@ X 1 coursework.ads
 13R9*DiveRecord 18e14 25r14 28r12
 14e7*isDiving{9E9} 28m27
 15i7*maxDepth{integer} 28m46
-16i7*currentDepth{integer} 28m67 57r57 58r28 59r53 59r77 2|8m19 26m19 54r57
-. 55m19 55r44
-17i7*safeDiveDepth{integer} 28m86 57r81 2|54r81
+16i7*currentDepth{integer} 28m67 57r57 58r28 59r53 59r77 2|8m19 27m19 53r57
+. 54m19 54r44
+17i7*safeDiveDepth{integer} 28m86 57r81 2|53r81
 20R9*Submarine 26e14 30r10
 21a7*air{8A9} 30m58 36r46 36r75 38r49 38r78 42r47 42r76 43r47 43r76 47r17
-. 47r46 51r47 51r76 56r74 57r23 63r74 63r96 64r18 68r43 68r72 69r19 2|6r14
-. 6r43 16r14 16r43 17m14 24r44 24r73 33r70 33r99 43r18 43r47 53r71 54r23
-. 61r14 62m14
-22e7*oxn{4E9} 30m24 37r23 56r47 2|6r72 33r14 53r44
+. 47r46 51r47 51r76 56r74 57r23 63r73 64r18 68r44 68r67 69r24 69r47 70r19
+. 74r43 75r18 2|6r14 6r43 16r41 16r64 17r24 17r47 18m14 25r44 25r73 34r67
+. 34r96 44r18 44r47 52r71 53r23 60r40 61m14 67r40 68m14
+22e7*oxn{4E9} 30m24 37r23 56r47 2|6r72 34r14 52r44
 23e7*stat{5E9} 30m40 36r17 38r19 42r17 43r18 51r17 56r17 59r18 63r43 2|7m14
-. 24r14 25m14 33r40 42r45 53r14
-24e7*reac{6E9} 31m24 37r50 2|6r99 42r14
-25r7*dive{13R9} 31m40 57r52 57r76 58r23 59r48 59r72 2|8m14 26m14 54r52 54r76
-. 55m14 55r39
+. 25r14 26m14 34r37 43r45 52r14
+24e7*reac{6E9} 31m24 37r50 2|6r99 43r14
+25r7*dive{13R9} 31m40 57r52 57r76 58r23 59r48 59r72 2|8m14 27m14 53r52 53r76
+. 54m14 54r39
 28r4*diveR{13R9} 31r48
 30r4*sub{20R9} 35r27 36r13 36r42 36r71 37r19 37r46 38r15 38r45 38r74 41r27
 . 42r13 42r43 42r72 43r14 43r43 43r72 46r27 47r13 47r42 50r27 51r13 51r43
 . 51r72 55r27 56r13 56r43 56r70 57r19 57r48 57r72 58r19 59r14 59r44 59r68
-. 62r27 63r39 63r70 63r92 64r14 67r27 68r39 68r68 69r15 2|6r10 6r39 6r68
-. 6r95 7m10 8m10 16r10 16r39 17m10 24r10 24r40 24r69 25m10 26m10 33r10 33r36
-. 33r66 33r95 42r10 42r41 43r14 43r43 53r10 53r40 53r67 54r19 54r48 54r72
-. 55m10 55r35 61r10 62m10
+. 62r27 63r39 63r69 64r14 67r27 68r40 68r63 69r20 69r43 70r15 73r27 74r39
+. 75r14 2|6r10 6r39 6r68 6r95 7m10 8m10 16r37 16r60 17r20 17r43 18m10 25r10
+. 25r40 25r69 26m10 27m10 34r10 34r33 34r63 34r92 43r10 43r41 44r14 44r43
+. 52r10 52r40 52r67 53r19 53r48 53r72 54m10 54r35 60r36 61m10 67r36 68m10
 34U14*submergeSub 2|4b14 10l8 10t19
-40U14*surfaceSub 2|21b14 28l8 28t18 34s10 44s10
-45U14*checkOxg 2|30b14 37l8 37t16
-49U14*checkReactor 2|39b14 46l8 46t20
-54U14*diveSub 2|49b14 57l8 57t15
-61U14*closeAirlock 61>27 2|59b14 64l8 64t20
-61i27 n{integer} 63r14 63r23 64r22 2|59b27 61r18 62r18
-66U14*openAirlock 66>26 2|13b14 19l8 19t19
-66i26 n{integer} 68r14 68r23 69r23 2|13b26 17r18
+40U14*surfaceSub 2|22b14 29l8 29t18 35s10 45s10
+45U14*checkOxg 2|31b14 38l8 38t16
+49U14*checkReactor 2|40b14 47l8 47t20
+54U14*diveSub 2|50b14 56l8 56t15
+61U14*closeAirlock 61>27 2|58b14 63l8 63t20
+61i27 n{integer} 63r14 63r23 63r77 64r22 2|58b27 60r11 60r20 60r44 61r18
+66U14*openAirlock 66>26 2|13b14 20l8 20t19
+66i26 n{integer} 68r14 68r23 70r23 2|13b26 16r11 16r20 18r18
+72U14*lockDoor 72>23 2|65b14 70l8 70t16
+72i23 n{integer} 74r14 74r23 74r47 75r22 2|65b23 67r11 67r20 67r44 68r18
 
 QQ SPARKVERSION 2018 (20180523)
 GG EK_DIRECT_CALLS coursework__submergesub 0
@@ -96,6 +100,8 @@ GG EK_DIRECT_CALLS coursework__closeairlock 0
 GG EK_GLOBALS coursework__closeairlock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework__openairlock 0
 GG EK_GLOBALS coursework__openairlock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_DIRECT_CALLS coursework__lockdoor 0
+GG EK_GLOBALS coursework__lockdoor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework 0
 GG EK_GLOBALS coursework local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 coursework__diver coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 2 coursework__diver coursework__sub FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_END_MARKER

@@ -39,7 +39,7 @@ begin
    Put_Line(title5);
    Put_Line("");
    Put_Line("");
-   Put_Line("1 = Surface/Submerge, 2 = Oxegen, 3 = Reactor, 4 = Dive, 5 = Open Airlock, 6 = Fire Missile, 7 = Quit");
+   Put_Line("1 = Surface/Submerge, 2 = Oxegen, 3 = Reactor, 4 = Dive, 5 = Open Airlock, 6 = Lock Door, 7 = Fire Missile, 8 = Quit");
 
    while simulationActive loop
       printSub;
@@ -67,6 +67,7 @@ begin
          Get(inp);
          if(inp = "1") then
             sub.oxn := Low;
+            Put_Line("    Oxegen is LOW!");
             checkOxg;
          end if;
          if(inp = "2") then
@@ -76,7 +77,6 @@ begin
          if(inp = "3") then
             sub.oxn := Absent;
             checkOxg;
-            Put_Line("    Oxegen is LOW!");
          end if;
 
       elsif(inp = "3") then
@@ -114,9 +114,16 @@ begin
          end if;
 
       elsif(inp = "6") then
-         Put_Line("test");
+         Put("    Lock door number (1,2): ");
+         Get(inp);
+         Put("Attempting to lock door ");
+         Put_Line(inp);
+         lockDoor(Integer'Value(inp));
 
       elsif(inp = "7") then
+         Put_Line("test");
+
+      elsif(inp = "8") then
          simulationActive := False;
       end if;
    end loop;

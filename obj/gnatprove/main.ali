@@ -12,7 +12,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U main%b		main.adb		d7717e19 OO SU
+U main%b		main.adb		60932a2c OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -22,10 +22,10 @@ D ada.ads		20180524051735 76789da1 ada%s
 D a-ioexce.ads		20180524051734 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
 D a-textio.ads		20180524051736 881db35a ada.text_io%s
-D coursework.ads	20190410135234 2b8d876f coursework%s
+D coursework.ads	20190410143559 9ae0cdae coursework%s
 D interfac.ads		20180524051734 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
-D main.adb		20190410135857 74e14a2c main%b
+D main.adb		20190410144919 726e54d8 main%b
 D system.ads		20180524051735 085b6ffb system%s
 D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
 D s-ficobl.ads		20180524051736 078245e4 system.file_control_block%s
@@ -35,41 +35,42 @@ X 1 ada.ads
 16K9*Ada 20e8 8|2r6 2r23
 X 4 a-textio.ads
 49K13*Text_IO 471e16 8|2w10 2r27
-240U14*Get 8|48s7 54s10 68s10 87s10 102s10 105s13 113s13
-242U14*Put 8|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 67s10 86s10
-. 101s10 104s13 106s13 112s13 114s13
+240U14*Get 8|48s7 54s10 67s10 82s10 97s10 100s13 108s13 116s10
+242U14*Put 8|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 66s10 81s10
+. 96s10 99s13 101s13 107s13 109s13 115s10 117s10
 263U14*Put_Line 8|17s7 18s7 20s7 24s7 26s7 28s7 30s7 34s4 35s4 36s4 37s4
-. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 80s13 97s10 107s13 115s13
-. 121s10
+. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 70s13 92s10 102s13 110s13
+. 118s10 122s10
 X 5 coursework.ads
-1K9*Coursework 71e15 8|1w6 1r22
-4n20*Present{4E9} 8|74r24
-4n29*Absent{4E9} 8|78r24
-4n37*Low{4E9} 8|70r24
-6n25*Normal{6E9} 8|93r25
-6n33*Overheated{6E9} 8|89r25
+1K9*Coursework 76e15 8|1w6 1r22
+4n20*Present{4E9} 8|73r24
+4n29*Absent{4E9} 8|76r24
+4n37*Low{4E9} 8|69r24
+6n25*Normal{6E9} 8|88r25
+6n33*Overheated{6E9} 8|84r25
 8A9*AirArray(3E9)<integer>
 16i7*currentDepth{integer} 8|30r25
 21a7*air{8A9} 8|22r15 24r20
-22e7*oxn{4E9} 8|28r20 70m17 74m17 78m17
+22e7*oxn{4E9} 8|28r20 69m17 73m17 76m17
 23e7*stat{5E9} 8|20r20 52r23
-24e7*reac{6E9} 8|26r20 89m17 93m17
+24e7*reac{6E9} 8|26r20 84m17 88m17
 25r7*dive{13R9} 8|30r20
-30r4*sub{20R9} 8|20r16 22r11 24r16 26r16 28r16 30r16 52r19 70m13 74m13 78m13
-. 89m13 93m13
+30r4*sub{20R9} 8|20r16 22r11 24r16 26r16 28r16 30r16 52r19 69m13 73m13 76m13
+. 84m13 88m13
 34U14*submergeSub 8|57s13
 40U14*surfaceSub 8|62s13
-45U14*checkOxg 8|71s13 75s13 79s13
-49U14*checkReactor 8|90s13
-54U14*diveSub 8|98s10
-61U14*closeAirlock 8|116s13
-66U14*openAirlock 8|108s13
+45U14*checkOxg 8|77s13
+49U14*checkReactor 8|85s13
+54U14*diveSub 8|93s10
+61U14*closeAirlock 8|111s13
+66U14*openAirlock 8|103s13
+72U14*lockDoor 8|119s10
 X 8 main.adb
-5U11*Main 5b11 127l5 127t9
-6b1 simulationActive{boolean} 44r10 124m10
-7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 66r10 68m14 69r13 73r13 77r13
-. 83m10 85r10 87m14 88r13 92r13 96r10 100r10 102m14 103r13 105m17 107r22
-. 108r39 111r13 113m17 115r22 116r40 120r10 123r10
+5U11*Main 5b11 128l5 128t9
+6b1 simulationActive{boolean} 44r10 125m10
+7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 65r13 67m14 68r13 72r13 75r13
+. 80r13 82m14 83r13 87r13 91r13 95r13 97m14 98r13 100m17 102r22 103r39 106r13
+. 108m17 110r22 111r40 114r13 116m14 118r19 119r33 121r13 124r13
 8i1 last{integer}
 9a1 title{string} 34r13
 10a1 title1{string} 35r13
@@ -83,5 +84,5 @@ QQ SPARKVERSION 2018 (20180523)
 GG EK_DIRECT_CALLS main__printsub 0
 GG EK_GLOBALS main__printsub local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 0 refined_proof_in 0 refined_input 1 coursework__sub refined_output 0 calls_proof 0 calls 0 calls_conditional 2 ada__text_io__put__4 ada__text_io__put_line__2 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS main 0
-GG EK_GLOBALS main local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 10 coursework__submergesub coursework__surfacesub coursework__checkoxg coursework__checkreactor coursework__divesub coursework__closeairlock coursework__openairlock ada__text_io__get__4 ada__text_io__put__4 ada__text_io__put_line__2 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_GLOBALS main local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 11 coursework__submergesub coursework__surfacesub coursework__checkoxg coursework__checkreactor coursework__divesub coursework__closeairlock coursework__openairlock coursework__lockdoor ada__text_io__get__4 ada__text_io__put__4 ada__text_io__put_line__2 local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_END_MARKER
