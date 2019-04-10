@@ -3,11 +3,11 @@ is
    type Airlock is (Open, Closed);
    type Oxegen is (Present, Absent, Low);
    type Status is (Submerged, Surfaced);
-   type OpertationAllowed is (True, False);
    type ReactorHeat is (Normal, Overheated);
    type Index is range 1 .. 2;
    type AirArray is array (Index) of Airlock;
    type Diving is (True, False);
+
    type Submarine is record
       air : AirArray;
       oxn : Oxegen;
@@ -16,49 +16,42 @@ is
       dive : Diving;
    end record;
 
-   type AcionPermitted is record
-      airlocksA : AirArray;
-      allowed : OpertationAllowed;
-   end record;
-
-   airlocks : AcionPermitted := (airlocksA => (Closed, Closed), allowed => False);
-
-   sub : Submarine := (oxn => Present, stat => Surfaced, air => airlocks.airlocksA,
+   sub : Submarine := (oxn => Present, stat => Surfaced, air => (Closed, Closed),
                        reac => Normal, dive => False);
 
    currentDepth : Integer := 0;
 
    procedure submergeSub with
-     Global => (In_Out => sub, Input => airlocks),
-     Pre => airlocks.allowed = True and sub.oxn = Present,
+     Global => (In_Out => sub),
+     Pre => sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present,
      Post =>  sub.oxn = Present;
 
    procedure openAirlock with
-     Global => (In_Out => airlocks),
-     Pre => airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed,
-     Post =>  airlocks.airlocksA(1) = Closed or airlocks.airlocksA(2) = Closed;
+     Global => (In_Out => sub),
+     Pre => sub.air(1) = Closed and then sub.air(2) = Closed,
+     Post =>  sub.air(1) = Closed or sub.air(2) = Closed;
 
    procedure surfaceSub with
-     Global => (In_Out => sub, Input => airlocks),
-     Pre => sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed,
-     Post => sub.stat = Surfaced and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
+     Global => (In_Out => sub),
+     Pre => sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed,
+     Post => sub.stat = Surfaced and then sub.air(1) = Closed and then sub.air(2) = Closed;
 
    procedure checkOxg with
-     Global => (In_Out => sub, Input => airlocks),
-     Pre => airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
+     Global => (In_Out => sub),
+     Pre => sub.air(1) = Closed and then sub.air(2) = Closed;
 
    procedure checkReactor with
-     Global => (In_Out => sub, Input => airlocks),
-     Pre => sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
+     Global => (In_Out => sub),
+     Pre => sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed;
 
 
    procedure diveSub with
-     Global => (In_Out => sub, Input => airlocks),
-     Pre => sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True,
+     Global => (In_Out => sub),
+     Pre => sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed and then sub.air(2) = Closed,
      Post => sub.stat = Submerged;
 
    procedure closeAirlock with
-     Global => (In_Out => airlocks, Input => sub),
-     Pre => sub.stat = Submerged;
+     Global => (In_Out => sub),
+     Pre => sub.stat = Submerged and then (sub.air(1) = Closed or sub.air(2) = Closed);
 
 end Coursework;

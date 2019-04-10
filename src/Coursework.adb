@@ -3,7 +3,7 @@ is
    procedure submergeSub is
    begin
       --operationPermitted;
-      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
+      if(sub.air(1) = Closed and then sub.air(2) = Closed and then sub.oxn = Present and then sub.reac = Normal) then
          sub.stat := Submerged;
       end if;
    end submergeSub;
@@ -12,15 +12,15 @@ is
    procedure openAirlock is
       --If one of the airlocks is open, dont open the next
    begin
-      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed) then
-         airlocks.airlocksA(1) := Open;
+      if(sub.air(1) = Closed and then sub.air(2) = Closed) then
+         sub.air(1) := Open;
       end if;
    end openAirlock;
 
    procedure surfaceSub is
       --Surface the submarine
    begin
-      if(sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed) then
+      if(sub.stat = Submerged and then sub.air(1) = Closed and then sub.air(2) = Closed) then
          sub.stat := Surfaced;
       end if;
    end surfaceSub;
@@ -45,7 +45,7 @@ is
    procedure diveSub is
       --Dive the sub
    begin
-      if(sub.stat = Submerged and then sub.oxn = Present and then airlocks.allowed = True) then
+      if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Closed and then sub.air(2) = Closed) then
          sub.dive := True;
          --Is this how to do this?
       end if;
@@ -53,8 +53,8 @@ is
 
    procedure closeAirlock is
    begin
-      if(airlocks.airlocksA(1) = Open) then
-         airlocks.airlocksA(1) := Closed;
+      if(sub.air(1) = Open) then
+         sub.air(1) := Closed;
       end if;
    end closeAirlock;
 

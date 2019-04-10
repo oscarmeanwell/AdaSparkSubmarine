@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 30
+          "line": 23
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 35
+          "line": 28
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 40
+          "line": 33
         }
       ],
       "spark": "all"
@@ -45,7 +45,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 45
+          "line": 38
         }
       ],
       "spark": "all"
@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 49
+          "line": 42
         }
       ],
       "spark": "all"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 54
+          "line": 47
         }
       ],
       "spark": "all"
@@ -75,38 +75,18 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 59
+          "line": 52
         }
       ],
       "spark": "all"
     }
   ],
   "flow": [
-    {
-      "file": "coursework.ads",
-      "line": 26,
-      "col": 4,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 1
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "coursework__flow__132.trace",
-      "how_proved": "flow"
-    }
   ],
   "proof": [
     {
       "file": "coursework.ads",
-      "line": 33,
+      "line": 26,
       "col": 15,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -115,7 +95,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 30
+            "line": 23
           }
         ]
       },
@@ -133,7 +113,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 33,
+      "check_line": 26,
       "check_col": 15,
       "how_proved": "prover",
       "stats": {
@@ -146,7 +126,7 @@
     },
     {
       "file": "coursework.ads",
-      "line": 57,
+      "line": 50,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -155,7 +135,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 54
+            "line": 47
           }
         ]
       },
@@ -173,7 +153,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 57,
+      "check_line": 50,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -195,7 +175,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 45
+            "line": 38
           }
         ]
       },
@@ -257,7 +237,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 49
+            "line": 42
           }
         ]
       },
@@ -310,7 +290,7 @@
     },
     {
       "file": "coursework.ads",
-      "line": 38,
+      "line": 31,
       "col": 15,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -319,7 +299,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 35
+            "line": 28
           }
         ]
       },
@@ -337,7 +317,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 38,
+      "check_line": 31,
       "check_col": 15,
       "how_proved": "prover",
       "stats": {
@@ -350,7 +330,7 @@
     },
     {
       "file": "coursework.ads",
-      "line": 43,
+      "line": 36,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -359,7 +339,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 40
+            "line": 33
           }
         ]
       },
@@ -413,7 +393,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 43,
+      "check_line": 36,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -430,29 +410,13 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_EFFECTS",
+        "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Coursework.closeAirlock",
+          "name": "Coursework.diveSub",
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 59
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.closeAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 59
+              "line": 47
             }
           ]
         }
@@ -467,7 +431,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 40
+                "line": 33
               }
             ]
           }
@@ -480,7 +444,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 49
+              "line": 42
             }
           ]
         }
@@ -495,7 +459,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 40
+                "line": 33
               }
             ]
           }
@@ -507,7 +471,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 40
+                "line": 33
               }
             ]
           }
@@ -519,7 +483,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 40
+                "line": 33
               }
             ]
           }
@@ -532,247 +496,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 49
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.submergeSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 30
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 40
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.submergeSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 30
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.submergeSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 30
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 40
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 40
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 35
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Coursework.surfaceSub",
-            "sloc": [
-              {
-                "file": "coursework.ads",
-                "line": 40
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.checkOxg",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_POST",
-          "arg": {
-            "name": "Coursework.surfaceSub",
-            "sloc": [
-              {
-                "file": "coursework.ads",
-                "line": 40
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Coursework.surfaceSub",
-            "sloc": [
-              {
-                "file": "coursework.ads",
-                "line": 40
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Coursework.surfaceSub",
-            "sloc": [
-              {
-                "file": "coursework.ads",
-                "line": 40
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.checkOxg",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.diveSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 54
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 35
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 35
+              "line": 42
             }
           ]
         }
@@ -788,7 +512,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 54
+              "line": 47
             }
           ]
         }
@@ -804,7 +528,87 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 54
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.submergeSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 23
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.submergeSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 23
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.submergeSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 23
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.closeAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 52
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.closeAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 52
             }
           ]
         }
@@ -825,17 +629,193 @@
           ]
         }
       }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Coursework.surfaceSub",
+            "sloc": [
+              {
+                "file": "coursework.ads",
+                "line": 33
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.checkOxg",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 38
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Coursework.surfaceSub",
+            "sloc": [
+              {
+                "file": "coursework.ads",
+                "line": 33
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Coursework.surfaceSub",
+            "sloc": [
+              {
+                "file": "coursework.ads",
+                "line": 33
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Coursework.surfaceSub",
+            "sloc": [
+              {
+                "file": "coursework.ads",
+                "line": 33
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.checkOxg",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 38
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
     }
   ],
   "timings": {
-    "marking": 2.96999991405755E-04,
-    "globals (basic)": 1.48999999510124E-04,
-    "globals/properties (advanced)": 6.40999991446733E-04,
-    "flow analysis": 1.62339992821217E-02,
+    "marking": 2.87000002572313E-04,
+    "globals (basic)": 1.42999997478910E-04,
+    "globals/properties (advanced)": 6.02999993134290E-04,
+    "flow analysis": 1.57949998974800E-02,
     "codepeer results": 6.00000021222513E-06,
-    "init_why_sections": 1.72000000020489E-04,
-    "translation of standard": 3.05699999444187E-03,
-    "translation of compilation unit": 1.07899997383356E-02,
-    "proof": 9.56772029399872E-01
+    "init_why_sections": 2.03000003239140E-04,
+    "translation of standard": 3.12200002372265E-03,
+    "translation of compilation unit": 1.19289997965097E-02,
+    "proof": 9.88011002540588E-01
   }
 }

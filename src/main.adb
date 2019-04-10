@@ -19,9 +19,9 @@ procedure printSub is
       Put("Submarine is: ");
       Put_Line(sub.stat'Image);
       Put("Airlocks are: ");
-      Put(airlocks.airlocksA(1)'Image);
+      Put(sub.air(1)'Image);
       Put(" and ");
-      Put_Line(airlocks.airlocksA(2)'Image);
+      Put_Line(sub.air(2)'Image);
       Put("  Reactor is: ");
       Put_Line(sub.reac'Image);
       Put("   Oxegen is: ");

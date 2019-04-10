@@ -37,9 +37,9 @@
   <proof prover="1" obsolete="true"><result status="unknown" steps="102"/></proof>
   <transf name="split_disj" >
    <goal name="WP_parameter def.0.0" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="78"/></proof>
    </goal>
    <goal name="WP_parameter def.0.1" expl="postcondition">
-   <proof prover="1" obsolete="true"><result status="unknown" steps="78"/></proof>
    </goal>
   </transf>
   </goal>

@@ -176,7 +176,6 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E06 := E06 + 1;
-      Coursework'Elab_Spec;
       E83 := E83 + 1;
    end adainit;
 
