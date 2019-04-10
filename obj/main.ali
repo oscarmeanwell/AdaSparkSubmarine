@@ -1,8 +1,9 @@
 V "GNAT Lib v2018"
 M P W=b
 A -gnatA
-A -mtune=generic
-A -march=x86-64
+A -mtune=core2
+A -mmacosx-version-min=10.14.0
+A -fPIC
 P ZX
 
 RN
@@ -10,7 +11,7 @@ RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		f43a3e40 NE OO SU
+U main%b		main.adb		cbbef48b NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -18,31 +19,31 @@ Z interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
 Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
 
-D ada.ads		20180524051736 76789da1 ada%s
-D a-except.ads		20180524051736 291912d5 ada.exceptions%s
-D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
-D a-tags.ads		20180524051738 491b781d ada.tags%s
-D a-textio.ads		20180524051738 881db35a ada.text_io%s
-D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190404152524 c891afbe coursework%s
-D interfac.ads		20180524051736 5ab55268 interfaces%s
-D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D main.adb		20190404154050 b4b622a4 main%b
-D system.ads		20180524051738 32a08138 system%s
-D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
-D s-exctab.ads		20180524051738 54135002 system.exception_table%s
-D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
-D s-imenne.ads		20180524051736 614c06c0 system.img_enum_new%s
-D s-parame.ads		20180524051738 48ec542b system.parameters%s
-D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
-D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
-D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
-D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
-D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
-D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
-D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+D ada.ads		20180524051735 76789da1 ada%s
+D a-except.ads		20180524051735 291912d5 ada.exceptions%s
+D a-ioexce.ads		20180524051734 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051736 491b781d ada.tags%s
+D a-textio.ads		20180524051736 881db35a ada.text_io%s
+D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
+D coursework.ads	20190410103218 f7156575 coursework%s
+D interfac.ads		20180524051734 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
+D main.adb		20190410102028 b4b622a4 main%b
+D system.ads		20180524051735 085b6ffb system%s
+D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
+D s-exctab.ads		20180524051736 54135002 system.exception_table%s
+D s-ficobl.ads		20180524051736 078245e4 system.file_control_block%s
+D s-imenne.ads		20180524051735 614c06c0 system.img_enum_new%s
+D s-parame.ads		20180524051736 48ec542b system.parameters%s
+D s-secsta.ads		20180524051736 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051735 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051736 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051736 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051736 2dc34a04 system.storage_elements%s
+D s-traent.ads		20180524051734 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051735 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20180524051736 1b7d22d2 system.wch_con%s
 X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
@@ -53,7 +54,7 @@ X 6 a-textio.ads
 263U14*Put_Line 11|17s7 18s7 20s7 24s7 26s7 28s7 30s7 34s4 35s4 36s4 37s4
 . 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 90s10 96s13 101s13 107s10
 X 8 coursework.ads
-1K9*Coursework 68e15 11|1w6 1r22
+1K9*Coursework 63e15 11|1w6 1r22
 4n20*Present{4E9} 11|74r24
 4n37*Low{4E9} 11|70r24
 7n25*Normal{7E9} 11|86r25
@@ -66,12 +67,12 @@ X 8 coursework.ads
 20a7*airlocksA{9A9} 11|22r20 24r25
 24r4*airlocks{19R9} 11|22r11 24r16
 26r4*sub{11R9} 11|20r16 26r16 28r16 30r16 52r19 70m13 74m13 82m13 86m13
-35U14*submergeSub 11|57s13
-40U14*openAirlock 11|97s13
-45U14*surfaceSub 11|62s13
-50U14*checkOxg 11|71s13 75s13
-54U14*checkReactor 11|83s13
-64U14*closeAirlock 11|102s13
+30U14*submergeSub 11|57s13
+35U14*openAirlock 11|97s13
+40U14*surfaceSub 11|62s13
+45U14*checkOxg 11|71s13 75s13
+49U14*checkReactor 11|83s13
+59U14*closeAirlock 11|102s13
 X 11 main.adb
 5U11*Main 5b11 113l5 113t9
 6b1 simulationActive{boolean} 44r10 110m10

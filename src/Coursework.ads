@@ -26,11 +26,7 @@ is
    sub : Submarine := (oxn => Present, stat => Surfaced, air => airlocks.airlocksA,
                        reac => Normal, dive => False);
 
-   procedure operationPermitted with
-     Global => (In_Out => airlocks),
-     Pre => airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed,
-     Post => airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
-
+   currentDepth : Integer := 0;
 
    procedure submergeSub with
      Global => (In_Out => sub, Input => airlocks),
@@ -43,17 +39,17 @@ is
      Post =>  airlocks.airlocksA(1) = Closed or airlocks.airlocksA(2) = Closed;
 
    procedure surfaceSub with
-     Global => (In_Out => sub),
-     Pre => sub.stat = Submerged,
-     Post => sub.stat = Surfaced;
+     Global => (In_Out => sub, Input => airlocks),
+     Pre => sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed,
+     Post => sub.stat = Surfaced and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
 
    procedure checkOxg with
      Global => (In_Out => sub, Input => airlocks),
-     Pre => airlocks.allowed= True;
+     Pre => airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
 
    procedure checkReactor with
      Global => (In_Out => sub, Input => airlocks),
-     Pre => sub.stat = Submerged and then airlocks.allowed = True;
+     Pre => sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed;
 
 
    procedure diveSub with

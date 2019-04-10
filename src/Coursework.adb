@@ -9,15 +9,6 @@ is
    end submergeSub;
 
 
-   procedure operationPermitted is
-      --Are both airlocks shut?
-   begin
-      if(airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed) then
-         airlocks.allowed := True;
-      end if;
-   end operationPermitted;
-
-
    procedure openAirlock is
       --If one of the airlocks is open, dont open the next
    begin
@@ -29,7 +20,7 @@ is
    procedure surfaceSub is
       --Surface the submarine
    begin
-      if(sub.stat = Submerged) then
+      if(sub.stat = Submerged and then airlocks.airlocksA(1) = Closed and then airlocks.airlocksA(2) = Closed) then
          sub.stat := Surfaced;
       end if;
    end surfaceSub;

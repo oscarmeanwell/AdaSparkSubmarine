@@ -1,20 +1,18 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\User\Desktop\fase\default.gpr
-20190403145616
+/Users/oscarmeanwell/Desktop/AdaSparkSubmarine/default.gpr
+20190410102028
 [BOUND OBJECT FILES]
-C:\Users\User\Desktop\fase\obj\Coursework.o
-C:\Users\User\Desktop\fase\obj\main.o
+/Users/oscarmeanwell/Desktop/AdaSparkSubmarine/obj/Coursework.o
+/Users/oscarmeanwell/Desktop/AdaSparkSubmarine/obj/main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\User\Desktop\fase\obj\
--LC:\Users\User\Desktop\fase\obj\
--LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-L/Users/oscarmeanwell/Desktop/AdaSparkSubmarine/obj/
+-L/Users/oscarmeanwell/Desktop/AdaSparkSubmarine/obj/
+-L/users/oscarmeanwell/opt/gnat/2018/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/
 -static
--static-libgcc
-C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
--Wl,--stack=0x2000000
+/users/oscarmeanwell/opt/gnat/2018/lib/gcc/x86_64-apple-darwin16.7.0/7.3.1/adalib/libgnat.a

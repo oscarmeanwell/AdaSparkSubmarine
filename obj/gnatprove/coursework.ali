@@ -12,73 +12,71 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U coursework%b		coursework.adb		b0c585ab OO PK
+U coursework%b		coursework.adb		3141e14c OO PK
 
-U coursework%s		coursework.ads		c891afbe OO PK
+U coursework%s		coursework.ads		f7156575 OO PK
 
-D coursework.ads	20190404152524 c891afbe coursework%s
-D coursework.adb	20190404154306 78542a15 coursework%b
-D system.ads		20180524051738 32a08138 system%s
+D coursework.ads	20190410103218 f7156575 coursework%s
+D coursework.adb	20190410103215 c6548439 coursework%b
+D system.ads		20180524051735 085b6ffb system%s
 X 1 coursework.ads
-1K9*Coursework 68l5 68e15 2|1b14 70l5 70t15
+1K9*Coursework 63l5 63e15 2|1b14 61l5 61t15
 3E9*Airlock 3e34 9r38
-3n21*Open{3E9} 2|25r35 65r34
-3n27*Closed{3E9} 24r48 24r56 31r37 31r77 32r38 32r78 42r37 42r77 43r39 43r73
-. 2|6r34 6r74 15r34 15r74 24r34 24r74 66r35
+3n21*Open{3E9} 2|16r35 56r34
+3n27*Closed{3E9} 24r48 24r56 37r37 37r77 38r39 38r73 42r67 42r107 43r67 43r107
+. 47r37 47r77 51r67 51r107 2|6r34 6r74 15r34 15r74 23r64 23r104 57r35
 4E9*Oxegen 4e41 13r13
-4n20*Present{4E9} 26r31 37r51 38r25 61r53 2|6r100 57r50
+4n20*Present{4E9} 26r31 32r51 33r25 56r53 2|6r100 48r50
 4n29*Absent{4E9}
-4n37*Low{4E9} 2|41r20
+4n37*Low{4E9} 2|32r20
 5E9*Status 5e40 14r14
-5n20*Submerged{5E9} 47r24 56r24 61r24 62r25 66r24 2|7r22 32r21 41r44 49r52
-. 57r21
-5n31*Surfaced{5E9} 26r48 48r25 2|33r22
+5n20*Submerged{5E9} 42r24 51r24 56r24 57r25 61r24 2|7r22 23r21 32r44 40r52
+. 48r21
+5n31*Surfaced{5E9} 26r48 43r25 2|24r22
 6E9*OpertationAllowed 6e43 21r17
-6n31*True{6E9} 37r32 52r31 56r62 61r89 2|16r30 57r86
+6n31*True{6E9} 32r32 56r89 2|48r86
 6n37*False{6E9} 24r76
 7E9*ReactorHeat 7e44 15r14
 7n25*Normal{7E9} 27r32 2|6r128
-7n33*Overheated{7E9} 2|49r21
+7n33*Overheated{7E9} 2|40r21
 8I9*Index<short_short_integer> 9r28
 9A9*AirArray(3E9)<8I9> 12r13 20r19
 10E9*Diving 10e32 16r14
-10n20*True{10E9} 2|58r22
+10n20*True{10E9} 2|49r22
 10n26*False{10E9} 27r48
 11R9*Submarine 17e14 26r10
 12a7*air{9A9} 26m58
-13e7*oxn{4E9} 26m24 37r45 38r19 61r47 2|6r94 41r14 57r44
-14e7*stat{5E9} 26m40 47r17 48r18 56r17 61r17 62r18 66r17 2|7m14 32r14 33m14
-. 41r37 49r45 57r14
-15e7*reac{7E9} 27m24 2|6r121 49r14
-16e7*dive{10E9} 27m40 2|58m14
+13e7*oxn{4E9} 26m24 32r45 33r19 56r47 2|6r94 32r14 48r44
+14e7*stat{5E9} 26m40 42r17 43r18 51r17 56r17 57r18 61r17 2|7m14 23r14 24m14
+. 32r37 40r45 48r14
+15e7*reac{7E9} 27m24 2|6r121 40r14
+16e7*dive{10E9} 27m40 2|49m14
 19R9*AcionPermitted 22e14 24r15
-20a7*airlocksA{9A9} 24m34 26r74 31r22 31r62 32r23 32r63 42r22 42r62 43r24
-. 43r58 2|6r19 6r59 15r19 15r59 24r19 24r59 25m19 65r19 66m19
-21e7*allowed{6E9} 24m65 37r22 52r22 56r52 61r79 2|16m19 57r76
-24r4*airlocks{19R9} 26r65 30r27 31r13 31r53 32r14 32r54 36r41 37r13 41r27
-. 42r13 42r53 43r15 43r49 51r41 52r13 55r41 56r43 60r41 61r70 65r27 2|6r10
-. 6r50 15r10 15r50 16m10 24r10 24r50 25m10 57r67 65r10 66m10
-26r4*sub{11R9} 36r27 37r41 38r15 46r27 47r13 48r14 51r27 55r27 56r13 60r27
-. 61r13 61r43 62r14 65r46 66r13 2|6r90 6r117 7m10 32r10 33m10 41r10 41r33
-. 49r10 49r41 57r10 57r40 58m10
-29U14*operationPermitted 2|12b14 18l8 18t26
-35U14*submergeSub 2|3b14 9l8 9t19
-40U14*openAirlock 2|21b14 27l8 27t19
-45U14*surfaceSub 2|29b14 35l8 35t18 42s10 50s10
-50U14*checkOxg 2|37b14 44l8 44t16
-54U14*checkReactor 2|46b14 52l8 52t20
-59U14*diveSub 2|54b14 61l8 61t15
-64U14*closeAirlock 2|63b14 68l8 68t20
+20a7*airlocksA{9A9} 24m34 26r74 37r22 37r62 38r24 38r58 42r52 42r92 43r52
+. 43r92 47r22 47r62 51r52 51r92 2|6r19 6r59 15r19 15r59 16m19 23r49 23r89
+. 56r19 57m19
+21e7*allowed{6E9} 24m65 32r22 56r79 2|48r76
+24r4*airlocks{19R9} 26r65 31r41 32r13 36r27 37r13 37r53 38r15 38r49 41r41
+. 42r43 42r83 43r43 43r83 46r41 47r13 47r53 50r41 51r43 51r83 55r41 56r70
+. 60r27 2|6r10 6r50 15r10 15r50 16m10 23r40 23r80 48r67 56r10 57m10
+26r4*sub{11R9} 31r27 32r41 33r15 41r27 42r13 43r14 46r27 50r27 51r13 55r27
+. 56r13 56r43 57r14 60r46 61r13 2|6r90 6r117 7m10 23r10 24m10 32r10 32r33
+. 40r10 40r41 48r10 48r40 49m10
+30U14*submergeSub 2|3b14 9l8 9t19
+35U14*openAirlock 2|12b14 18l8 18t19
+40U14*surfaceSub 2|20b14 26l8 26t18 33s10 41s10
+45U14*checkOxg 2|28b14 35l8 35t16
+49U14*checkReactor 2|37b14 43l8 43t20
+54U14*diveSub 2|45b14 52l8 52t15
+59U14*closeAirlock 2|54b14 59l8 59t20
 
 QQ SPARKVERSION 2018 (20180523)
-GG EK_DIRECT_CALLS coursework__operationpermitted 0
-GG EK_GLOBALS coursework__operationpermitted local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__airlocks proper_output 1 coursework__airlocks refined_proof_in 0 refined_input 1 coursework__airlocks refined_output 1 coursework__airlocks calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__airlocks LOCKS 0
 GG EK_DIRECT_CALLS coursework__submergesub 0
 GG EK_GLOBALS coursework__submergesub local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 coursework__airlocks coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 2 coursework__airlocks coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 coursework__airlocks coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework__openairlock 0
 GG EK_GLOBALS coursework__openairlock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__airlocks proper_output 1 coursework__airlocks refined_proof_in 0 refined_input 1 coursework__airlocks refined_output 1 coursework__airlocks calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__airlocks LOCKS 0
 GG EK_DIRECT_CALLS coursework__surfacesub 0
-GG EK_GLOBALS coursework__surfacesub local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_GLOBALS coursework__surfacesub local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 coursework__airlocks coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 2 coursework__airlocks coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 coursework__airlocks coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework__checkoxg 1 coursework__surfacesub
 GG EK_GLOBALS coursework__checkoxg local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 2 coursework__airlocks coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 2 coursework__airlocks coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 coursework__airlocks coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework__checkreactor 1 coursework__surfacesub
