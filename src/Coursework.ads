@@ -84,9 +84,14 @@ is
      Post => sub.air(n) = Locked;
 
    procedure loadTorpedeo(n : Integer) with
-   Global => (In_Out => sub),
-   Pre => n = (1..4);
+     Global => (In_Out => sub),
+     Pre => n >= 1 and then n <= 4 and then sub.air(1) = Locked and then sub.air(2) = Locked
+     and then sub.tor.slots(n) = Empty and then sub.tor.numberOfTorepedos > 0,
+     Post => sub.tor.slots(n) = Loaded;
 
    procedure fireTorpedeo(n : Integer) with
-
+     Global => (In_Out => sub),
+     Pre => n >= 1 and then n <= 4 and then sub.air(1) = Locked and then sub.air(2) = Locked
+        and then sub.tor.slots(n) = Loaded,
+     Post => sub.tor.slots(n) = Empty;
 end Coursework;

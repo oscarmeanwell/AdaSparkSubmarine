@@ -8,15 +8,19 @@ P ZX
 
 RN
 RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		33ee65bf NE OO SU
+U main%b		main.adb		77f644cb NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
 Z interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
 Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.val_int%s	s-valint.adb		s-valint.ali
@@ -28,11 +32,14 @@ D a-stream.ads		20180524051735 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051736 491b781d ada.tags%s
 D a-textio.ads		20180524051736 881db35a ada.text_io%s
 D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
-D coursework.ads	20190410151355 3e164a38 coursework%s
+D coursework.ads	20190410160107 24dfef0c coursework%s
 D interfac.ads		20180524051734 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
-D main.adb		20190410150854 85e59cdd main%b
+D main.adb		20190410163732 db34189d main%b
 D system.ads		20180524051735 085b6ffb system%s
+D s-conca2.ads		20180524051735 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20180524051736 0b705ca5 system.concat_3%s
+D s-conca4.ads		20180524051736 7e642b20 system.concat_4%s
 D s-crtl.ads		20180524051734 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051736 54135002 system.exception_table%s
 D s-ficobl.ads		20180524051736 078245e4 system.file_control_block%s
@@ -52,44 +59,54 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-240U14*Get 11|48s7 54s10 67s10 83s10 98s10 101s13 109s13 117s10
-242U14*Put 11|19s7 21s7 22s7 23s7 25s7 27s7 29s7 47s7 51s10 53s10 66s10 82s10
-. 97s10 100s13 102s13 108s13 110s13 116s10 118s10
-263U14*Put_Line 11|17s7 18s7 20s7 24s7 26s7 28s7 30s7 34s4 35s4 36s4 37s4
-. 38s4 39s4 40s4 41s4 42s4 46s7 52s10 56s13 61s13 69s13 93s10 103s13 111s13
-. 119s10 123s10
+166U14*New_Line 11|17s7 17s16
+240U14*Get 11|43s7 49s10 62s10 78s10 93s10 96s13 99s16 107s16 115s13 125s10
+. 128s13 134s13
+242U14*Put 11|23s7 24s7 42s7 46s10 48s10 61s10 77s10 92s10 95s13 98s16 100s16
+. 106s16 108s16 114s13 116s13 124s10 127s13 133s13
+263U14*Put_Line 11|18s7 19s7 20s7 21s7 22s7 25s7 29s4 30s4 31s4 32s4 33s4
+. 34s4 35s4 36s4 37s4 41s7 47s10 51s13 56s13 64s13 88s10 101s16 109s16 117s13
+. 123s10 129s13 135s13
 X 8 coursework.ads
-1K9*Coursework 76e15 11|1w6 1r22
-6n25*Normal{6E9} 11|89r25
-6n33*Overheated{6E9} 11|85r25
-8A9*AirArray(3E9)<integer>
-16i7*currentDepth{integer} 11|30r25
-21a7*air{8A9} 11|22r15 24r20
-22e7*oxn{4E9} 11|28r20
-23e7*stat{5E9} 11|20r20 52r23
-24e7*reac{6E9} 11|26r20 85m17 89m17
-25r7*dive{13R9} 11|30r20
-30r4*sub{20R9} 11|20r16 22r11 24r16 26r16 28r16 30r16 52r19 85m13 89m13
-34U14*submergeSub 11|57s13
-40U14*surfaceSub 11|62s13
-45U14*checkOxg 11|70s13 74s13 78s13
-49U14*checkReactor 11|86s13
-54U14*diveSub 11|94s10
-61U14*closeAirlock 11|112s13
-66U14*openAirlock 11|104s13
-72U14*lockDoor 11|120s10
+1K9*Coursework 97e15 11|1w6 1r22
+6n25*Normal{6E9} 11|84r25
+6n33*Overheated{6E9} 11|80r25
+7A9*AirArray(3E9)<integer>
+11A9*TorArray(10E9)<integer>
+18i7*currentDepth{integer} 11|22r48
+23i7*numberOfTorepedos{integer} 11|123r66
+24a7*slots{11A9} 11|24r19 24r51 25r24 25r56
+28a7*air{7A9} 11|19r43 19r69
+29e7*oxn{4E9} 11|21r43
+30e7*stat{5E9} 11|18r43 47r23
+31e7*reac{6E9} 11|20r43 80m17 84m17
+32r7*dive{15R9} 11|22r43
+33r7*tor{22R9} 11|24r15 24r47 25r20 25r52 123r62
+40r4*sub{27R9} 11|18r39 19r39 19r65 20r39 21r39 22r39 24r11 24r43 25r16 25r48
+. 47r19 80m13 84m13 123r58
+43U14*submergeSub 11|52s13
+49U14*surfaceSub 11|57s13
+54U14*overideOxegen 11|65s13 69s13 73s13
+58U14*overideReactor 11|81s13
+63U14*diveSub 11|89s10
+70U14*closeAirlock 11|110s16
+75U14*openAirlock 11|102s16
+81U14*lockDoor 11|118s13
+86U14*loadTorpedeo 11|130s13
+92U14*fireTorpedeo 11|136s13
 X 11 main.adb
-5U11*Main 5b11 129l5 129t9
-6b1 simulationActive{boolean} 44r10 126m10
-7a1 inp{string} 48m11 50r10 54m14 55r13 60r13 65r13 67m14 68r13 72r13 76r13
-. 81r13 83m14 84r13 88r13 92r13 96r13 98m14 99r13 101m17 103r22 104r39 107r13
-. 109m17 111r22 112r40 115r13 117m14 119r19 120r33 122r13 125r13
+5U11*Main 5b11 143l5 143t9
+6b1 simulationActive{boolean} 39r10 140m10
+7a1 inp{string} 43m11 45r10 49m14 50r13 55r13 60r13 62m14 63r13 67r13 71r13
+. 76r13 78m14 79r13 83r13 87r13 91r13 93m14 94r13 96m17 97r16 99m20 101r25
+. 102r42 105r16 107m20 109r25 110r43 113r13 115m17 117r22 118r36 122r13 125m14
+. 126r13 128m17 129r62 130r40 132r16 134m17 135r64 136r40 139r13
 8i1 last{integer}
-9a1 title{string} 34r13
-10a1 title1{string} 35r13
-11a1 title2{string} 36r13
-12a1 title3{string} 37r13
-13a1 title4{string} 38r13
-14a1 title5{string} 39r13
-15U11 printSub 15b11 32l8 32t16 45s7
+9a1 title{string} 29r13
+10a1 title1{string} 30r13
+11a1 title2{string} 31r13
+12a1 title3{string} 32r13
+13a1 title4{string} 33r13
+14a1 title5{string} 34r13
+15U11 printSub 15b11 27l8 27t16 40s7
 

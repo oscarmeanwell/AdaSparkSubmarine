@@ -13,78 +13,95 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U coursework%b		coursework.adb		73502741 OO PK
+U coursework%b		coursework.adb		2509e5ad OO PK
 
-U coursework%s		coursework.ads		764f81d2 OO PK
+U coursework%s		coursework.ads		24dfef0c OO PK
 
-D coursework.ads	20190410152221 764f81d2 coursework%s
-D coursework.adb	20190410152221 051fa693 coursework%b
+D coursework.ads	20190410160107 24dfef0c coursework%s
+D coursework.adb	20190410160119 01d60aa1 coursework%b
 D system.ads		20180524051735 085b6ffb system%s
 X 1 coursework.ads
-1K9*Coursework 74l5 74e15 2|1b14 81l5 81t15
+1K9*Coursework 97l5 97e15 2|1b14 99l5 99t15
 3E9*Airlock 3e42 7r53
-3n21*Open{3E9} 61r52 68r28 2|18r24 69r49
-3n27*Closed{3E9} 62r27 66r53 67r33 72r52 2|16r50 17r33 70r24 76r49
-3n35*Locked{3E9} 29r66 29r74 34r55 34r84 36r58 36r87 40r56 40r85 41r56 41r85
-. 45r26 45r55 49r56 49r85 54r83 55r32 66r76 67r56 73r27 2|6r23 6r52 16r73
-. 17r56 25r53 25r82 34r53 34r82 53r27 53r56 61r80 62r32 77r24
-4E9*Oxegen 4e41 21r13
-4n20*Present{4E9} 29r31 35r29 54r53 2|6r78 39r24 61r50
+3n21*Open{3E9} 72r52 79r28 2|18r24 69r49
+3n27*Closed{3E9} 73r27 77r53 78r33 83r52 2|16r50 17r33 70r24 76r49
+3n35*Locked{3E9} 40r66 40r74 45r55 45r84 47r58 47r87 51r56 51r85 52r56 52r85
+. 56r26 56r55 60r56 60r85 65r83 66r32 77r76 78r56 84r27 88r58 88r87 94r58
+. 94r87 2|6r23 6r52 16r73 17r56 25r53 25r82 34r53 34r82 53r27 53r56 61r80
+. 62r32 77r24 83r55 83r84 91r55 91r84
+4E9*Oxegen 4e41 29r13
+4n20*Present{4E9} 40r31 46r29 65r53 2|6r78 39r24 61r50
 4n29*Absent{4E9} 2|43r24
 4n37*Low{4E9} 2|36r24
-5E9*Status 5e40 22r14
-5n20*Submerged{5E9} 36r26 40r24 49r24 54r24 57r25 2|7r22 25r21 34r21 52r52
+5E9*Status 5e40 30r14
+5n20*Submerged{5E9} 47r26 51r24 60r24 65r24 68r25 2|7r22 25r21 34r21 52r52
 . 61r21
-5n31*Surfaced{5E9} 29r48 34r24 41r25 2|26r22
-6E9*ReactorHeat 6e44 23r14
-6n25*Normal{6E9} 30r32 35r57 2|6r106
+5n31*Surfaced{5E9} 40r48 45r24 52r25 2|26r22
+6E9*ReactorHeat 6e44 31r14
+6n25*Normal{6E9} 41r32 46r57 2|6r106
 6n33*Overheated{6E9} 2|52r21
-7A9*AirArray(3E9)<integer> 20r13
-8E9*Diving 8e32 13r18
+7A9*AirArray(3E9)<integer> 28r13
+8E9*Diving 8e32 16r18
 8n20*True{8E9}
-8n26*False{8E9} 27r39
+8n26*False{8E9} 36r39
 9E9*DoorLocked 9e36
 9n24*True{9E9}
 9n30*False{9E9}
-10N4*MAXDIVE 27r58 27r103
-12R9*DiveRecord 17e14 24r14 27r12
-13e7*isDiving{8E9} 27m27
-14i7*maxDepth{integer} 27m46
-15i7*currentDepth{integer} 27m67 55r57 56r28 57r53 57r77 2|8m19 27m19 62r57
+10E9*IsLoaded 10e36 11r53
+10n22*Empty{10E9} 38r65 38r88 89r34 96r33 2|84r38 94r30
+10n29*Loaded{10E9} 38r72 38r80 90r33 95r37 2|85r30 92r38
+11A9*TorArray(10E9)<integer> 24r14
+13N4*MAXDIVE 36r58 36r103
+15R9*DiveRecord 20e14 32r14 36r12
+16e7*isDiving{8E9} 36m27
+17i7*maxDepth{integer} 36m46
+18i7*currentDepth{integer} 36m67 66r57 67r28 68r53 68r77 2|8m19 27m19 62r57
 . 63m19 63r44
-16i7*safeDiveDepth{integer} 27m86 55r81 2|62r81
-19R9*Submarine 25e14 29r10
-20a7*air{7A9} 29m58 34r46 34r75 36r49 36r78 40r47 40r76 41r47 41r76 45r17
-. 45r46 49r47 49r76 54r74 55r23 61r43 62r18 66r44 66r67 67r24 67r47 68r19
-. 72r43 73r18 2|6r14 6r43 16r41 16r64 17r24 17r47 18m14 25r44 25r73 34r44
-. 34r73 53r18 53r47 61r71 62r23 69r40 70m14 76r40 77m14
-21e7*oxn{4E9} 29m24 35r23 54r47 2|6r72 36m17 39m17 43m17 61r44
-22e7*stat{5E9} 29m40 34r17 36r19 40r17 41r18 49r17 54r17 57r18 2|7m14 25r14
+19i7*safeDiveDepth{integer} 36m86 66r81 2|62r81
+22R9*TorepedoRecord 25e14 33r12 38r11
+23i7*numberOfTorepedos{integer} 38m30 89r57 2|84r61
+24a7*slots{11A9} 38m55 89r23 90r22 95r26 96r22 2|84r27 85m18 92r27 94m18
+27R9*Submarine 34e14 40r10
+28a7*air{7A9} 40m58 45r46 45r75 47r49 47r78 51r47 51r76 52r47 52r76 56r17
+. 56r46 60r47 60r76 65r74 66r23 72r43 73r18 77r44 77r67 78r24 78r47 79r19
+. 83r43 84r18 88r49 88r78 94r49 94r78 2|6r14 6r43 16r41 16r64 17r24 17r47
+. 18m14 25r44 25r73 34r44 34r73 53r18 53r47 61r71 62r23 69r40 70m14 76r40
+. 77m14 83r46 83r75 91r46 91r75
+29e7*oxn{4E9} 40m24 46r23 65r47 2|6r72 36m17 39m17 43m17 61r44
+30e7*stat{5E9} 40m40 45r17 47r19 51r17 52r18 60r17 65r17 68r18 2|7m14 25r14
 . 26m14 34r14 52r45 61r14
-23e7*reac{6E9} 30m24 35r50 2|6r99 52r14
-24r7*dive{12R9} 30m40 55r52 55r76 56r23 57r48 57r72 2|8m14 27m14 62r52 62r76
+31e7*reac{6E9} 41m24 46r50 2|6r99 52r14
+32r7*dive{15R9} 41m40 66r52 66r76 67r23 68r48 68r72 2|8m14 27m14 62r52 62r76
 . 63m14 63r39
-27r4*diveR{12R9} 30r48
-29r4*sub{19R9} 33r27 34r13 34r42 34r71 35r19 35r46 36r15 36r45 36r74 39r27
-. 40r13 40r43 40r72 41r14 41r43 41r72 44r27 45r13 45r42 48r27 49r13 49r43
-. 49r72 53r27 54r13 54r43 54r70 55r19 55r48 55r72 56r19 57r14 57r44 57r68
-. 60r27 61r39 62r14 65r27 66r40 66r63 67r20 67r43 68r15 71r27 72r39 73r14
-. 2|6r10 6r39 6r68 6r95 7m10 8m10 16r37 16r60 17r20 17r43 18m10 25r10 25r40
-. 25r69 26m10 27m10 34r10 34r40 34r69 36m13 39m13 43m13 52r10 52r41 53r14
-. 53r43 61r10 61r40 61r67 62r19 62r48 62r72 63m10 63r35 69r36 70m10 76r36
-. 77m10
-32U14*submergeSub 2|4b14 10l8 10t19
-38U14*surfaceSub 2|22b14 29l8 29t18 42s13 54s10
-43U14*overideOxegen 43>28 2|31b14 47l8 47t21
-43a28 d{string} 2|31b28 35r13 38r13 41r13
-47U14*overideReactor 2|49b14 56l8 56t22
-52U14*diveSub 2|59b14 65l8 65t15
-59U14*closeAirlock 59>27 2|67b14 72l8 72t20
-59i27 n{integer} 61r14 61r23 61r47 62r22 2|67b27 69r11 69r20 69r44 70r18
-64U14*openAirlock 64>26 2|13b14 20l8 20t19
-64i26 n{integer} 66r14 66r23 68r23 2|13b26 16r11 16r20 18r18
-70U14*lockDoor 70>23 2|74b14 79l8 79t16
-70i23 n{integer} 72r14 72r23 72r47 73r22 2|74b23 76r11 76r20 76r44 77r18
+33r7*tor{22R9} 41m55 89r19 89r53 90r18 95r22 96r18 2|84r23 84r57 85m14 92r23
+. 94m14
+36r4*diveR{15R9} 41r48
+38r4*torR{22R9} 41r62
+40r4*sub{27R9} 44r27 45r13 45r42 45r71 46r19 46r46 47r15 47r45 47r74 50r27
+. 51r13 51r43 51r72 52r14 52r43 52r72 55r27 56r13 56r42 59r27 60r13 60r43
+. 60r72 64r27 65r13 65r43 65r70 66r19 66r48 66r72 67r19 68r14 68r44 68r68
+. 71r27 72r39 73r14 76r27 77r40 77r63 78r20 78r43 79r15 82r27 83r39 84r14
+. 87r27 88r45 88r74 89r15 89r49 90r14 93r27 94r45 94r74 95r18 96r14 2|6r10
+. 6r39 6r68 6r95 7m10 8m10 16r37 16r60 17r20 17r43 18m10 25r10 25r40 25r69
+. 26m10 27m10 34r10 34r40 34r69 36m13 39m13 43m13 52r10 52r41 53r14 53r43
+. 61r10 61r40 61r67 62r19 62r48 62r72 63m10 63r35 69r36 70m10 76r36 77m10
+. 83r42 83r71 84r19 84r53 85m10 91r42 91r71 92r19 94m10
+43U14*submergeSub 2|4b14 10l8 10t19
+49U14*surfaceSub 2|22b14 29l8 29t18 42s13 54s10
+54U14*overideOxegen 54>28 2|31b14 47l8 47t21
+54a28 d{string} 2|31b28 35r13 38r13 41r13
+58U14*overideReactor 2|49b14 56l8 56t22
+63U14*diveSub 2|59b14 65l8 65t15
+70U14*closeAirlock 70>27 2|67b14 72l8 72t20
+70i27 n{integer} 72r14 72r23 72r47 73r22 2|67b27 69r11 69r20 69r44 70r18
+75U14*openAirlock 75>26 2|13b14 20l8 20t19
+75i26 n{integer} 77r14 77r23 79r23 2|13b26 16r11 16r20 18r18
+81U14*lockDoor 81>23 2|74b14 79l8 79t16
+81i23 n{integer} 83r14 83r23 83r47 84r22 2|74b23 76r11 76r20 76r44 77r18
+86U14*loadTorpedeo 86>27 2|81b14 87l8 87t20
+86i27 n{integer} 88r13 88r29 89r29 90r28 2|81b27 83r10 83r26 84r33 85r24
+92U14*fireTorpedeo 92>27 2|89b14 97l8 97t20
+92i27 n{integer} 94r13 94r29 95r32 96r28 2|89b27 91r10 91r26 92r33 94r24
 
 QQ SPARKVERSION 2018 (20180523)
 GG EK_DIRECT_CALLS coursework__submergesub 0
@@ -103,6 +120,10 @@ GG EK_DIRECT_CALLS coursework__openairlock 0
 GG EK_GLOBALS coursework__openairlock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework__lockdoor 0
 GG EK_GLOBALS coursework__lockdoor local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_DIRECT_CALLS coursework__loadtorpedeo 0
+GG EK_GLOBALS coursework__loadtorpedeo local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
+GG EK_DIRECT_CALLS coursework__firetorpedeo 0
+GG EK_GLOBALS coursework__firetorpedeo local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 coursework__sub proper_output 1 coursework__sub refined_proof_in 0 refined_input 1 coursework__sub refined_output 1 coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 coursework__sub LOCKS 0
 GG EK_DIRECT_CALLS coursework 0
-GG EK_GLOBALS coursework local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 coursework__diver coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 2 coursework__diver coursework__sub FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_GLOBALS coursework local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 3 coursework__diver coursework__torr coursework__sub calls_proof 0 calls 0 calls_conditional 0 local_var 3 coursework__diver coursework__torr coursework__sub FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_END_MARKER

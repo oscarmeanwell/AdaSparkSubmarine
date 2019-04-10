@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 32
+          "line": 43
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 38
+          "line": 49
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 43
+          "line": 54
         }
       ],
       "spark": "all"
@@ -45,7 +45,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 47
+          "line": 58
         }
       ],
       "spark": "all"
@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 52
+          "line": 63
         }
       ],
       "spark": "all"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 59
+          "line": 70
         }
       ],
       "spark": "all"
@@ -75,7 +75,7 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 64
+          "line": 75
         }
       ],
       "spark": "all"
@@ -85,7 +85,27 @@
       "sloc": [
         {
           "file": "coursework.ads",
-          "line": 70
+          "line": 81
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Coursework.loadTorpedeo",
+      "sloc": [
+        {
+          "file": "coursework.ads",
+          "line": 86
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Coursework.fireTorpedeo",
+      "sloc": [
+        {
+          "file": "coursework.ads",
+          "line": 92
         }
       ],
       "spark": "all"
@@ -94,7 +114,7 @@
   "flow": [
     {
       "file": "coursework.ads",
-      "line": 29,
+      "line": 40,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -109,12 +129,12 @@
       },
       "check_tree": {
       },
-      "tracefile": "coursework__flow__148.trace",
+      "tracefile": "coursework__flow__303.trace",
       "how_proved": "flow"
     },
     {
       "file": "coursework.ads",
-      "line": 29,
+      "line": 40,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -129,12 +149,12 @@
       },
       "check_tree": {
       },
-      "tracefile": "coursework__flow__149.trace",
+      "tracefile": "coursework__flow__304.trace",
       "how_proved": "flow"
     },
     {
       "file": "coursework.ads",
-      "line": 29,
+      "line": 40,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -149,12 +169,12 @@
       },
       "check_tree": {
       },
-      "tracefile": "coursework__flow__150.trace",
+      "tracefile": "coursework__flow__305.trace",
       "how_proved": "flow"
     },
     {
       "file": "coursework.ads",
-      "line": 29,
+      "line": 40,
       "col": 4,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -169,11 +189,652 @@
       },
       "check_tree": {
       },
-      "tracefile": "coursework__flow__151.trace",
+      "tracefile": "coursework__flow__306.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "coursework.ads",
+      "line": 40,
+      "col": 4,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "coursework__flow__307.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "coursework.ads",
+      "line": 40,
+      "col": 4,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 1
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "coursework__flow__308.trace",
       "how_proved": "flow"
     }
   ],
   "proof": [
+    {
+      "file": "coursework.ads",
+      "line": 83,
+      "col": 47,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.lockDoor",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 83,
+      "check_col": 47,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.adb",
+      "line": 85,
+      "col": 24,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.loadTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 86
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 85,
+      "check_col": 24,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.adb",
+      "line": 42,
+      "col": 13,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.overideOxegen",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 54
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 28,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 28,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 20,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 42,
+      "check_col": 13,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 3,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 89,
+      "col": 29,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.loadTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 86
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 89,
+      "check_col": 29,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.adb",
+      "line": 84,
+      "col": 33,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.loadTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 86
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 84,
+      "check_col": 33,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 79,
+      "col": 15,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.openAirlock",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 75
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 106,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 79,
+      "check_col": 15,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 73,
+      "col": 22,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.closeAirlock",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 70
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 73,
+      "check_col": 22,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 47,
+      "col": 15,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.submergeSub",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 43
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 47,
+      "check_col": 15,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 3,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.adb",
+      "line": 69,
+      "col": 44,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.closeAirlock",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 70
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 69,
+      "check_col": 44,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 73,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.closeAirlock",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 70
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 71,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 73,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 79,
+      "col": 23,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.openAirlock",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 75
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 79,
+      "check_col": 23,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
     {
       "file": "coursework.ads",
       "line": 72,
@@ -181,7 +842,7 @@
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
       "entity": {
-        "name": "Coursework.lockDoor",
+        "name": "Coursework.closeAirlock",
         "sloc": [
           {
             "file": "coursework.ads",
@@ -227,454 +888,6 @@
     },
     {
       "file": "coursework.adb",
-      "line": 42,
-      "col": 13,
-      "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.overideOxegen",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 43
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 28,
-              "time": 7.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 28,
-              "time": 8.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 20,
-              "time": 8.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.adb",
-      "check_line": 42,
-      "check_col": 13,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 3,
-          "max_steps": 1,
-          "max_time": 7.99999982118607E-02
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 68,
-      "col": 15,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.openAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 64
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 51,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 68,
-      "check_col": 15,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 62,
-      "col": 22,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.closeAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 59
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 62,
-      "check_col": 22,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 36,
-      "col": 15,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.submergeSub",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 32
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-            "split_disj": [
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 36,
-      "check_col": 15,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 3,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.adb",
-      "line": 69,
-      "col": 44,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.closeAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 59
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.adb",
-      "check_line": 69,
-      "check_col": 44,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 62,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.closeAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 59
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 46,
-              "time": 0
-            }
-          },
-          "transformations": {
-            "split_disj": [
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 62,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 68,
-      "col": 23,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.openAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 64
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 68,
-      "check_col": 23,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.ads",
-      "line": 61,
-      "col": 47,
-      "rule": "VC_INDEX_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Coursework.closeAirlock",
-        "sloc": [
-          {
-            "file": "coursework.ads",
-            "line": 59
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "coursework.ads",
-      "check_line": 61,
-      "check_col": 47,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "coursework.adb",
       "line": 18,
       "col": 18,
       "rule": "VC_INDEX_CHECK",
@@ -684,7 +897,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 64
+            "line": 75
           }
         ]
       },
@@ -725,6 +938,108 @@
       }
     },
     {
+      "file": "coursework.ads",
+      "line": 96,
+      "col": 28,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.fireTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 92
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 5.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 96,
+      "check_col": 28,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 5.00000007450581E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 95,
+      "col": 32,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.fireTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 92
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 95,
+      "check_col": 32,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
       "file": "coursework.adb",
       "line": 76,
       "col": 44,
@@ -735,7 +1050,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 70
+            "line": 81
           }
         ]
       },
@@ -786,7 +1101,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 59
+            "line": 70
           }
         ]
       },
@@ -837,7 +1152,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 52
+            "line": 63
           }
         ]
       },
@@ -868,7 +1183,7 @@
     },
     {
       "file": "coursework.ads",
-      "line": 57,
+      "line": 68,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -877,7 +1192,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 52
+            "line": 63
           }
         ]
       },
@@ -906,7 +1221,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 57,
+      "check_line": 68,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -928,7 +1243,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 47
+            "line": 58
           }
         ]
       },
@@ -938,7 +1253,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 3.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -949,7 +1264,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 3.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -960,7 +1275,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 3.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -975,7 +1290,7 @@
         "CVC4": {
           "count": 3,
           "max_steps": 1,
-          "max_time": 2.99999993294477E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
@@ -990,7 +1305,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 70
+            "line": 81
           }
         ]
       },
@@ -1032,7 +1347,58 @@
     },
     {
       "file": "coursework.ads",
-      "line": 73,
+      "line": 90,
+      "col": 28,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.loadTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 86
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 90,
+      "check_col": 28,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 84,
       "col": 22,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -1041,7 +1407,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 70
+            "line": 81
           }
         ]
       },
@@ -1070,7 +1436,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 73,
+      "check_line": 84,
       "check_col": 22,
       "how_proved": "prover",
       "stats": {
@@ -1082,8 +1448,99 @@
       }
     },
     {
+      "file": "coursework.adb",
+      "line": 94,
+      "col": 24,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.fireTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 92
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 94,
+      "check_col": 24,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
+    },
+    {
       "file": "coursework.ads",
-      "line": 41,
+      "line": 90,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.loadTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 86
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 35,
+              "time": 6.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 90,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 5.99999986588955E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 52,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -1092,7 +1549,7 @@
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 38
+            "line": 49
           }
         ]
       },
@@ -1146,7 +1603,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 41,
+      "check_line": 52,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -1159,16 +1616,16 @@
     },
     {
       "file": "coursework.ads",
-      "line": 73,
+      "line": 96,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Coursework.lockDoor",
+        "name": "Coursework.fireTorpedeo",
         "sloc": [
           {
             "file": "coursework.ads",
-            "line": 70
+            "line": 92
           }
         ]
       },
@@ -1177,7 +1634,47 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 46,
+              "steps": 35,
+              "time": 7.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.ads",
+      "check_line": 96,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 7.00000002980232E-02
+        }
+      }
+    },
+    {
+      "file": "coursework.ads",
+      "line": 84,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.lockDoor",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 81
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 71,
               "time": 0
             }
           },
@@ -1186,7 +1683,7 @@
         }
       ],
       "check_file": "coursework.ads",
-      "check_line": 73,
+      "check_line": 84,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -1196,9 +1693,296 @@
           "max_time": 0.00000000000000E+00
         }
       }
+    },
+    {
+      "file": "coursework.adb",
+      "line": 92,
+      "col": 33,
+      "rule": "VC_INDEX_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Coursework.fireTorpedeo",
+        "sloc": [
+          {
+            "file": "coursework.ads",
+            "line": 92
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 4.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "coursework.adb",
+      "check_line": 92,
+      "check_col": 33,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 3.99999991059303E-02
+        }
+      }
     }
   ],
   "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.fireTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 92
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.fireTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 92
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.fireTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 92
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 49
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 49
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.surfaceSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 49
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.closeAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 70
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.closeAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 70
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.closeAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 70
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.openAirlock",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.diveSub",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 63
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Coursework.surfaceSub",
+            "sloc": [
+              {
+                "file": "coursework.ads",
+                "line": 49
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.overideReactor",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 58
+            }
+          ]
+        }
+      }
+    },
     {
       "assumptions": [
         {
@@ -1208,7 +1992,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1220,7 +2004,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1232,7 +2016,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1245,7 +2029,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 47
+              "line": 58
             }
           ]
         }
@@ -1261,7 +2045,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 52
+              "line": 63
             }
           ]
         }
@@ -1277,7 +2061,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 52
+              "line": 63
             }
           ]
         }
@@ -1293,7 +2077,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 32
+              "line": 43
             }
           ]
         }
@@ -1309,7 +2093,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 32
+              "line": 43
             }
           ]
         }
@@ -1325,7 +2109,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 32
+              "line": 43
             }
           ]
         }
@@ -1341,7 +2125,23 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 70
+              "line": 81
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Coursework.loadTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 86
             }
           ]
         }
@@ -1356,7 +2156,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1369,7 +2169,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 43
+              "line": 54
             }
           ]
         }
@@ -1384,7 +2184,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1396,7 +2196,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1408,7 +2208,7 @@
             "sloc": [
               {
                 "file": "coursework.ads",
-                "line": 38
+                "line": 49
               }
             ]
           }
@@ -1421,7 +2221,7 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 43
+              "line": 54
             }
           ]
         }
@@ -1437,7 +2237,23 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 70
+              "line": 81
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Coursework.loadTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 86
             }
           ]
         }
@@ -1453,7 +2269,23 @@
           "sloc": [
             {
               "file": "coursework.ads",
-              "line": 70
+              "line": 81
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Coursework.loadTorpedeo",
+          "sloc": [
+            {
+              "file": "coursework.ads",
+              "line": 86
             }
           ]
         }
@@ -1474,205 +2306,17 @@
           ]
         }
       }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.surfaceSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.closeAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 59
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 64
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.closeAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 59
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 64
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.closeAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 59
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Coursework.openAirlock",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 64
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Coursework.diveSub",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 52
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Coursework.surfaceSub",
-            "sloc": [
-              {
-                "file": "coursework.ads",
-                "line": 38
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Coursework.overideReactor",
-          "sloc": [
-            {
-              "file": "coursework.ads",
-              "line": 47
-            }
-          ]
-        }
-      }
     }
   ],
   "timings": {
-    "marking": 3.87000007322058E-04,
-    "globals (basic)": 1.59000002895482E-04,
-    "globals/properties (advanced)": 6.97000010404736E-04,
-    "flow analysis": 3.15570011734962E-02,
-    "codepeer results": 6.00000021222513E-06,
-    "init_why_sections": 1.86999997822568E-04,
-    "translation of standard": 2.89399991743267E-03,
-    "translation of compilation unit": 1.62519998848438E-02,
-    "proof": 1.16914498806000E+00
+    "marking": 5.05000003613532E-04,
+    "globals (basic)": 1.74000000697561E-04,
+    "globals/properties (advanced)": 7.68999976571649E-04,
+    "flow analysis": 4.62879985570908E-02,
+    "codepeer results": 7.00000009601354E-06,
+    "init_why_sections": 2.05999996978790E-04,
+    "translation of standard": 3.31999990157783E-03,
+    "translation of compilation unit": 2.27060001343489E-02,
+    "proof": 2.57398009300232E+00
   }
 }
