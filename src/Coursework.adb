@@ -59,7 +59,7 @@ is
    procedure diveSub is
    begin
       if(sub.stat = Submerged and then sub.oxn = Present and then sub.air(1) = Locked
-         and then sub.air(2) = Locked and then sub.dive.currentDepth < sub.dive.safeDiveDepth) then
+         and then sub.air(2) = Locked and then sub.dive.currentDepth < sub.dive.safeDiveDepth and then sub.reac = Normal) then
          sub.dive.currentDepth := sub.dive.currentDepth + 100;
       end if;
    end diveSub;

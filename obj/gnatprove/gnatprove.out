@@ -8,23 +8,23 @@ Data Dependencies                 .          .          .          .            
 Flow Dependencies                 .          .          .          .            .           .          .
 Initialization                    6          6          .          .            .           .          .
 Non-Aliasing                      .          .          .          .            .           .          .
-Run-time Checks                  19          .          .          .    19 (CVC4)           .          .
+Run-time Checks                  23          .          .          .    23 (CVC4)           .          .
 Assertions                        .          .          .          .            .           .          .
 Functional Contracts             10          .          .          .    10 (CVC4)           .          .
 LSP Verification                  .          .          .          .            .           .          .
 --------------------------------------------------------------------------------------------------------
-Total                            35    6 (17%)          .          .     29 (83%)           .          .
+Total                            39    6 (15%)          .          .     33 (85%)           .          .
 
 
 Analyzed 2 units
 in unit coursework, 11 subprograms and packages out of 11 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.closeAirlock at coursework.ads:70 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.diveSub at coursework.ads:63 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  Coursework.fireTorpedeo at coursework.ads:92 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.loadTorpedeo at coursework.ads:86 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.lockDoor at coursework.ads:81 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.openAirlock at coursework.ads:75 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Coursework.closeAirlock at coursework.ads:72 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.diveSub at coursework.ads:63 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Coursework.fireTorpedeo at coursework.ads:98 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.loadTorpedeo at coursework.ads:89 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (8 checks)
+  Coursework.lockDoor at coursework.ads:83 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.openAirlock at coursework.ads:77 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
   Coursework.overideOxegen at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.overideReactor at coursework.ads:58 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.submergeSub at coursework.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)

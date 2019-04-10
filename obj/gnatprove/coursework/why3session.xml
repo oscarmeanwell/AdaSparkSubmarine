@@ -91,14 +91,44 @@
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="precondition" proved="true">
-  <proof prover="0"><result status="valid" steps="45"/></proof>
-  <proof prover="1" obsolete="true"><result status="unknown" steps="98"/></proof>
+  <proof prover="0"><result status="valid" steps="47"/></proof>
+  <proof prover="1"><result status="unknown" steps="104"/></proof>
   </goal>
-  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
+  <goal name="WP_parameter def.1" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="51"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="98"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.3" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="14"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="154"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.3.0" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="154"/></proof>
+   </goal>
+   <goal name="WP_parameter def.3.1" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.4.1">
+   <proof prover="1"><result status="failure"/></proof>
+   </goal>
+   <goal name="WP_parameter def.3.1">
+   <proof prover="1"><result status="failure"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.0">
+  <proof prover="0"><result status="unknown" steps="74"/></proof>
+  <proof prover="1"><result status="unknown" steps="74"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.0.0">
+   <proof prover="1"><result status="unknown" steps="74"/></proof>
+   </goal>
+   <goal name="WP_parameter def.1.0">
+   <proof prover="1"><result status="failure"/></proof>
+   </goal>
+  </transf>
   </goal>
  </transf>
  </goal>
@@ -147,6 +177,9 @@
    </goal>
   </transf>
   </goal>
+  <goal name="WP_parameter def.9" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="82"/></proof>
+  </goal>
  </transf>
  </goal>
 </theory>
@@ -168,6 +201,9 @@
   </goal>
   <goal name="WP_parameter def.4" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="106"/></proof>
+  </goal>
+  <goal name="WP_parameter def.5" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="119"/></proof>
   </goal>
  </transf>
  </goal>
@@ -202,6 +238,9 @@
   <goal name="WP_parameter def.8" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="71"/></proof>
   </goal>
+  <goal name="WP_parameter def.9" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="82"/></proof>
+  </goal>
  </transf>
  </goal>
 </theory>
@@ -226,14 +265,50 @@
   <goal name="WP_parameter def.5" expl="assertion" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="WP_parameter def.6" expl="assertion" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
+  <goal name="WP_parameter def.6" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="39"/></proof>
   </goal>
   <goal name="WP_parameter def.7" expl="assertion" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="WP_parameter def.8" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="35"/></proof>
+  <goal name="WP_parameter def.8" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.9" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.10" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.11" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.12" expl="assertion" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.13" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="45"/></proof>
+  </goal>
+  <goal name="WP_parameter def.14" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="38"/></proof>
+  </goal>
+  <goal name="WP_parameter def.15" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="45"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="205"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.15.0" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.15.1" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.15.2" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="104"/></proof>
+   </goal>
+   <goal name="WP_parameter def.15.3" expl="postcondition">
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.16" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="45"/></proof>
   </goal>
  </transf>
  </goal>
@@ -266,6 +341,21 @@
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
   <goal name="WP_parameter def.8" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="35"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="220"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.8.0" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.8.1" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.8.2" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.8.3" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="68"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter def.9" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="35"/></proof>
   </goal>
  </transf>

@@ -6,12 +6,14 @@ procedure Main is
 simulationActive : Boolean := True;
 inp : String (1..1);
 last : Integer := 80;
-title : string :=    "   _____       _                          _               _____            _             _   _____                 _ " ;
-title1 : string :=   "  / ____|     | |                        (_)             / ____|          | |           | | |  __ \               | |" ;
-title2 : string :=   " | (___  _   _| |__  _ __ ___   __ _ _ __ _ _ __   ___  | |     ___  _ __ | |_ _ __ ___ | | | |__) |_ _ _ __   ___| |" ;
-title3 : string :=   "  \___ \| | | | '_ \| '_ ` _ \ / _` | '__| | '_ \ / _ \ | |    / _ \| '_ \| __| '__/ _ \| | |  ___/ _` | '_ \ / _ \ |" ;
-title4 : string :=   "  ____) | |_| | |_) | | | | | | (_| | |  | | | | |  __/ | |___| (_) | | | | |_| | | (_) | | | |  | (_| | | | |  __/ |";
-title5 : string :=   " |_____/ \__,_|_.__/|_| |_| |_|\__,_|_|  |_|_| |_|\___|  \_____\___/|_| |_|\__|_|  \___/|_| |_|   \__,_|_| |_|\___|_|";
+t1 : string :=   "   _____       _                          _               _____            _             _   _____                 _ " ;
+t2 : string :=   "  / ____|     | |                        (_)             / ____|          | |           | | |  __ \               | |" ;
+t3 : string :=   " | (___  _   _| |__  _ __ ___   __ _ _ __ _ _ __   ___  | |     ___  _ __ | |_ _ __ ___ | | | |__) |_ _ _ __   ___| |" ;
+t4 : string :=   "  \___ \| | | | '_ \| '_ ` _ \ / _` | '__| | '_ \ / _ \ | |    / _ \| '_ \| __| '__/ _ \| | |  ___/ _` | '_ \ / _ \ |" ;
+t5 : string :=   "  ____) | |_| | |_) | | | | | | (_| | |  | | | | |  __/ | |___| (_) | | | | |_| | | (_) | | | |  | (_| | | | |  __/ |";
+t6 : string :=   " |_____/ \__,_|_.__/|_| |_| |_|\__,_|_|  |_|_| |_|\___|  \_____\___/|_| |_|\__|_|  \___/|_| |_|   \__,_|_| |_|\___|_|";
+
+
 procedure printSub is
    begin
       New_Line;New_Line;
@@ -26,14 +28,8 @@ procedure printSub is
 
    end printSub;
 begin
-   Put_Line(title);
-   Put_Line(title1);
-   Put_Line(title2);
-   Put_Line(title3);
-   Put_Line(title4);
-   Put_Line(title5);
-   Put_Line("");
-   Put_Line("");
+   Put_Line(t1); Put_Line(t2); Put_Line(t3); Put_Line(t4); Put_Line(t5); Put_Line(t6);
+   New_Line; New_Line;
    Put_Line("1 = Surface/Submerge, 2 = Doors, 3 = Reactor, 4 = Oxegen, 5 = Dive, 6 = Torpedoes, 7 = Quit");
 
    while simulationActive loop

@@ -12,7 +12,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		77f644cb NE OO SU
+U main%b		main.adb		5e96eccd NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W coursework%s		coursework.adb		coursework.ali
@@ -35,7 +35,7 @@ D a-unccon.ads		20180524051736 0e9b276f ada.unchecked_conversion%s
 D coursework.ads	20190410160107 24dfef0c coursework%s
 D interfac.ads		20180524051734 5ab55268 interfaces%s
 D i-cstrea.ads		20180524051734 e53d8b8e interfaces.c_streams%s
-D main.adb		20190410163732 db34189d main%b
+D main.adb		20190410164751 f254b09b main%b
 D system.ads		20180524051735 085b6ffb system%s
 D s-conca2.ads		20180524051735 02a0d7d0 system.concat_2%s
 D s-conca3.ads		20180524051736 0b705ca5 system.concat_3%s
@@ -59,54 +59,54 @@ X 1 ada.ads
 16K9*Ada 20e8 11|2r6 2r23
 X 6 a-textio.ads
 49K13*Text_IO 471e16 11|2w10 2r27
-166U14*New_Line 11|17s7 17s16
-240U14*Get 11|43s7 49s10 62s10 78s10 93s10 96s13 99s16 107s16 115s13 125s10
-. 128s13 134s13
-242U14*Put 11|23s7 24s7 42s7 46s10 48s10 61s10 77s10 92s10 95s13 98s16 100s16
-. 106s16 108s16 114s13 116s13 124s10 127s13 133s13
-263U14*Put_Line 11|18s7 19s7 20s7 21s7 22s7 25s7 29s4 30s4 31s4 32s4 33s4
-. 34s4 35s4 36s4 37s4 41s7 47s10 51s13 56s13 64s13 88s10 101s16 109s16 117s13
-. 123s10 129s13 135s13
+166U14*New_Line 11|19s7 19s16 32s4 32s14
+240U14*Get 11|39s7 45s10 58s10 74s10 89s10 92s13 95s16 103s16 111s13 121s10
+. 124s13 130s13
+242U14*Put 11|25s7 26s7 38s7 42s10 44s10 57s10 73s10 88s10 91s13 94s16 96s16
+. 102s16 104s16 110s13 112s13 120s10 123s13 129s13
+263U14*Put_Line 11|20s7 21s7 22s7 23s7 24s7 27s7 31s4 31s18 31s32 31s46 31s60
+. 31s74 33s4 37s7 43s10 47s13 52s13 60s13 84s10 97s16 105s16 113s13 119s10
+. 125s13 131s13
 X 8 coursework.ads
 1K9*Coursework 97e15 11|1w6 1r22
-6n25*Normal{6E9} 11|84r25
-6n33*Overheated{6E9} 11|80r25
+6n25*Normal{6E9} 11|80r25
+6n33*Overheated{6E9} 11|76r25
 7A9*AirArray(3E9)<integer>
 11A9*TorArray(10E9)<integer>
-18i7*currentDepth{integer} 11|22r48
-23i7*numberOfTorepedos{integer} 11|123r66
-24a7*slots{11A9} 11|24r19 24r51 25r24 25r56
-28a7*air{7A9} 11|19r43 19r69
-29e7*oxn{4E9} 11|21r43
-30e7*stat{5E9} 11|18r43 47r23
-31e7*reac{6E9} 11|20r43 80m17 84m17
-32r7*dive{15R9} 11|22r43
-33r7*tor{22R9} 11|24r15 24r47 25r20 25r52 123r62
-40r4*sub{27R9} 11|18r39 19r39 19r65 20r39 21r39 22r39 24r11 24r43 25r16 25r48
-. 47r19 80m13 84m13 123r58
-43U14*submergeSub 11|52s13
-49U14*surfaceSub 11|57s13
-54U14*overideOxegen 11|65s13 69s13 73s13
-58U14*overideReactor 11|81s13
-63U14*diveSub 11|89s10
-70U14*closeAirlock 11|110s16
-75U14*openAirlock 11|102s16
-81U14*lockDoor 11|118s13
-86U14*loadTorpedeo 11|130s13
-92U14*fireTorpedeo 11|136s13
+18i7*currentDepth{integer} 11|24r48
+23i7*numberOfTorepedos{integer} 11|119r66
+24a7*slots{11A9} 11|26r19 26r51 27r24 27r56
+28a7*air{7A9} 11|21r43 21r69
+29e7*oxn{4E9} 11|23r43
+30e7*stat{5E9} 11|20r43 43r23
+31e7*reac{6E9} 11|22r43 76m17 80m17
+32r7*dive{15R9} 11|24r43
+33r7*tor{22R9} 11|26r15 26r47 27r20 27r52 119r62
+40r4*sub{27R9} 11|20r39 21r39 21r65 22r39 23r39 24r39 26r11 26r43 27r16 27r48
+. 43r19 76m13 80m13 119r58
+43U14*submergeSub 11|48s13
+49U14*surfaceSub 11|53s13
+54U14*overideOxegen 11|61s13 65s13 69s13
+58U14*overideReactor 11|77s13
+63U14*diveSub 11|85s10
+70U14*closeAirlock 11|106s16
+75U14*openAirlock 11|98s16
+81U14*lockDoor 11|114s13
+86U14*loadTorpedeo 11|126s13
+92U14*fireTorpedeo 11|132s13
 X 11 main.adb
-5U11*Main 5b11 143l5 143t9
-6b1 simulationActive{boolean} 39r10 140m10
-7a1 inp{string} 43m11 45r10 49m14 50r13 55r13 60r13 62m14 63r13 67r13 71r13
-. 76r13 78m14 79r13 83r13 87r13 91r13 93m14 94r13 96m17 97r16 99m20 101r25
-. 102r42 105r16 107m20 109r25 110r43 113r13 115m17 117r22 118r36 122r13 125m14
-. 126r13 128m17 129r62 130r40 132r16 134m17 135r64 136r40 139r13
+5U11*Main 5b11 139l5 139t9
+6b1 simulationActive{boolean} 35r10 136m10
+7a1 inp{string} 39m11 41r10 45m14 46r13 51r13 56r13 58m14 59r13 63r13 67r13
+. 72r13 74m14 75r13 79r13 83r13 87r13 89m14 90r13 92m17 93r16 95m20 97r25
+. 98r42 101r16 103m20 105r25 106r43 109r13 111m17 113r22 114r36 118r13 121m14
+. 122r13 124m17 125r62 126r40 128r16 130m17 131r64 132r40 135r13
 8i1 last{integer}
-9a1 title{string} 29r13
-10a1 title1{string} 30r13
-11a1 title2{string} 31r13
-12a1 title3{string} 32r13
-13a1 title4{string} 33r13
-14a1 title5{string} 34r13
-15U11 printSub 15b11 27l8 27t16 40s7
+9a1 t1{string} 31r13
+10a1 t2{string} 31r27
+11a1 t3{string} 31r41
+12a1 t4{string} 31r55
+13a1 t5{string} 31r69
+14a1 t6{string} 31r83
+17U11 printSub 17b11 29l8 29t16 36s7
 
