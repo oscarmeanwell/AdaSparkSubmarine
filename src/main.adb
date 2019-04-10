@@ -73,7 +73,6 @@ begin
          Put("    Reactor overheated(1), normal (2): ");
          Get(inp);
          if(inp = "1") then
-            sub.reac := Overheated;
             overideReactor;
          end if;
          if(inp = "2") then

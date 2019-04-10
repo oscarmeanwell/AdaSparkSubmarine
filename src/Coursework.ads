@@ -57,8 +57,8 @@ is
 
    procedure overideReactor with
      Global => (In_Out => sub),
-     Pre => sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked;
-
+     Pre => sub.reac = Normal and then sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked,
+     Post => sub.reac = Overheated;
 
    procedure diveSub with
      Global => (In_Out => sub),

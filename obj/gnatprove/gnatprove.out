@@ -10,10 +10,10 @@ Initialization                    6          6          .          .            
 Non-Aliasing                      .          .          .          .            .           .          .
 Run-time Checks                  23          .          .          .    23 (CVC4)           .          .
 Assertions                        .          .          .          .            .           .          .
-Functional Contracts             10          .          .          .    10 (CVC4)           .          .
+Functional Contracts             11          .          .          .    11 (CVC4)           .          .
 LSP Verification                  .          .          .          .            .           .          .
 --------------------------------------------------------------------------------------------------------
-Total                            39    6 (15%)          .          .     33 (85%)           .          .
+Total                            40    6 (15%)          .          .     34 (85%)           .          .
 
 
 Analyzed 2 units
@@ -26,7 +26,7 @@ in unit coursework, 11 subprograms and packages out of 11 analyzed
   Coursework.lockDoor at coursework.ads:82 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
   Coursework.openAirlock at coursework.ads:76 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
   Coursework.overideOxegen at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.overideReactor at coursework.ads:58 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.overideReactor at coursework.ads:58 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
   Coursework.submergeSub at coursework.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Coursework.surfaceSub at coursework.ads:49 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
 in unit main, 0 subprograms and packages out of 1 analyzed

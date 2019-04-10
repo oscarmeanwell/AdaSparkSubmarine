@@ -49,9 +49,10 @@ is
    procedure overideReactor is
       --Check the reactor
    begin
-      if(sub.reac = Overheated and then sub.stat = Submerged and then
-             sub.air(1) = Locked and then sub.air(2) = Locked) then
+      if(sub.reac = Normal and then sub.stat = Submerged and then
+         sub.air(1) = Locked and then sub.air(2) = Locked) then
          surfaceSub;
+         sub.reac := Overheated;
       end if;
    end overideReactor;
 
