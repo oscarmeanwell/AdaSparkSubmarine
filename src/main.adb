@@ -67,15 +67,15 @@ begin
          Get(inp);
          if(inp = "1") then
             Put_Line("    Oxegen is LOW!");
-            checkOxg("Low");
+            overideOxegen("Low");
          end if;
          if(inp = "2") then
 
-            checkOxg("Present");
+            overideOxegen("Present");
          end if;
          if(inp = "3") then
 
-            checkOxg("Absent");
+            overideOxegen("Absent");
          end if;
 
       elsif(inp = "3") then
@@ -83,7 +83,7 @@ begin
          Get(inp);
          if(inp = "1") then
             sub.reac := Overheated;
-            checkReactor;
+            overideReactor;
          end if;
          if(inp = "2") then
             sub.reac := Normal;

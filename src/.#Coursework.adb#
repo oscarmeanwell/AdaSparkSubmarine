@@ -78,4 +78,12 @@ is
       end if;
    end lockDoor;
 
+   procedure loadTorpedeo(n : Integer)
+   begin
+      if(n >= 1 and then n <= 4 and then sub.air(1) = Locked and then sub.air(2) = Locked
+         and then sub.tor.slots(n) = Empty and then sub.tor.numberOfTorepedos > 0) then
+
+      end if;
+   end loadTorpedeo;
+
 end Coursework;

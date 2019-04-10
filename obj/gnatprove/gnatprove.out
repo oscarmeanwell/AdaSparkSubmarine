@@ -19,13 +19,13 @@ Total                            23    4 (17%)          .          .     19 (83%
 Analyzed 2 units
 in unit coursework, 9 subprograms and packages out of 9 analyzed
   Coursework at coursework.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Coursework.checkOxg at coursework.ads:45 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.checkReactor at coursework.ads:49 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.closeAirlock at coursework.ads:61 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.diveSub at coursework.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  Coursework.lockDoor at coursework.ads:72 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
-  Coursework.openAirlock at coursework.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
-  Coursework.submergeSub at coursework.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Coursework.surfaceSub at coursework.ads:40 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.closeAirlock at coursework.ads:59 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.diveSub at coursework.ads:52 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Coursework.lockDoor at coursework.ads:70 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Coursework.openAirlock at coursework.ads:64 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Coursework.overideOxegen at coursework.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.overideReactor at coursework.ads:47 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.submergeSub at coursework.ads:32 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Coursework.surfaceSub at coursework.ads:38 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
 in unit main, 0 subprograms and packages out of 1 analyzed
   Main at main.adb:5 skipped

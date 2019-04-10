@@ -4,10 +4,12 @@ is
    type Oxegen is (Present, Absent, Low);
    type Status is (Submerged, Surfaced);
    type ReactorHeat is (Normal, Overheated);
-   type Index is new Integer range 1 .. 2;
    type AirArray is array (Integer range 1 .. 2) of Airlock;
    type Diving is (True, False);
    type DoorLocked is (True, False);
+   type IsLoaded is (Empty, Loaded);
+   type TorArray is array (Integer range 1 .. 4) of IsLoaded;
+
    MAXDIVE : constant := 1000;
 
    type DiveRecord is record
@@ -17,19 +19,26 @@ is
       safeDiveDepth : Integer;
    end record;
 
+   type TorepedoRecord is record
+      numberOfTorepedos : Integer;
+      slots: TorArray;
+   end record;
+
    type Submarine is record
       air : AirArray;
       oxn : Oxegen;
       stat : Status;
       reac : ReactorHeat;
       dive : DiveRecord;
+      tor: TorepedoRecord;
    end record;
 
    diveR : DiveRecord := (isDiving => False, maxDepth => MAXDIVE, currentDepth => 0, safeDiveDepth => MAXDIVE - 100);
 
-   sub : Submarine := (oxn => Present, stat => Surfaced, air => (Locked, Locked),
-                       reac => Normal, dive => diveR);
+   torR : TorepedoRecord := (numberOfTorepedos => 15, slots => (Empty, Loaded, Loaded, Empty));
 
+   sub : Submarine := (oxn => Present, stat => Surfaced, air => (Locked, Locked),
+                       reac => Normal, dive => diveR, tor => torR);
 
    procedure submergeSub with
      Global => (In_Out => sub),
@@ -42,11 +51,11 @@ is
      Pre => sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked,
      Post => sub.stat = Surfaced and then sub.air(1) = Locked and then sub.air(2) = Locked;
 
-   procedure checkOxg(d : String) with
+   procedure overideOxegen(d : String) with
      Global => (In_Out => sub),
      Pre => sub.air(1) = Locked and then sub.air(2) = Locked;
 
-   procedure checkReactor with
+   procedure overideReactor with
      Global => (In_Out => sub),
      Pre => sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked;
 
@@ -73,4 +82,11 @@ is
      Global => (In_Out => sub),
      Pre => (n = 1 or n = 2) and then sub.air(n) = Closed,
      Post => sub.air(n) = Locked;
+
+   procedure loadTorpedeo(n : Integer) with
+   Global => (In_Out => sub),
+   Pre => n = (1..4);
+
+   procedure fireTorpedeo(n : Integer) with
+
 end Coursework;

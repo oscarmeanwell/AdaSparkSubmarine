@@ -57,23 +57,22 @@
  </transf>
  </goal>
 </theory>
-<theory name="Coursework__checkoxg__subprogram_def" proved="true">
+<theory name="Coursework__overideoxegen__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="precondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
+  <proof prover="0"><result status="valid" steps="20"/></proof>
   </goal>
   <goal name="WP_parameter def.1" expl="precondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
+  <proof prover="0"><result status="valid" steps="28"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="precondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  <proof prover="1" obsolete="true"><result status="unknown" steps="62"/></proof>
+  <proof prover="0"><result status="valid" steps="28"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Coursework__checkreactor__subprogram_def" proved="true">
+<theory name="Coursework__overidereactor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="precondition" proved="true">
@@ -84,7 +83,6 @@
   </goal>
   <goal name="WP_parameter def.2" expl="precondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
-  <proof prover="1" obsolete="true"><result status="unknown" steps="62"/></proof>
   </goal>
  </transf>
  </goal>
@@ -137,15 +135,15 @@
   <proof prover="1" obsolete="true"><result status="unknown" steps="196"/></proof>
   <transf name="split_disj" >
    <goal name="WP_parameter def.8.0" expl="postcondition">
-   <proof prover="1" obsolete="true"><result status="failure"/></proof>
    </goal>
    <goal name="WP_parameter def.8.1" expl="postcondition">
-   <proof prover="1" obsolete="true"><result status="failure"/></proof>
+   <proof prover="1" obsolete="true"><result status="unknown" steps="91"/></proof>
    </goal>
    <goal name="WP_parameter def.8.2" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="failure"/></proof>
    </goal>
    <goal name="WP_parameter def.8.3" expl="postcondition">
-   <proof prover="1" obsolete="true"><result status="unknown" steps="91"/></proof>
+   <proof prover="1" obsolete="true"><result status="failure"/></proof>
    </goal>
   </transf>
   </goal>

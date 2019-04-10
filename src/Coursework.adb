@@ -28,7 +28,7 @@ is
       end if;
    end surfaceSub;
 
-   procedure checkOxg(d : String) is
+   procedure overideOxegen(d : String) is
    begin
       --Check the oxegen Levels
       if(sub.stat = Submerged and then sub.air(1) = Locked and then sub.air(2) = Locked) then
@@ -44,16 +44,16 @@ is
          end if;
       end if;
 
-   end checkOxg;
+   end overideOxegen;
 
-   procedure checkReactor is
+   procedure overideReactor is
       --Check the reactor
    begin
       if(sub.reac = Overheated and then sub.stat = Submerged and then
              sub.air(1) = Locked and then sub.air(2) = Locked) then
          surfaceSub;
       end if;
-   end checkReactor;
+   end overideReactor;
 
 
    procedure diveSub is
@@ -77,5 +77,9 @@ is
          sub.air(n) := Locked;
       end if;
    end lockDoor;
+
+   procedure loadTorpedeo(n : Integer)
+
+   end loadTorpedeo;
 
 end Coursework;
