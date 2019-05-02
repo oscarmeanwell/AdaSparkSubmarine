@@ -1,7 +1,7 @@
 # A Submarine controller written in Ada-SPARK.
 
 * Uses Preconditions and Postconditions in order to create a safety critical system
-* Compiles at SPARK gold level guaranteeing an absence of run time errors
+* Compiles at SPARK gold level guaranteeing the absence of run time errors
 * Has a console based GUI therefrom you can control the submarine, actions will not complete unless the preconditions are satisifed. 
 
 ### How do I run this? ###
